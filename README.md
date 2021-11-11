@@ -1,2 +1,3 @@
-# hikers-guide
-FS Project: HikersGuide
+# HikersGuide
+
+FullStack Project: Clone of AllTrails
