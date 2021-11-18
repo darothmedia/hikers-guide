@@ -1,0 +1,42 @@
+# == Schema Information
+#
+# Table name: trails
+#
+#  id          :bigint           not null, primary key
+#  name        :string           not null
+#  overview    :text             not null
+#  description :text
+#  difficulty  :string           not null
+#  length      :float            not null
+#  elevation   :integer          not null
+#  route_type  :string           not null
+#  lat         :float
+#  lng         :float
+#  park_id     :integer          not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+one:
+  name: MyString
+  overview: MyText
+  description: MyText
+  difficulty: MyString
+  length: 1.5
+  elevation: 1
+  route_type: MyString
+  lat: 1.5
+  lng: 1.5
+  park_id: 1
+
+two:
+  name: MyString
+  overview: MyText
+  description: MyText
+  difficulty: MyString
+  length: 1.5
+  elevation: 1
+  route_type: MyString
+  lat: 1.5
+  lng: 1.5
+  park_id: 1
