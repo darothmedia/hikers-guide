@@ -9,5 +9,9 @@
 #  updated_at :datetime         not null
 #
 class ParkTag < ApplicationRecord
-  belongs_to :park_taggable, polymorphic: true
+  belongs_to :park,
+    class_name: :Park
+
+  belongs_to :tag,
+    class_name: :Tag
 end

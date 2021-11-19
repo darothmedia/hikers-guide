@@ -281,3 +281,122 @@ Migrating to CreateParkTags (20211118225757)
   ↳ bin/rails:9
   [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/daroth/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "newuser@user.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "fname", "lname", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "newuser@user.com"], ["fname", "new"], ["lname", "user"], ["password_digest", "$2a$12$qk1XmWeGnURWVl8/yUJ5meNIjOz6.pQolcwp1LJniJmTWDJlwQvRu"], ["session_token", "Md-0s0-0x8Q-0pca9yHhVQ"], ["created_at", "2021-11-19 20:06:53.854918"], ["updated_at", "2021-11-19 20:06:53.854918"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "newuser@user.com"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (4.5ms)[0m  [1m[32mINSERT INTO "tags" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "rocky"], ["created_at", "2021-11-19 20:13:06.364164"], ["updated_at", "2021-11-19 20:13:06.364164"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6913667672095649325)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to UpdateTags (20211119201524)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "tags" RENAME COLUMN "type" TO "tag_type"[0m
+  ↳ db/migrate/20211119201524_update_tags.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211119201524"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6913667672095649325)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/daroth/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (3.7ms)[0m  [1m[32mINSERT INTO "tags" ("body", "tag_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "rocky"], ["tag_type", "condition"], ["created_at", "2021-11-19 20:16:43.686007"], ["updated_at", "2021-11-19 20:16:43.686007"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPark Create (2.3ms)[0m  [1m[32mINSERT INTO "parks" ("name", "acreage", "description", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "park"], ["acreage", 34], ["description", "parky"], ["state", "California"], ["created_at", "2021-11-19 20:20:31.741087"], ["updated_at", "2021-11-19 20:20:31.741087"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPark Load (0.8ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrail Create (3.4ms)[0m  [1m[32mINSERT INTO "trails" ("name", "overview", "difficulty", "length", "elevation", "route_type", "park_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "trail"], ["overview", "stuff"], ["difficulty", "hard"], ["length", 3.1], ["elevation", 246], ["route_type", "loop"], ["park_id", 1], ["created_at", "2021-11-19 20:21:10.005455"], ["updated_at", "2021-11-19 20:21:10.005455"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTrail Load (1.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTrail Load (0.5ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTrail Load (0.5ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTrail Load (1.8ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  [1m[36mTag Load (1.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTrail Load (1.3ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrailTag Create (3.8ms)[0m  [1m[32mINSERT INTO "trail_tags" ("tag_id", "trail_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tag_id", 2], ["trail_id", 1], ["created_at", "2021-11-19 21:30:17.545198"], ["updated_at", "2021-11-19 21:30:17.545198"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTrailTag Load (0.8ms)[0m  [1m[34mSELECT "trail_tags".* FROM "trail_tags"[0m
+  [1m[36mTrail Load (0.7ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  [1m[36mPark Load (1.5ms)[0m  [1m[34mSELECT "parks".* FROM "parks"[0m
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPark Load (0.8ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mParkTag Create (2.8ms)[0m  [1m[32mINSERT INTO "park_tags" ("tag_id", "park_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tag_id", 2], ["park_id", 1], ["created_at", "2021-11-19 21:31:53.300106"], ["updated_at", "2021-11-19 21:31:53.300106"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mParkTag Load (0.8ms)[0m  [1m[34mSELECT "park_tags".* FROM "park_tags"[0m
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrail Load (2.7ms)[0m  [1m[34mSELECT "trails".* FROM "trails" INNER JOIN "trail_tags" ON "trails"."id" = "trail_tags"."trail_id" WHERE "trail_tags"."tag_id" = $1[0m  [["tag_id", 2]]
+  [1m[36mParkTag Load (1.4ms)[0m  [1m[34mSELECT "park_tags".* FROM "park_tags"[0m
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPark Load (1.9ms)[0m  [1m[34mSELECT "parks".* FROM "parks" INNER JOIN "park_tags" ON "parks"."id" = "park_tags"."park_id" WHERE "park_tags"."tag_id" = $1[0m  [["tag_id", 2]]
+  [1m[36mTrail Load (3.0ms)[0m  [1m[34mSELECT "trails".* FROM "trails" INNER JOIN "trail_tags" ON "trails"."id" = "trail_tags"."trail_id" WHERE "trail_tags"."tag_id" = $1[0m  [["tag_id", 2]]
+  [1m[36mTrail Load (0.8ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrail Load (0.7ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTag Load (2.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "trail_tags" ON "tags"."id" = "trail_tags"."tag_id" WHERE "trail_tags"."trail_id" = $1[0m  [["trail_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrail Load (0.7ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Create (2.5ms)[0m  [1m[32mINSERT INTO "reviews" ("body", "rating", "actdate", "author_id", "trail_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["body", "stuff"], ["rating", 5], ["actdate", 1991], ["author_id", 1], ["trail_id", 1], ["created_at", "2021-11-19 21:52:04.866193"], ["updated_at", "2021-11-19 21:52:04.866193"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrail Load (0.7ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Create (4.5ms)[0m  [1m[32mINSERT INTO "reviews" ("body", "rating", "actdate", "author_id", "trail_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["body", "stuff"], ["rating", 5], ["actdate", "2021-11-19"], ["author_id", 1], ["trail_id", 1], ["created_at", "2021-11-19 21:54:07.783837"], ["updated_at", "2021-11-19 21:54:07.783837"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrail Load (0.7ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]

@@ -9,6 +9,10 @@
 #  updated_at :datetime         not null
 #
 class TrailTag < ApplicationRecord
-  belongs_to :trail_taggable, polymorphic: true
+  belongs_to :trail,
+    class_name: :Trail
+    
+  belongs_to :tag,
+    class_name: :Tag
 
 end

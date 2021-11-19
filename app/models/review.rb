@@ -14,6 +14,10 @@
 class Review < ApplicationRecord
   validates :body, :rating, :actdate, :author_id, :trail_id, presence: true
 
-  belongs_to :reviewable, polymorphic: true
+  belongs_to :author,
+    foreign_key: :author_id,
+    class_name: :User
+
+  belongs_to :trail
 
 end

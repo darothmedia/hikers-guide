@@ -21,7 +21,9 @@ class Park < ApplicationRecord
   validates :name, :acreage, :description, :state, presence: true
 
   has_many :trails
-  has_many :tags, as: :park_taggable
-
+  has_many :park_tags
+  has_many :tags,
+    through: :park_tags,
+    class_name: :Tag
 
 end

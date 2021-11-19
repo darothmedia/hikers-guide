@@ -19,8 +19,16 @@
 class Trail < ApplicationRecord
 
   validates :name, :overview, :difficulty, :length, :elevation, :route_type, :park_id, presence: true
+  validates :difficulty, inclusion: {in: ['easy', 'moderate', 'hard']}
+  validates :route_type, inclusion: {in: ['Out & Back', 'Loop', 'Point-to-Point']}
+  
+  has_one_attached :main_photo
   belongs_to :park
-  has_many :reviews, as: :reviewable
-  has_many :tags, as: :trail_taggable
+  has_many :reviews
+  has_many :trail_tags
+  has_many :tags,
+    through: :trail_tags,
+    class_name: :Tag
+ 
 
 end
