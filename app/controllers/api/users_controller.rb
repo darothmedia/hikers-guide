@@ -10,19 +10,31 @@ class Api::UsersController < ApplicationController
   end
 
   def update
-
+    @user = select_user
+    if @user.update(user_params)
+      render '/'
+    else
+      render json: @user.errors.full_messages, status: 401
+    end
   end
 
   def show
-
+    @user = select_user
   end
 
   def index
-
+    @users = User.all
   end
 
   def destroy
-
+    @user = select_user
+    if @user
+      @user.destroy
+      render '/'
+    else
+      render ['User does not exist']
+    end
+  
   end
 
   private
