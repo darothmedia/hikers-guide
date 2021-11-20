@@ -5,6 +5,7 @@ import SignUpFormContainer from './users/sign_up_form_container'
 const App = ({ children }) => (
   <div>
     <Routes>
+      {/* <Route exact path='/login' element={<LogInFormContainer />} /> */}
       <Route path='/signup' element={<SignUpFormContainer />} />
     </Routes>
   </div>

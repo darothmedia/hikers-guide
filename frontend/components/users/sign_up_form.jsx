@@ -11,7 +11,7 @@ export default class SignUpForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault()
-    this.props.signUp(this.user)
+    this.props.signUp(this.state)
   }
 
   updateField(field) {
@@ -23,21 +23,15 @@ export default class SignUpForm extends React.Component {
       <div id='sign-up-form'>
         <form onSubmit={this.handleSubmit}>
           <h1>Create your free account</h1>
-          <label id='form-labels'>First name
-            <input type="text" onChange={this.updateField('fname')} value={this.state.fname}/>
-          </label>
+
+          <input type="text" placeholder="First name" onChange={this.updateField('fname')} value={this.state.fname}/>
           <br />
-          <label id='form-labels'>Last name
-            <input type="text" onChange={this.updateField('lname')} value={this.state.lname} />
-          </label>
+          <input type="text" placeholder="Last name" onChange={this.updateField('lname')} value={this.state.lname} />
           <br />
-          <label id='form-labels'>Email
-            <input type="text" onChange={this.updateField('email')} value={this.state.email} />
-          </label>
+          <input type="text" placeholder="Email" onChange={this.updateField('email')} value={this.state.email} />
           <br />
-          <label id='form-labels'>Password
-            <input type="password" onChange={this.updateField('password')} value={this.state.password} />
-          </label>
+          <input type="password" placeholder="Password" onChange={this.updateField('password')} value={this.state.password} />
+
           <br />
           <button type="submit">Sign up</button>
         </form>

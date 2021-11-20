@@ -20,17 +20,17 @@ const removeUser = userId => ({
 })
 
 
-export const requestUsers = () => dispatch => UserAPIUtil.fetchUsers()
-  .then(users => dispatch(receiveUsers(users)))
+export const requestUsers = () => dispatch => (UserAPIUtil.fetchUsers()
+  .then(users => dispatch(receiveUsers(users))))
 
-export const requestUser = (userId) => dispatch => UserAPIUtil.fetchUser(userId)
-  .then(user => dispatch(receiveUser(user)))
+export const requestUser = (userId) => dispatch => (UserAPIUtil.fetchUser(userId)
+  .then(user => dispatch(receiveUser(user))))
 
-export const createUser = (user) => dispatch => UserAPIUtil.signUp(user)
-  .then(user => dispatch(receiveUser(user)))
+export const createUser = (user) => dispatch => (UserAPIUtil.signUp(user)
+  .then(user => dispatch(receiveUser(user))))
 
-export const updateUser = (user) => dispatch => UserAPIUtil.updateUser(user)
-  .then(user => dispatch(receiveUser(user)))
+export const updateUser = (user) => dispatch => (UserAPIUtil.updateUser(user)
+  .then(user => dispatch(receiveUser(user))))
 
-export const deleteUser = (userId) => dispatch => UserAPIUtil.deleteUser(userId)
-  .then(() => dispatch(removeUser(userId)))
+export const deleteUser = (userId) => dispatch => (UserAPIUtil.deleteUser(userId)
+  .then(() => dispatch(removeUser(userId))))
