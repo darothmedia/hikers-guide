@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export default class SignUpForm extends React.Component {
   constructor(props){
     super(props)
-    this.user = this.props.user
+    this.state = this.props.user
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
@@ -24,18 +24,22 @@ export default class SignUpForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <h1>Create your free account</h1>
           <label id='form-labels'>First name
-            <input type="text" onChange={this.updateField('fname')} value={this.user.fname}/>
+            <input type="text" onChange={this.updateField('fname')} value={this.state.fname}/>
           </label>
+          <br />
           <label id='form-labels'>Last name
-            <input type="text" onChange={this.updateField('lname')} value={this.user.lname} />
+            <input type="text" onChange={this.updateField('lname')} value={this.state.lname} />
           </label>
+          <br />
           <label id='form-labels'>Email
-            <input type="text" onChange={this.updateField('email')} value={this.user.email} />
+            <input type="text" onChange={this.updateField('email')} value={this.state.email} />
           </label>
+          <br />
           <label id='form-labels'>Password
-            <input type="password" onChange={this.updateField('password')} value={this.user.password} />
+            <input type="password" onChange={this.updateField('password')} value={this.state.password} />
           </label>
-          <button type="submit" value='Sign up'></button>
+          <br />
+          <button type="submit">Sign up</button>
         </form>
         <div id='log-in-question'>
           Already have an account? <Link to='/'>Log in</Link>

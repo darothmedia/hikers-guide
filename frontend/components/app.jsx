@@ -1,11 +1,12 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router';
+import SignUpFormContainer from './users/sign_up_form_container'
 
 const App = ({ children }) => (
   <div>
-    <Switch>
-      <Route path='/signup' component={SignUpFormContainer} />
-    </Switch>
+    <Routes>
+      <Route path='/signup' element={<SignUpFormContainer />} />
+    </Routes>
   </div>
 );
 
