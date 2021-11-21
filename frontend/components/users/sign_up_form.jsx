@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-export default class SignUpForm extends React.Component {
+class SignUpForm extends React.Component {
   constructor(props){
     super(props)
     this.state = this.props.user
@@ -20,6 +20,7 @@ export default class SignUpForm extends React.Component {
 
   render(){
     return(
+      <div id='sign-up-background'>
       <div id='sign-up-form'>
         <form onSubmit={this.handleSubmit}>
           <h1>Create your free account</h1>
@@ -36,12 +37,15 @@ export default class SignUpForm extends React.Component {
           <button type="submit">Sign up</button>
         </form>
         <div id='log-in-question'>
-          Already have an account? <Link to='/'>Log in</Link>
+          Already have an account? <Link to='/login'>Log in</Link>
           <br />
           <br />
           <Link to='/' id='demo'>Log in as demo user</Link>
         </div>
       </div>
+      </div>
     )
   }
 }
+
+export default SignUpForm

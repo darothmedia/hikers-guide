@@ -9,14 +9,19 @@ export default class Navbar extends React.Component {
           <Link to='/'>Explore</Link>
         </div>
         <div id='logo'>
-          <img src='https://hikers-guide.s3.us-west-1.amazonaws.com/logo/img/logo/hg-solo-logo4x.png' alt='HikersGuide logo' />
-          <img src="https://hikers-guide.s3.us-west-1.amazonaws.com/logo/img/buttons/ttg-button-inactive%404x.png" alt="To The Galaxy" />
+          <Link to='/'>
+            <img src='https://hikers-guide.s3.us-west-1.amazonaws.com/logo/img/logo/hg-solo-logo4x.png' alt='HikersGuide logo' />
+          </Link>
+          <img src="https://hikers-guide.s3.us-west-1.amazonaws.com/logo/img/buttons/ttg-button-inactive%404x.png" alt="To The Galaxy" id='ttg'/>
         </div>
         <div id='right-nav'>
           <Link to='/signup'>
             <button id='sign-up-button'>Sign Up</button>
+          </Link>
+          <Link to='/login'>
             <button id='log-in-button'>Log In</button>
           </Link>
+
         </div>
 
         

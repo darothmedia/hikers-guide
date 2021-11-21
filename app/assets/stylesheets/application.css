@@ -40,6 +40,10 @@ body {
   font-family: 'Proxima Nova', Arial, sans-serif;
 }
 
+body.galaxy {
+  background-color: black;
+}
+
 a {
   text-decoration: none;
   color: #D75B32;
@@ -47,4 +51,8 @@ a {
 
 input {
   border: 1px solid gray;
+}
+
+button {
+  cursor: pointer;
 }
