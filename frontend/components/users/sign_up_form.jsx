@@ -37,6 +37,9 @@ export default class SignUpForm extends React.Component {
         </form>
         <div id='log-in-question'>
           Already have an account? <Link to='/'>Log in</Link>
+          <br />
+          <br />
+          <Link to='/' id='demo'>Log in as demo user</Link>
         </div>
       </div>
     )
