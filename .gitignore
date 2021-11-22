@@ -4,6 +4,9 @@ bundle.js
 bundle.js.map
 .byebug_history
 npm-debug.log
+tmp/
 # Ignore application configuration
 /config/application.yml
 /config/cloudinary.yml
+
+
