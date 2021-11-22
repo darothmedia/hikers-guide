@@ -1,24 +1,24 @@
 import React from 'react';
-import { Route, Routes } from 'react-router';
+import { Route, Switch } from 'react-router';
 import SignUpFormContainer from './users/sign_up_form_container'
 import SplashContainer from './splash/splash_container'
 import Navbar from './navbar/navbar';
 import LogInFormContainer from './users/log_in_form_container'
 import ExploreContainer from './explore/explore_container'
 import Footer from './splash/footer';
+import { ProtectedRoute, AuthRoute } from '../util/route_util';
 
 const App = ({ children }) => (
   <div>
     <header>
       <Navbar />
     </header>
-    <Routes>
-      {/* <Route exact path='/login' element={<LogInFormContainer />} /> */}
-      <Route path='/signup' element={<SignUpFormContainer />} />
-      <Route path='/login' element={<LogInFormContainer />} />
-      <Route path='/explore' element={<ExploreContainer />} />
-      <Route exact path='/' element={<SplashContainer />} />
-    </Routes>
+    <Switch>
+      <Route path='/signup' component={SignUpFormContainer} />
+      <Route path='/login' component={LogInFormContainer} />
+      <Route path='/explore' component={ExploreContainer} />
+      <Route exact path='/' component={SplashContainer} />
+    </Switch>
     <footer>
       <Footer />
     </footer>

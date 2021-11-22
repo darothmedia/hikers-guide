@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 export default class Navbar extends React.Component {
   constructor(props){
     super(props)
-    
   }
 
   render(){
@@ -24,12 +23,15 @@ export default class Navbar extends React.Component {
         </div>
         </section>
         <section id='right-nav'>
-          <Link to='/signup'>
-            <button id='sign-up-button'>Sign Up</button>
-          </Link>
-          <Link to='/login'>
-            <button id='log-in-button'>Log In</button>
-          </Link>
+          {console.log(this.props.state)}
+          <div id='right-navlinks'>
+            <Link to='/signup'>
+              <button id='sign-up-button'>Sign Up</button>
+            </Link>
+            <Link to='/login'>
+              <button id='log-in-button'>Log In</button>
+            </Link>
+          </div>
         </section>
       </div>
     )

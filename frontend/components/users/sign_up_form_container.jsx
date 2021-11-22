@@ -3,8 +3,7 @@ import { createUser } from "../../actions/user_actions";
 import SignUpForm from "./sign_up_form";
 
 const mSTP = (state) => ({
-  user: {fname:"", lname:"", email: "", password:""},
-  errors: state.errors.user,
+  errors: state.errors.session,
   formType: 'signup'
 })
 

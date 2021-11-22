@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link, BrowserRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 class SignUpForm extends React.Component {
   constructor(props){
     super(props)
-    this.state = this.props.user
+    this.state = { fname: "", lname: "", email: "", password: "" },
     this.handleSubmit = this.handleSubmit.bind(this)
     // this.renderErrors = this.renderErrors.bind(this)
   }
@@ -12,7 +12,7 @@ class SignUpForm extends React.Component {
   handleSubmit(e){
     e.preventDefault()
     this.props.signUp(this.state)
-    
+      .then(() => this.props.history.push('/'))
   }
 
   updateField(field) {
@@ -22,11 +22,19 @@ class SignUpForm extends React.Component {
   renderErrors() {
     return (
       <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
+        {this.props.errors.map((error, i) => {
+          if (error.includes('Fname')) {
+            error = `First name can't be blank`
+          }
+          if (error.includes('Lname')) {
+            error = `Last name can't be blank`
+          }
+          return (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          )
+  })}
       </ul>
     )
   }
@@ -37,7 +45,7 @@ class SignUpForm extends React.Component {
       <div id='sign-up-form'>
         <form onSubmit={this.handleSubmit}>
           <h2>Create your free account</h2>
-          {/* {this.renderErrors()} */}
+          
           <input type="text" placeholder="First name" onChange={this.updateField('fname')} value={this.state.fname}/>
           <br />
           <input type="text" placeholder="Last name" onChange={this.updateField('lname')} value={this.state.lname} />
@@ -54,6 +62,9 @@ class SignUpForm extends React.Component {
           <br />
           <br />
           <Link to='/' id='demo'>Log in as demo user</Link>
+          <div className='errors'>
+              {this.renderErrors()}
+          </div>
         </div>
       </div>
       </div>

@@ -11,6 +11,7 @@ export default class LogInForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault()
     this.props.logIn(this.state)
+      .then(() => this.props.history.push('/'))
   }
 
   updateField(field) {
@@ -20,11 +21,13 @@ export default class LogInForm extends React.Component {
   renderErrors() {
     return (
       <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
+        {this.props.errors.map((error, i) => {
+          return(
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          )
+  })}
       </ul>
     )
   }
@@ -48,7 +51,9 @@ export default class LogInForm extends React.Component {
             <br />
             <br />
             <Link to='/' id='demo'>Log in as demo user</Link>
-            {this.renderErrors()}
+            <div className='errors'>
+              {this.renderErrors()}
+            </div>
           </div>
         </div>
       </div>
