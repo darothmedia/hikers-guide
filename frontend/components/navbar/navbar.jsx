@@ -1,12 +1,23 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 
-export default class Navbar extends React.Component {
-  constructor(props){
-    super(props)
-  }
+export default ({currentUser, logout}) => {
+  const rightNav = currentUser ? (
+    <div id='user-nav'>
+      <button id='user-name'>{currentUser.fname}</button>
+    </div>
+  ) : (
+    <div id = 'right-navlinks'>
+      {console.log(currentUser)}
+      <Link to = '/signup'>
+        <button id = 'sign-up-button'>Sign Up</button>
+      </Link >
+      <Link to='/login'>
+      <button id='log-in-button'>Log In</button>
+      </Link>
+    </div >
+  )
 
-  render(){
     return(
       <div id='navbar'>
         <section id='left-nav'>
@@ -23,17 +34,8 @@ export default class Navbar extends React.Component {
         </div>
         </section>
         <section id='right-nav'>
-          {console.log(this.props.state)}
-          <div id='right-navlinks'>
-            <Link to='/signup'>
-              <button id='sign-up-button'>Sign Up</button>
-            </Link>
-            <Link to='/login'>
-              <button id='log-in-button'>Log In</button>
-            </Link>
-          </div>
+          {rightNav}
         </section>
       </div>
     )
-  }
 }

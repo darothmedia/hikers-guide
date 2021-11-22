@@ -8,6 +8,16 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= stylesheet_link_tag    'https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css'%>
     <%= javascript_include_tag 'application' %>
+
+    <% if current_user %>
+      <script>
+        window.currentUser = {
+          "fname": "<%= current_user.fname %>",
+          "lname": "<%= current_user.lname%>",
+          "email": "<%= current_user.email%>"
+        };
+      </script>
+    <% end %>
   </head>
 
   <body>
