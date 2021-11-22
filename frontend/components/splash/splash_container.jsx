@@ -1,8 +1,9 @@
 import Splash from "./splash";
 import { connect } from "react-redux";
 
-const mSTP = props => ({
 
+const mSTP = props => ({
+  tagline: localStorage.theme
 })
 
 const mDTP = dispatch => ({

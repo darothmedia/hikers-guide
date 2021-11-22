@@ -36,8 +36,19 @@
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
 }
 
+.galaxy #sign-up-form, .galaxy #log-in-form {
+  background-color: black;
+  color: white;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .4);
+}
+
 ::placeholder {
   color: #666666;
+  opacity: 0.5;
+}
+
+.galaxy ::placeholder {
+  color: white;
   opacity: 0.5;
 }
 
@@ -55,6 +66,11 @@
   width: 230px;
   border-radius: 5px;
   border: 1px solid #C4C4C4;
+}
+
+.galaxy #sign-up-form input, .galaxy #log-in-form input {
+  background-color: slategrey;
+  color: white;
 }
 
 input:focus {
@@ -84,6 +100,10 @@ input:focus {
   color: #666666;
   font-weight: 350;
   padding-bottom: 30px;
+}
+
+.galaxy #sign-up-form div, .galaxy #log-in-form div {
+  color: white;
 }
 
 #demo {

@@ -11,7 +11,7 @@ export default class Navbar extends React.Component {
     return(
       <div id='navbar'>
         <section id='left-nav'>
-          <Link to='/'>Explore</Link>
+          <Link to='/explore'>Explore</Link>
         </section>
         <section id='center'>
         <div id='logo'>

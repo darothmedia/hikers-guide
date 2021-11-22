@@ -4,6 +4,7 @@ import SignUpFormContainer from './users/sign_up_form_container'
 import SplashContainer from './splash/splash_container'
 import Navbar from './navbar/navbar';
 import LogInFormContainer from './users/log_in_form_container'
+import ExploreContainer from './explore/explore_container'
 
 const App = ({ children }) => (
   <div>
@@ -14,6 +15,7 @@ const App = ({ children }) => (
       {/* <Route exact path='/login' element={<LogInFormContainer />} /> */}
       <Route path='/signup' element={<SignUpFormContainer />} />
       <Route path='/login' element={<LogInFormContainer />} />
+      <Route path='/explore' element={<ExploreContainer />} />
       <Route exact path='/' element={<SplashContainer />} />
     </Routes>
   </div>
