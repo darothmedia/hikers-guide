@@ -7,7 +7,7 @@
   min-width: 800px;
 }
 
-#navbar[theme='galaxy'] {
+.galaxy #navbar {
   background-color: black;
 }
 
@@ -17,18 +17,45 @@
   font-weight: 600;
 }
 
-#logo {
+.galaxy #navbar a {
+  color: #C6C6C6;
+}
+
+#center {
   flex: 0 1 auto;
-  position: absolute;
-  left: 50%;
-  align-self: center;
-  height: 40px;
-  margin-top: 10px;
+  position: fixed;
+  left: 45%;
   transform: translateX(-50%);
+}
+
+#logo {
+  display: inline-block;
+  height: 40px;
+  // margin-top: 10px;
 }
 
 #logo img {
   height: 40px;
+  margin-top: 10px;
+}
+
+
+#ttg {
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+  background-color: #C6C6C6;
+  color: white;
+  font-size: 10px;
+  border: 0px solid #C6C6C6;
+  border-radius: 10px;
+  padding: 7px;
+  width: 100px;
+  margin-top: 14px;
+}
+
+.galaxy #navbar #ttg {
+  background-color: #D75B32;
 }
 
 #left-nav a {
@@ -58,6 +85,11 @@
   margin-right: 10px;
 }
 
+.galaxy #sign-up-button {
+  background-color: white;
+  color: #414141
+}
+
 #log-in-button {
   background-color: white;
   color: #D75B32;
@@ -67,7 +99,10 @@
   width: 90px;
 }
 
-#ttg {
-  cursor: pointer;
+.galaxy #log-in-button {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
 }
+
 
