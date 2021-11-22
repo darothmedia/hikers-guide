@@ -2,9 +2,8 @@ import { connect } from "react-redux";
 import LogInForm from "./log_in_form";
 import { logIn } from "../../actions/session_actions";
 
-const mSTP = (state) => ({
-  user: { email: "", password: "" },
-  errors: state.errors.session,
+const mSTP = ({errors}) => ({
+  errors: errors.session,
   formType: 'login'
 })
 

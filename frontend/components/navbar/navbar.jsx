@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom'
 export default ({currentUser, logout}) => {
   const rightNav = currentUser ? (
     <div id='user-nav'>
-      <button id='user-name'>{currentUser.fname}</button>
+      <button id='log-out' onClick={logout}>Log Out</button>
     </div>
   ) : (
     <div id = 'right-navlinks'>
-      {console.log(currentUser)}
       <Link to = '/signup'>
         <button id = 'sign-up-button'>Sign Up</button>
       </Link >

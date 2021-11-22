@@ -18,6 +18,10 @@ export default class LogInForm extends React.Component {
     return e => this.setState({ [field]: e.currentTarget.value })
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors()
+  }
+
   renderErrors() {
     return (
       <ul>

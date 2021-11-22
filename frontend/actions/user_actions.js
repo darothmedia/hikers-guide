@@ -37,14 +37,6 @@ export const requestUsers = () => dispatch => (UserAPIUtil.fetchUsers()
 export const requestUser = (userId) => dispatch => (UserAPIUtil.fetchUser(userId)
   .then(user => dispatch(receiveUser(user))))
 
-export const createUser = (user) => dispatch => (
-  UserAPIUtil.signUp(user).then(user => (
-    dispatch(receiveUser(user))
-  ), error => (
-    dispatch(receiveErrors(error.responseJSON))
-  ))
-);
-
 export const updateUser = (user) => dispatch => (UserAPIUtil.updateUser(user)
   .then(user => dispatch(receiveUser(user))))
 
