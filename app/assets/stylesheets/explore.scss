@@ -10,3 +10,11 @@
   flex-direction: column;
   align-content: flex-end;
 }
+
+.galaxy #explore-background {
+  background: url('https://hikers-guide.s3.us-west-1.amazonaws.com/galaxies/hubble_ngc2903_potw2143a.jpg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
