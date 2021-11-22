@@ -1,21 +1,34 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, BrowserRouter } from 'react-router-dom'
 
-
-export default class SignUpForm extends React.Component {
+class SignUpForm extends React.Component {
   constructor(props){
     super(props)
     this.state = this.props.user
     this.handleSubmit = this.handleSubmit.bind(this)
+    // this.renderErrors = this.renderErrors.bind(this)
   }
 
   handleSubmit(e){
     e.preventDefault()
     this.props.signUp(this.state)
+    
   }
 
   updateField(field) {
     return e => this.setState({ [field]: e.currentTarget.value })
+  }
+
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    )
   }
 
   render(){
@@ -24,7 +37,7 @@ export default class SignUpForm extends React.Component {
       <div id='sign-up-form'>
         <form onSubmit={this.handleSubmit}>
           <h2>Create your free account</h2>
-
+          {/* {this.renderErrors()} */}
           <input type="text" placeholder="First name" onChange={this.updateField('fname')} value={this.state.fname}/>
           <br />
           <input type="text" placeholder="Last name" onChange={this.updateField('lname')} value={this.state.lname} />
@@ -47,3 +60,5 @@ export default class SignUpForm extends React.Component {
     )
   }
 }
+
+export default SignUpForm

@@ -17,13 +17,25 @@ export default class LogInForm extends React.Component {
     return e => this.setState({ [field]: e.currentTarget.value })
   }
 
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
   render() {
     return (
       <div id='log-in-background'>
         <div id='log-in-form'>
           <form onSubmit={this.handleSubmit}>
             <h2>Log in and let's get going</h2>
-
+            
             <input type="text" placeholder="Email" onChange={this.updateField('email')} value={this.state.email} />
             <br />
             <input type="password" placeholder="Password" onChange={this.updateField('password')} value={this.state.password} />
@@ -36,6 +48,7 @@ export default class LogInForm extends React.Component {
             <br />
             <br />
             <Link to='/' id='demo'>Log in as demo user</Link>
+            {this.renderErrors()}
           </div>
         </div>
       </div>

@@ -1,13 +1,15 @@
 import { connect } from "react-redux";
 import LogInForm from "./log_in_form";
-import { requestUser } from "../../actions/user_actions";
+import { logIn } from "../../actions/session_actions";
 
-const mSTP = props => ({
-  user: { email: "", password: "" }
+const mSTP = (state) => ({
+  user: { email: "", password: "" },
+  errors: state.errors.session,
+  formType: 'login'
 })
 
 const mDTP = dispatch => ({
-  logIn: user => dispatch(requestUser(user))
+  logIn: user => dispatch(logIn(user))
 })
 
 export default connect(mSTP, mDTP)(LogInForm)

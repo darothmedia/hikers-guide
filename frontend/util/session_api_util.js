@@ -11,4 +11,3 @@ export const logout = () => (
     type: `DELETE`
   })
 )
-

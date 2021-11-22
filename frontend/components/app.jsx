@@ -5,6 +5,7 @@ import SplashContainer from './splash/splash_container'
 import Navbar from './navbar/navbar';
 import LogInFormContainer from './users/log_in_form_container'
 import ExploreContainer from './explore/explore_container'
+import Footer from './splash/footer';
 
 const App = ({ children }) => (
   <div>
@@ -18,6 +19,9 @@ const App = ({ children }) => (
       <Route path='/explore' element={<ExploreContainer />} />
       <Route exact path='/' element={<SplashContainer />} />
     </Routes>
+    <footer>
+      <Footer />
+    </footer>
   </div>
 );
 
