@@ -36,12 +36,12 @@ time, mark, audio, video {
 }
 
 body {
-  background-color: darkgreen;
+  background-color: white;
   font-family: 'Proxima Nova', Arial, sans-serif;
 }
 
 body.galaxy {
-  background-color: slategrey;
+  background-color: black;
 }
 
 a {
