@@ -8,11 +8,8 @@ export default class Splash extends React.Component {
   }
 
   tagline(){
-    // if (localStorage.theme === 'trail') {return ('planet')}
-    // else {
       let tags = ['trail', 'adventure', 'inspiration', 'path', 'planet']
       return (tags[Math.floor(Math.random() * tags.length)])
-    // }
   }
 
   render(){
