@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_19_201524) do
+ActiveRecord::Schema.define(version: 2021_11_23_195058) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2021_11_19_201524) do
     t.integer "acreage", null: false
     t.text "description", null: false
     t.text "hours"
-    t.integer "contact"
+    t.string "contact"
     t.string "fb_link"
     t.string "twitter_link"
     t.string "web_link"

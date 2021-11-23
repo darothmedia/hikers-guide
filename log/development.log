@@ -20331,3 +20331,550 @@ Processing by Api::UsersController#create as JSON
 Completed 422 Unprocessable Entity in 308ms (Views: 0.1ms | ActiveRecord: 1.3ms)
 
 
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (1.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 91]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 100]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 94]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 97]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 101]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 98]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 102]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 103]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 104]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 90]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 92]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 93]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 95]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 96]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 105]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 106]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 99]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "fname", "lname", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "demo@user.com"], ["fname", "demo"], ["lname", "user"], ["password_digest", "$2a$12$WDCSL0ypGc.Um9SHABc0Tec60JsUeiKLFlPhW08TbMod1C7F2bKTK"], ["session_token", "ksyR6rSWBkrD_-swsOkFYw"], ["created_at", "2021-11-23 19:35:45.405021"], ["updated_at", "2021-11-23 19:35:45.405021"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTrail Load (3.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mTrail Destroy (0.8ms)[0m  [1m[31mDELETE FROM "trails" WHERE "trails"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE DATABASE "hikers-guide_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE "hikers-guide_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35mSQL (1.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (9.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "park_tags" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "park_tags" ("id" bigserial primary key, "tag_id" integer NOT NULL, "park_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_park_tags_on_park_id" ON "park_tags"  ("park_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX  "index_park_tags_on_tag_id" ON "park_tags"  ("tag_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (3.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "parks" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "parks" ("id" bigserial primary key, "name" character varying NOT NULL, "acreage" integer NOT NULL, "description" text NOT NULL, "hours" text, "contact" integer, "fb_link" character varying, "twitter_link" character varying, "web_link" character varying, "lat" float, "lng" float, "state" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_parks_on_name" ON "parks"  ("name")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (3.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews" CASCADE[0m
+  ↳ db/schema.rb:44
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "body" text NOT NULL, "rating" integer NOT NULL, "actdate" date NOT NULL, "author_id" integer NOT NULL, "trail_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:44
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_author_id" ON "reviews"  ("author_id")[0m
+  ↳ db/schema.rb:44
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_trail_id" ON "reviews"  ("trail_id")[0m
+  ↳ db/schema.rb:44
+  [1m[35m (2.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "tags" CASCADE[0m
+  ↳ db/schema.rb:56
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "tags" ("id" bigserial primary key, "body" character varying NOT NULL, "tag_type" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:56
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_tags_on_body" ON "tags"  ("body")[0m
+  ↳ db/schema.rb:56
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "trail_tags" CASCADE[0m
+  ↳ db/schema.rb:64
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "trail_tags" ("id" bigserial primary key, "tag_id" integer NOT NULL, "trail_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:64
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_trail_tags_on_tag_id" ON "trail_tags"  ("tag_id")[0m
+  ↳ db/schema.rb:64
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_trail_tags_on_trail_id" ON "trail_tags"  ("trail_id")[0m
+  ↳ db/schema.rb:64
+  [1m[35m (3.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "trails" CASCADE[0m
+  ↳ db/schema.rb:73
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "trails" ("id" bigserial primary key, "name" character varying NOT NULL, "overview" text NOT NULL, "description" text, "difficulty" character varying NOT NULL, "length" float NOT NULL, "elevation" integer NOT NULL, "route_type" character varying NOT NULL, "lat" float, "lng" float, "park_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:73
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_trails_on_name" ON "trails"  ("name")[0m
+  ↳ db/schema.rb:73
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_trails_on_park_id" ON "trails"  ("park_id")[0m
+  ↳ db/schema.rb:73
+  [1m[35m (4.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:90
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "fname" character varying NOT NULL, "lname" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:90
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:90
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:90
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "park_tags" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "park_tags" ("id" bigserial primary key, "tag_id" integer NOT NULL, "park_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_park_tags_on_park_id" ON "park_tags"  ("park_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_park_tags_on_tag_id" ON "park_tags"  ("tag_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "parks" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "parks" ("id" bigserial primary key, "name" character varying NOT NULL, "acreage" integer NOT NULL, "description" text NOT NULL, "hours" text, "contact" integer, "fb_link" character varying, "twitter_link" character varying, "web_link" character varying, "lat" float, "lng" float, "state" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_parks_on_name" ON "parks"  ("name")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews" CASCADE[0m
+  ↳ db/schema.rb:44
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "body" text NOT NULL, "rating" integer NOT NULL, "actdate" date NOT NULL, "author_id" integer NOT NULL, "trail_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:44
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_author_id" ON "reviews"  ("author_id")[0m
+  ↳ db/schema.rb:44
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_trail_id" ON "reviews"  ("trail_id")[0m
+  ↳ db/schema.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "tags" CASCADE[0m
+  ↳ db/schema.rb:56
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "tags" ("id" bigserial primary key, "body" character varying NOT NULL, "tag_type" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:56
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_tags_on_body" ON "tags"  ("body")[0m
+  ↳ db/schema.rb:56
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "trail_tags" CASCADE[0m
+  ↳ db/schema.rb:64
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "trail_tags" ("id" bigserial primary key, "tag_id" integer NOT NULL, "trail_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:64
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_trail_tags_on_tag_id" ON "trail_tags"  ("tag_id")[0m
+  ↳ db/schema.rb:64
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX  "index_trail_tags_on_trail_id" ON "trail_tags"  ("trail_id")[0m
+  ↳ db/schema.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "trails" CASCADE[0m
+  ↳ db/schema.rb:73
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "trails" ("id" bigserial primary key, "name" character varying NOT NULL, "overview" text NOT NULL, "description" text, "difficulty" character varying NOT NULL, "length" float NOT NULL, "elevation" integer NOT NULL, "route_type" character varying NOT NULL, "lat" float, "lng" float, "park_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:73
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_trails_on_name" ON "trails"  ("name")[0m
+  ↳ db/schema.rb:73
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_trails_on_park_id" ON "trails"  ("park_id")[0m
+  ↳ db/schema.rb:73
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:90
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "fname" character varying NOT NULL, "lname" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:90
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:90
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:90
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211119201524)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211118224541),
+(20211118223502),
+(20211118225613),
+(20211118225118),
+(20211118225757),
+(20211118225420),
+(20211118224417);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-23 19:36:15.987643"], ["updated_at", "2021-11-23 19:36:15.987643"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-11-23 19:36:15.990050"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "fname", "lname", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "demo@user.com"], ["fname", "demo"], ["lname", "user"], ["password_digest", "$2a$12$YPLdMTg2cxbt11pl510IVeG/iFRL7rMLhQEsvZOrOs0W3KrMcnBrq"], ["session_token", "EdnRhz0YzaZRp-ySvHEkUw"], ["created_at", "2021-11-23 19:36:16.323286"], ["updated_at", "2021-11-23 19:36:16.323286"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTrail Load (2.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "fname", "lname", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "demo@user.com"], ["fname", "demo"], ["lname", "user"], ["password_digest", "$2a$12$u1tWNxy10Kg4f5QFu/kSSemTEHqBBi3HXEXOmgBomqnpRsdVDC2zK"], ["session_token", "n0_f1aBQlBIEtiItjgp7TA"], ["created_at", "2021-11-23 19:36:25.320666"], ["updated_at", "2021-11-23 19:36:25.320666"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTrail Load (1.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "fname", "lname", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "demo@user.com"], ["fname", "demo"], ["lname", "user"], ["password_digest", "$2a$12$/R1.vmyRJRabgIEWN9WExe7l1nJDM8krJX5egyHVPUJBV0M8kTzl6"], ["session_token", "pL8kp83PxiZYbzcqWK82Vg"], ["created_at", "2021-11-23 19:38:31.795524"], ["updated_at", "2021-11-23 19:38:31.795524"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTrail Load (1.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPark Load (1.4ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:52
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "fname", "lname", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "demo@user.com"], ["fname", "demo"], ["lname", "user"], ["password_digest", "$2a$12$pqa5TbwIjFxumoBCl9cncuQNeywQk4c5DuSquhNhPZPekStFbgegC"], ["session_token", "SJAsJMq-zt7rakkyrvMGWQ"], ["created_at", "2021-11-23 19:49:22.729570"], ["updated_at", "2021-11-23 19:49:22.729570"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPark Load (1.7ms)[0m  [1m[34mSELECT "parks".* FROM "parks"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "fname", "lname", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "demo@user.com"], ["fname", "demo"], ["lname", "user"], ["password_digest", "$2a$12$/5Yg4fs5Is/IUy9FkI478eerkN2ZbM1vDy11/22APtdOVmqzkMX7y"], ["session_token", "v8qJp_TahNoC8aZVBGt9UQ"], ["created_at", "2021-11-23 19:49:59.310589"], ["updated_at", "2021-11-23 19:49:59.310589"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPark Load (1.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPark Create (2.5ms)[0m  [1m[32mINSERT INTO "parks" ("name", "acreage", "description", "hours", "web_link", "lat", "lng", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Tilden Regional Park"], ["acreage", 2079], ["description", "Tilden Regional Park, also known as Tilden Park, is a 2,079-acre regional park in the East Bay, part of the San Francisco Bay Area in California. It is between the Berkeley Hills and San Pablo Ridge."], ["hours", "Monday 5:00 am - 10:00 pm | Tuesday 5:00 am - 10:00 pm | Wednesday 5:00 am - 10:00 pm | Thursday 5:00 am - 10:00 pm |Friday 5:00 am - 10:00 pm | Saturday 5:00 am - 10:00 pm | Sunday 5:00 am - 10:00 pm"], ["web_link", "http://www.ebparks.org/parks/tilden.htm"], ["lat", 37.90486], ["lng", -122.24505], ["state", "California"], ["created_at", "2021-11-23 19:49:59.337066"], ["updated_at", "2021-11-23 19:49:59.337066"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPark Create (0.9ms)[0m  [1m[32mINSERT INTO "parks" ("name", "acreage", "description", "hours", "contact", "fb_link", "twitter_link", "web_link", "lat", "lng", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Yosemite National Park"], ["acreage", 759620], ["description", "With over 3.5 million yearly visitors from throughout the world, the iconic Yosemite National Park is known for some of the most beautiful hikes and landscapes in the United States. There are over 800 miles of trails to explore through Yosemite Valley, Tuolumne Meadows, and Wawona. Yosemite has so much to see including the sequoias, the flower filed meadows and valleys left behind from the glaciers, the highest waterfall in the United States, and the spectacular Half Dome and El Capitan."], ["hours", "Monday: All day | Tuesday: All day | Wednesday: All day | Thursday: All day | Friday: All day | Saturday All day | Sunday All day"], ["contact", 2093720200], ["fb_link", "https://www.facebook.com/YosemiteNPS"], ["twitter_link", "https://twitter.com/YosemiteNPS"], ["web_link", "https://www.nps.gov/yose/index.htm"], ["lat", 37.72736], ["lng", -119.57502], ["state", "California"], ["created_at", "2021-11-23 19:49:59.340821"], ["updated_at", "2021-11-23 19:49:59.340821"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6913667672095649325)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to EditTrails (20211123195058)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.3ms)[0m  [1m[35mALTER TABLE "trails" ALTER COLUMN "contact" TYPE character varying[0m
+  ↳ db/migrate/20211123195058_edit_trails.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6913667672095649325)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6913667672095649325)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to EditTrails (20211123195058)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (15.1ms)[0m  [1m[35mALTER TABLE "parks" ALTER COLUMN "contact" TYPE character varying[0m
+  ↳ db/migrate/20211123195058_edit_trails.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211123195058"]]
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6913667672095649325)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "fname", "lname", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "demo@user.com"], ["fname", "demo"], ["lname", "user"], ["password_digest", "$2a$12$1xauw2k7b0YTsOo3fPEVFuyw6JtAYr.Zz.TYvOneLQW7L.Ol7fpk6"], ["session_token", "t6aRgHKIBon0EkzFZUhEjQ"], ["created_at", "2021-11-23 19:53:12.349970"], ["updated_at", "2021-11-23 19:53:12.349970"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPark Load (1.7ms)[0m  [1m[34mSELECT "parks".* FROM "parks"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mPark Destroy (0.4ms)[0m  [1m[31mDELETE FROM "parks" WHERE "parks"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mPark Destroy (0.4ms)[0m  [1m[31mDELETE FROM "parks" WHERE "parks"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPark Create (0.7ms)[0m  [1m[32mINSERT INTO "parks" ("name", "acreage", "description", "hours", "web_link", "lat", "lng", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Tilden Regional Park"], ["acreage", 2079], ["description", "Tilden Regional Park, also known as Tilden Park, is a 2,079-acre regional park in the East Bay, part of the San Francisco Bay Area in California. It is between the Berkeley Hills and San Pablo Ridge."], ["hours", "Monday 5:00 am - 10:00 pm | Tuesday 5:00 am - 10:00 pm | Wednesday 5:00 am - 10:00 pm | Thursday 5:00 am - 10:00 pm |Friday 5:00 am - 10:00 pm | Saturday 5:00 am - 10:00 pm | Sunday 5:00 am - 10:00 pm"], ["web_link", "http://www.ebparks.org/parks/tilden.htm"], ["lat", 37.90486], ["lng", -122.24505], ["state", "California"], ["created_at", "2021-11-23 19:53:12.382454"], ["updated_at", "2021-11-23 19:53:12.382454"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPark Create (0.5ms)[0m  [1m[32mINSERT INTO "parks" ("name", "acreage", "description", "hours", "contact", "fb_link", "twitter_link", "web_link", "lat", "lng", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Yosemite National Park"], ["acreage", 759620], ["description", "With over 3.5 million yearly visitors from throughout the world, the iconic Yosemite National Park is known for some of the most beautiful hikes and landscapes in the United States. There are over 800 miles of trails to explore through Yosemite Valley, Tuolumne Meadows, and Wawona. Yosemite has so much to see including the sequoias, the flower filed meadows and valleys left behind from the glaciers, the highest waterfall in the United States, and the spectacular Half Dome and El Capitan."], ["hours", "Monday: All day | Tuesday: All day | Wednesday: All day | Thursday: All day | Friday: All day | Saturday All day | Sunday All day"], ["contact", "209-372-0200"], ["fb_link", "https://www.facebook.com/YosemiteNPS"], ["twitter_link", "https://twitter.com/YosemiteNPS"], ["web_link", "https://www.nps.gov/yose/index.htm"], ["lat", 37.72736], ["lng", -119.57502], ["state", "California"], ["created_at", "2021-11-23 19:53:12.384294"], ["updated_at", "2021-11-23 19:53:12.384294"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mPark Create (0.6ms)[0m  [1m[32mINSERT INTO "parks" ("name", "acreage", "description", "hours", "contact", "web_link", "lat", "lng", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Mount Tamalpais State Park"], ["acreage", 6300], ["description", "With over 3.5 million yearly visitors from throughout the world, the iconic Yosemite National Park is known for some of the most beautiful hikes and landscapes in the United States. There are over 800 miles of trails to explore through Yosemite Valley, Tuolumne Meadows, and Wawona. Yosemite has so much to see including the sequoias, the flower filed meadows and valleys left behind from the glaciers, the highest waterfall in the United States, and the spectacular Half Dome and El Capitan."], ["hours", "Monday 7:00 am - dusk | Tuesday 7:00 am - dusk | Wednesday 7:00 am - dusk | Thursday 7:00 am - dusk |Friday 7:00 am - dusk | Saturday 7:00 am - dusk | Sunday 7:00 am - dusk"], ["contact", "415-388-2070"], ["web_link", "http://www.parks.ca.gov/default.asp?page_id=471"], ["lat", 37.92743], ["lng", -122.57986], ["state", "California"], ["created_at", "2021-11-23 19:53:12.385941"], ["updated_at", "2021-11-23 19:53:12.385941"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[36mTrail Load (1.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:51
+  [1m[36mTrail Create (2.2ms)[0m  [1m[32mINSERT INTO "trails" ("name", "overview", "description", "difficulty", "length", "elevation", "route_type", "lat", "lng", "park_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Wildcat Peak Trail"], ["overview", "Wildcat Peak Trail via Laurel Canyon and Sylvan Trail is a 3.2 mile heavily trafficked loop trail located near Berkeley, California that features beautiful wild flowers and is rated as moderate. The trail is primarily used for hiking, running, and nature trips and is accessible year-round."], ["description", "This scenic loop takes you from the Tilden Park Environmental Education Center to the summit of Wildcat Peak via the Jewel Lake, Sylvan, Peak and Laurel Canyon trails. Terrific views of the Bay Area and a variety of plants and birds keep this route interesting throughout. This route may be very muddy in wet weather."], ["difficulty", "Moderate"], ["length", 3.2], ["elevation", 672], ["route_type", "Loop"], ["lat", 37.90486], ["lng", -122.24505], ["park_id", 3], ["created_at", "2021-11-23 19:53:12.422923"], ["updated_at", "2021-11-23 19:53:12.422923"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mPark Load (0.5ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:64
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:77
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:77
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:77
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:90
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:90
+  [1m[36mTrail Create (2.2ms)[0m  [1m[32mINSERT INTO "trails" ("name", "overview", "description", "difficulty", "length", "elevation", "route_type", "lat", "lng", "park_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Verna Dunshee Loop"], ["overview", "Verna Dunshee Loop is a 0.8 mile lightly trafficked loop trail located near Mill Valley, California that features beautiful wild flowers and is good for all skill levels. The trail is primarily used for hiking, walking, running, and nature trips and is accessible year-round."], ["description", "According to Access Northern California (http://accessnca.org/access-northern-california/explore/explore-detail-view/?site_id=89): Just north of San Francisco’s Golden Gate Bridge, Mount Tamalpais State Park rises majestically from the heart of Marin County. Its deep canyons and sweeping hillsides are cloaked with cool redwood forests, oak woodlands, open grasslands, and sturdy chaparral. Most of it inaccessible to wheelchair riders."], ["difficulty", "Easy"], ["length", 0.8], ["elevation", 68], ["route_type", "Loop"], ["lat", 37.92743], ["lng", -122.57986], ["park_id", 5], ["created_at", "2021-11-23 19:53:12.438059"], ["updated_at", "2021-11-23 19:53:12.438059"]]
+  ↳ db/seeds.rb:90
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:90

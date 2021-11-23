@@ -19,7 +19,7 @@
 class Trail < ApplicationRecord
 
   validates :name, :overview, :difficulty, :length, :elevation, :route_type, :park_id, presence: true
-  validates :difficulty, inclusion: {in: ['easy', 'moderate', 'hard']}
+  validates :difficulty, inclusion: {in: ['Easy', 'Moderate', 'Hard']}
   validates :route_type, inclusion: {in: ['Out & Back', 'Loop', 'Point-to-Point']}
   
   has_one_attached :main_photo
