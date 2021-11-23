@@ -68,7 +68,7 @@ t2 = Trail.create(
   difficulty: "Moderate",
   length: 4.0,
   elevation: 452,
-  route_type: "Out & back",
+  route_type: "Out & Back",
   lat: 37.90486,
   lng: -122.24505,
   park_id: p1.id
@@ -81,7 +81,7 @@ t3 = Trail.create(
   difficulty: "Hard",
   length: 3.2,
   elevation: 672,
-  route_type: "Out & back",
+  route_type: "Out & Back",
   lat: 37.72736,
   lng: -119.57502,
   park_id: p2.id
