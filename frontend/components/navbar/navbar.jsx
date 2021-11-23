@@ -9,6 +9,7 @@ export default ({currentUser, logout}) => {
     </div>
   ) : (
     <div id = 'right-navlinks'>
+      {console.log(currentUser)}
       <Link to = '/signup'>
         <button id = 'sign-up-button'>Sign Up</button>
       </Link >
