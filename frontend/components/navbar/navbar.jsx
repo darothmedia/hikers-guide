@@ -16,7 +16,6 @@ export default class Navbar extends React.Component {
       </div>
     ) : (
       <div id='right-navlinks'>
-        {console.log(this.props.currentUser)}
         <Link to='/signup'>
           <button id='sign-up-button'>Sign Up</button>
         </Link >
