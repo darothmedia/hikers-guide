@@ -14,13 +14,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const splash = document.getElementById('splash')
   let preloadedState = undefined
 
-  if (window.currentUser) {
-    preloadedState = {
-      session: {
-        currentUser: window.currentUser
-      }
-    }
-  }
+  // if (window.currentUser) {
+  //   preloadedState = {
+  //     session: {
+  //       currentUser: window.currentUser
+  //     }
+  //   }
+  // }
 
   window.preloadedState = preloadedState
 

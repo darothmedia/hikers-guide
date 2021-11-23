@@ -24,13 +24,13 @@ export const clearErrors = () => ({
   type: CLEAR_ERRORS
 })
 
-export const logIn = user => dispatch => (
-  SessionAPIutil.login(user)
-    .then(dispatch(clearErrors()))
-    .then((user) => (
-      dispatch(receiveCurrentUser(user)))
-      .fail(errors => (dispatch(receiveErrors(errors.responseJSON)))
-  )))
+export const logIn = (user) => dispatch => (
+  SessionAPIutil.login(user).then((user) => (
+      dispatch(receiveCurrentUser(user))
+  ), error => (
+      dispatch(receiveErrors(error.responseJSON))
+  ))   
+);
 
 export const logOut = () => dispatch => (
   SessionAPIutil.logout()
