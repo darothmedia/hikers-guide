@@ -6,4 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-trails = 
+User.destroy_all
+demo = User.create(fname: 'demo', lname: 'user', email: 'demo@user.com', password:'password')

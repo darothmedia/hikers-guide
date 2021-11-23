@@ -6,9 +6,9 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER'
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS'
 export const CLEAR_ERRORS = 'CLEAR_ERRORS'
 
-const receiveCurrentUser = currentUser => ({
+const receiveCurrentUser = user => ({
   type: RECEIVE_CURRENT_USER,
-  currentUser
+  user
 })
 
 const logoutCurrentUser = () => ({
@@ -25,9 +25,9 @@ export const clearErrors = () => ({
 })
 
 export const logIn = (user) => dispatch => (
-  SessionAPIutil.login(user).then((user) => (
-      dispatch(receiveCurrentUser(user))
-  ), error => (
+  SessionAPIutil.login(user)
+    .then((user) => dispatch(receiveCurrentUser(user))
+  , error => (
       dispatch(receiveErrors(error.responseJSON))
   ))   
 );

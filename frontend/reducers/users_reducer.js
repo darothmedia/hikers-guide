@@ -3,15 +3,14 @@ import { RECEIVE_USERS, RECEIVE_USER, REMOVE_USER } from '../actions/user_action
 
 const UsersReducer = (oldState = {}, action) => {
   Object.freeze(oldState)
+  const nState = Object.assign({}, oldState)
   switch (action.type) {
     case RECEIVE_USERS:
       return Object.assign({}, action.users)
     case RECEIVE_USER:
-      return Object.assign({}, oldState, action.user)
+      return Object.assign({}, nState, {[action.user.id]: action.user})
     case RECEIVE_CURRENT_USER:
-      return Object.assign({}, oldState, action.currentUser)
     case REMOVE_USER:
-      let nState = Object.assign({}, oldState)
       delete nState[action.userId]
       return nState
     default:

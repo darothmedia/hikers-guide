@@ -6,12 +6,19 @@ class SignUpForm extends React.Component {
     super(props)
     this.state = { fname: "", lname: "", email: "", password: "" },
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.demoUserLogin = this.demoUserLogin.bind(this)
   }
 
   handleSubmit(e){
     e.preventDefault()
     this.props.signUp(this.state)
       .then(() => this.props.history.push('/'))
+  }
+
+  demoUserLogin(e) {
+    e.preventDefault()
+    const demo = { email: 'demo@user.com', password: 'password' }
+    this.props.logIn(demo)
   }
 
   updateField(field) {
@@ -64,7 +71,7 @@ class SignUpForm extends React.Component {
           Already have an account? <Link to='/login'>Log in</Link>
           <br />
           <br />
-          <Link to='/' id='demo'>Log in as demo user</Link>
+          <button onClick={this.demoUserLogin} className='demo'>Log in as demo user</button>
           <div className='errors'>
               {this.renderErrors()}
           </div>

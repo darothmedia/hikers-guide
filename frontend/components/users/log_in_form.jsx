@@ -6,6 +6,7 @@ export default class LogInForm extends React.Component {
     super(props)
     this.state = {email: "", password: ""}
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.demoUserLogin = this.demoUserLogin.bind(this)
   }
 
   handleSubmit(e) {
@@ -13,6 +14,12 @@ export default class LogInForm extends React.Component {
     const user = this.state
     this.props.logIn(user)
       .then(() => this.props.history.push('/'))
+  }
+
+  demoUserLogin(e) {
+    e.preventDefault()
+    const demo = {email: 'demo@user.com', password:'password'}
+    this.props.logIn(demo)
   }
 
   updateField(field) {
@@ -55,7 +62,7 @@ export default class LogInForm extends React.Component {
             Don't have an account?
             <br />
             <br />
-            <Link to='/' id='demo'>Log in as demo user</Link>
+            <button onClick={this.demoUserLogin} className='demo'>Log in as demo user</button>
             <div className='errors'>
               {this.renderErrors()}
             </div>

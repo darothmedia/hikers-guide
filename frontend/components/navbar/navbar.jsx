@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom'
 
 export default ({currentUser, logout}) => {
-  const rightNav = currentUser ? (
+  const rightNav = (currentUser) ? (
     <div id='user-nav'>
       <button id='log-out' onClick={logout}>Log Out</button>
     </div>
