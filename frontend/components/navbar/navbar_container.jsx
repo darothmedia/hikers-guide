@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "./navbar";
 import { connect } from "react-redux";
 import { logOut } from "../../actions/session_actions";

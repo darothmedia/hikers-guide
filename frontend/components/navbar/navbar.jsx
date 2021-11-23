@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from 'react-router-dom'
 
 export default ({currentUser, logout}) => {
-  const rightNav = (currentUser) ? (
+  const display = currentUser ? (
     <div id='user-nav'>
+      <div id='user-name'>{currentUser.fname}</div>
       <button id='log-out' onClick={logout}>Log Out</button>
     </div>
   ) : (
@@ -33,7 +34,7 @@ export default ({currentUser, logout}) => {
         </div>
         </section>
         <section id='right-nav'>
-          {rightNav}
+          {display}
         </section>
       </div>
     )

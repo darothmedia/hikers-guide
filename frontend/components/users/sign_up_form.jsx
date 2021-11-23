@@ -19,6 +19,7 @@ class SignUpForm extends React.Component {
     e.preventDefault()
     const demo = { email: 'demo@user.com', password: 'password' }
     this.props.logIn(demo)
+      .then(() => this.props.history.push('/'))
   }
 
   updateField(field) {

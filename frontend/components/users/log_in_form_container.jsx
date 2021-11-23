@@ -1,10 +1,9 @@
 import { connect } from "react-redux";
 import LogInForm from "./log_in_form";
-import { logIn } from "../../actions/session_actions";
-import { clearErrors } from "../../actions/session_actions";
+import { logIn, clearErrors } from "../../actions/session_actions";
 
-const mSTP = ({errors}) => ({
-  errors: errors.session,
+const mSTP = (state) => ({
+  errors: state.errors.session,
   formType: 'login'
 })
 

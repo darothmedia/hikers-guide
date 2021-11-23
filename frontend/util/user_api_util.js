@@ -1,7 +1,7 @@
 export const signUp = (user) => (
   $.ajax({
     url: `/api/users`,
-    type: `POST`,
+    method: 'POST',
     data: { user }
   })
 )
@@ -9,14 +9,14 @@ export const signUp = (user) => (
 export const fetchUsers = () => (
   $.ajax({
     url: `/api/users`,
-    type: `GET`
+    method: 'GET'
   })
 )
 
 export const fetchUser = (userId) => (
   $.ajax({
     url: `/api/users/${userId}`,
-    type: `GET`,
+    method: 'GET',
     userId
   })
 )
@@ -24,14 +24,14 @@ export const fetchUser = (userId) => (
 export const deleteUser = (userId) => (
   $.ajax({
     url: `/api/users/${userId}`,
-    type: `DELETE`
+    method: 'DELETE'
   })
 )
 
 export const updateUser = (user) => (
   $.ajax({
     url: `/api/users/${user.id}`,
-    type: `PATCH`,
+    method: 'PATCH',
     data: {user}
   })
 )
