@@ -3,8 +3,8 @@ import Navbar from "./navbar";
 import { connect } from "react-redux";
 import { logOut } from "../../actions/session_actions";
 
-const mSTP = ({entities, session}) => ({
-  currentUser = entities.users
+const mSTP = (state) => ({
+  currentUser: state.session.currentUser
 })
 
 const mDTP = dispatch => ({

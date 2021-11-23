@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router';
 import SignUpFormContainer from './users/sign_up_form_container'
 import SplashContainer from './splash/splash_container'
-import Navbar from './navbar/navbar';
+import NavbarContainer from './navbar/navbar_container'
 import LogInFormContainer from './users/log_in_form_container'
 import ExploreContainer from './explore/explore_container'
 import Footer from './splash/footer';
@@ -11,7 +11,7 @@ import { ProtectedRoute, AuthRoute } from '../util/route_util';
 const App = ({ children }) => (
   <div>
     <header>
-      <Navbar />
+      <NavbarContainer />
     </header>
     <Switch>
       <Route path='/signup' component={SignUpFormContainer} />

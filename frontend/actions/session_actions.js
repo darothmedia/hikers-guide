@@ -40,8 +40,9 @@ export const logIn = (user) => dispatch => (
 
 export const logOut = () => dispatch => (
   SessionAPIutil.logout()
-    .then(() => dispatch(logoutCurrentUser()))
-      .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
+    .then(() => dispatch(logoutCurrentUser()),
+    error => dispatch(receiveErrors(error.responseJSON))
+  )
 )
 
 export const signUp = (user) => dispatch => (
