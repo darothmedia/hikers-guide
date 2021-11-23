@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom'
+import TrailModule from "../trails/trail_module";
 
 export default class Explore extends React.Component {
   constructor(props) {
@@ -12,20 +13,15 @@ export default class Explore extends React.Component {
 
   render() {
     return (
-      <div id='trails'>
-        <ul>
+      <div id='explore-bg'>
+        <div id='trails'>
           {this.props.trails.map((trail) => (
-            <div key={trail.id}>
-              <li>{trail.name}</li>
-              <li>{trail.elevation}</li>
-              <li>{trail.overview}</li>
-              <li>{trail.difficulty}</li>
-              <br />
-            </div>
+            <TrailModule key={trail.id} trail={trail} />
           ))
           }
-        </ul>
+        </div>
       </div>
+      
     )
   }
 }

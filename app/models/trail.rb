@@ -29,6 +29,5 @@ class Trail < ApplicationRecord
   has_many :tags,
     through: :trail_tags,
     class_name: :Tag
- 
 
 end

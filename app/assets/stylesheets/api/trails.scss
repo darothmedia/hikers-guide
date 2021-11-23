@@ -1,3 +1,82 @@
 // Place all the styles related to the api/trails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#explore-bg {
+  background-color: #F2F2F2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#trails {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-left: 10px;
+  align-content: space-around;
+}
+
+#trail-module {
+  display: flexbox;
+  width: 298px;
+  height: 200px;
+  background-color: white;
+  padding: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  // box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
+  
+}
+
+#trail-stats {
+  margin-top: 120px;
+}
+
+#trail-stats p {
+  font-size: 14px;
+  color: #767676;
+}
+
+#trail-stats p div {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#trail-stats h1 {
+  font-weight: 600;
+  font-size: 17px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.difficulty {
+  background-color: #D75B32;
+  color: white;
+  font-size: 12px;
+  font-weight: 350;
+  border: 0px solid #D75B32;
+  border-radius: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 4px;
+  display: block;
+  width: 70px;
+  text-align: center;
+}
+
+.difficulty#Easy {
+  background-color: #629730;
+}
+
+.difficulty#Hard {
+  background-color: #414141;
+}
+
+.difficulty#Moderate {
+  background-color: #4B98D3;
+}
+
