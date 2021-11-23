@@ -6,9 +6,25 @@ export default class Explore extends React.Component {
     super(props)
   }
 
+  componentDidMount(){
+    this.props.fetchTrails()
+  }
+
   render() {
     return (
-      <div id='explore-background'>
+      <div id='trails'>
+        <ul>
+          {this.props.trails.map((trail) => (
+            <div key={trail.id}>
+              <li>{trail.name}</li>
+              <li>{trail.elevation}</li>
+              <li>{trail.overview}</li>
+              <li>{trail.difficulty}</li>
+              <br />
+            </div>
+          ))
+          }
+        </ul>
       </div>
     )
   }
