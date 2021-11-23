@@ -6,7 +6,6 @@ class SignUpForm extends React.Component {
     super(props)
     this.state = { fname: "", lname: "", email: "", password: "" },
     this.handleSubmit = this.handleSubmit.bind(this)
-    // this.renderErrors = this.renderErrors.bind(this)
   }
 
   handleSubmit(e){
