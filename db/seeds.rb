@@ -50,6 +50,7 @@ p3 = Park.create(
 )
 
 Trail.destroy_all
+
 t1 = Trail.create(
   name: "Wildcat Peak Trail",
   overview:"Wildcat Peak Trail via Laurel Canyon and Sylvan Trail is a 3.2 mile heavily trafficked loop trail located near Berkeley, California that features beautiful wild flowers and is rated as moderate. The trail is primarily used for hiking, running, and nature trips and is accessible year-round.",
@@ -60,11 +61,14 @@ t1 = Trail.create(
   route_type: "Loop",
   lat: 37.90486,
   lng: -122.24505,
-  park_id: p1.id
+  park_id: p1.id,
+  m_photo: 'https://hikers-guide.s3.us-west-1.amazonaws.com/HikersGuide_GP2/IMG_8338.jpg'
 )
 
 tp1 = URI.open('https://hikers-guide.s3.us-west-1.amazonaws.com/HikersGuide_GP2/IMG_8338.jpg')
 t1.main_photo.attach(io: tp1, filename: 'IMG_8338.jpg')
+
+
 
 t2 = Trail.create(
   name: "Inspiration Point Trail",
@@ -76,7 +80,8 @@ t2 = Trail.create(
   route_type: "Out & Back",
   lat: 37.90486,
   lng: -122.24505,
-  park_id: p1.id
+  park_id: p1.id,
+  m_photo: 'https://hikers-guide.s3.us-west-1.amazonaws.com/HikersGuide_GP2/DSCN4130.jpg'
 )
 
 t3 = Trail.create(
@@ -89,7 +94,8 @@ t3 = Trail.create(
   route_type: "Out & Back",
   lat: 37.72736,
   lng: -119.57502,
-  park_id: p2.id
+  park_id: p2.id,
+  m_photo: 'https://hikers-guide.s3.us-west-1.amazonaws.com/HikersGuide_GP2/IMG_20210913_100444372.jpg'
 )
 
 t4 = Trail.create(
@@ -102,6 +108,7 @@ t4 = Trail.create(
   route_type: "Loop",
   lat: 37.92743,
   lng: -122.57986,
-  park_id: p3.id
+  park_id: p3.id,
+  m_photo: 'https://hikers-guide.s3.us-west-1.amazonaws.com/HikersGuide_GP2/IMG_8823.jpg'
 )
 

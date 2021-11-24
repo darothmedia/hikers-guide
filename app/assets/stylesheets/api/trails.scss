@@ -25,18 +25,35 @@
   width: 250px;
   height: 200px;
   background-color: white;
-  padding: 20px;
+  // padding: 20px;
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 10px;
+  overflow: hidden;
   // box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
   
 }
 
-// #trail-stats {
-//   // margin-top: 120px;
-// }
+#trail-module>div {
+  width: 250px;
+  height: 100px;
+  overflow: hidden;
+}
+
+
+
+#trail-module img {
+  width: 250px;
+  object-fit: cover;
+  transform: translateY(-20%);
+}
+
+#trail-stats {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+}
 
 #trail-stats p {
   font-size: 14px;
@@ -65,8 +82,8 @@
   font-weight: 350;
   border: 0px solid #D75B32;
   border-radius: 8px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 4px;
+  margin-bottom: 4px;
   padding: 4px;
   display: block;
   width: 70px;
@@ -84,4 +101,6 @@
 .difficulty#Moderate {
   background-color: #4B98D3;
 }
+
+
 

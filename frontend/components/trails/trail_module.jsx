@@ -15,10 +15,7 @@ const TrailModule = ({trail}) => {
 
   return (
     <div id='trail-module'>
-      <image>
-        {console.log(trail.mainPhoto)}
-        <img src={trail.mainPhoto.filename} alt={trail.name} />
-      </image>
+      <div><img src={trail.m_photo} alt={trail.name} /></div>
       <div id='trail-stats'>
         <h1>{trail.name}</h1>
         <p>{trail.park}</p>

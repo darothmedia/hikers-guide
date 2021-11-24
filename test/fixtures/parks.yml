@@ -7,7 +7,7 @@
 #  acreage      :integer          not null
 #  description  :text             not null
 #  hours        :text
-#  contact      :integer
+#  contact      :string
 #  fb_link      :string
 #  twitter_link :string
 #  web_link     :string
