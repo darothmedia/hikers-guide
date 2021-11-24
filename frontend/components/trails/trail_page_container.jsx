@@ -1,13 +1,13 @@
-import Explore from "./explore";
+import TrailPage from './trail_page'
 import { connect } from "react-redux";
-import { fetchAllTrails } from "../../actions/trail_actions";
+import { fetchTrail } from "../../actions/trail_actions";
 
 const mSTP = state => ({
-  trails: Object.keys(state.entities.trails).map(key => state.entities.trails[key])
+  trail: state.entities.trails
 })
 
 const mDTP = dispatch => ({
-  fetchTrails: () => dispatch(fetchAllTrails())
+  fetchTrail: (trailId) => dispatch(fetchTrail(trailId))
 })
 
-export default connect(mSTP, mDTP)(Explore)
+export default connect(mSTP, mDTP)(TrailPage)

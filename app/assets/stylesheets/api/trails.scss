@@ -2,13 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#explore-bg {
-  background-color: #F2F2F2;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
 #trails {
   display: flex;
   flex-direction: row;
@@ -16,7 +9,7 @@
   margin-left: 10px;
   align-content: space-around;
   justify-content: center;
-  min-width: 1200px;
+  min-width: 1080px;
 }
 
 #trail-module {
@@ -32,7 +25,10 @@
   border-radius: 10px;
   overflow: hidden;
   // box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
-  
+}
+
+.galaxy #trail-module {
+  background-color: #414141;
 }
 
 #trail-module>div {
@@ -41,10 +37,9 @@
   overflow: hidden;
 }
 
-
-
 #trail-module img {
-  width: 250px;
+  width: 255px;
+  height: auto;
   object-fit: cover;
   transform: translateY(-20%);
 }
@@ -58,6 +53,16 @@
 #trail-stats p {
   font-size: 14px;
   color: #767676;
+}
+
+.galaxy #trail-stats {
+  color: white;
+}
+
+
+
+.galaxy #trail-stats p, .galaxy #lower-info div {
+  color: lightgray;
 }
 
 #lower-info div {
@@ -96,6 +101,10 @@
 
 .difficulty#Hard {
   background-color: #414141;
+}
+
+.galaxy .difficulty#Hard {
+  background-color: black;
 }
 
 .difficulty#Moderate {
