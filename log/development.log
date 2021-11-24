@@ -29942,3 +29942,432 @@ Processing by Api::TrailsController#index as JSON
 Completed 200 OK in 25ms (Views: 13.8ms | ActiveRecord: 9.9ms)
 
 
+Started GET "/" for ::1 at 2021-11-23 17:10:16 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 54ms (Views: 52.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/trails" for ::1 at 2021-11-23 17:10:17 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (1.5ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  [1m[36mPark Load (0.9ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mCACHE Park Load (0.0ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (0.5ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (1.2ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 18], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (1.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 20], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  Rendered api/trails/index.json.jbuilder (20.9ms)
+Completed 200 OK in 24ms (Views: 13.0ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/api/trails" for ::1 at 2021-11-23 17:10:36 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (1.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  [1m[36mPark Load (0.6ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mCACHE Park Load (0.0ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (0.5ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (0.9ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 18], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 20], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  Rendered api/trails/index.json.jbuilder (17.0ms)
+Completed 200 OK in 20ms (Views: 13.1ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/api/trails" for ::1 at 2021-11-23 17:12:38 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (4.6ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  [1m[36mPark Load (0.6ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mCACHE Park Load (0.0ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (0.5ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 18], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 20], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  Rendered api/trails/index.json.jbuilder (16.4ms)
+Completed 200 OK in 20ms (Views: 10.6ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/api/trails" for ::1 at 2021-11-23 17:12:43 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (0.7ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mCACHE Park Load (0.0ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (0.5ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 18], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 20], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  Rendered api/trails/index.json.jbuilder (14.1ms)
+Completed 200 OK in 18ms (Views: 12.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/api/trails" for ::1 at 2021-11-23 17:13:02 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (1.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mCACHE Park Load (0.0ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (1.2ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (0.8ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 18], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 20], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  Rendered api/trails/index.json.jbuilder (20.0ms)
+Completed 200 OK in 23ms (Views: 14.6ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/api/trails" for ::1 at 2021-11-23 17:13:10 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (0.7ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  [1m[36mPark Load (0.6ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mCACHE Park Load (0.0ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (0.6ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 18], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 20], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  Rendered api/trails/index.json.jbuilder (14.6ms)
+Completed 200 OK in 18ms (Views: 12.0ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/api/trails" for ::1 at 2021-11-23 17:13:14 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (0.9ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  [1m[36mPark Load (0.5ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mCACHE Park Load (0.0ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (0.7ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (1.1ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 18], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 20], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  Rendered api/trails/index.json.jbuilder (14.7ms)
+Completed 200 OK in 20ms (Views: 13.6ms | ActiveRecord: 5.6ms)
+
+
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Destroy (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "fname", "lname", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "demo@user.com"], ["fname", "demo"], ["lname", "user"], ["password_digest", "$2a$12$Id1n/NzEvsdk105IcALpbeRkNvdCnFNQk1wdra7mUUAin.MZjeYni"], ["session_token", "NGg1NNgORKMIyMXZHRaakg"], ["created_at", "2021-11-24 01:17:28.160647"], ["updated_at", "2021-11-24 01:17:28.160647"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[36mPark Load (1.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPark Destroy (0.6ms)[0m  [1m[31mDELETE FROM "parks" WHERE "parks"."id" = $1[0m  [["id", 22]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPark Destroy (0.3ms)[0m  [1m[31mDELETE FROM "parks" WHERE "parks"."id" = $1[0m  [["id", 23]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPark Destroy (0.3ms)[0m  [1m[31mDELETE FROM "parks" WHERE "parks"."id" = $1[0m  [["id", 24]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mPark Create (0.7ms)[0m  [1m[32mINSERT INTO "parks" ("name", "acreage", "description", "hours", "web_link", "lat", "lng", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Tilden Regional Park"], ["acreage", 2079], ["description", "Tilden Regional Park, also known as Tilden Park, is a 2,079-acre regional park in the East Bay, part of the San Francisco Bay Area in California. It is between the Berkeley Hills and San Pablo Ridge."], ["hours", "Monday 5:00 am - 10:00 pm | Tuesday 5:00 am - 10:00 pm | Wednesday 5:00 am - 10:00 pm | Thursday 5:00 am - 10:00 pm |Friday 5:00 am - 10:00 pm | Saturday 5:00 am - 10:00 pm | Sunday 5:00 am - 10:00 pm"], ["web_link", "http://www.ebparks.org/parks/tilden.htm"], ["lat", 37.90486], ["lng", -122.24505], ["state", "California"], ["created_at", "2021-11-24 01:17:28.194059"], ["updated_at", "2021-11-24 01:17:28.194059"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mPark Create (0.5ms)[0m  [1m[32mINSERT INTO "parks" ("name", "acreage", "description", "hours", "contact", "fb_link", "twitter_link", "web_link", "lat", "lng", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Yosemite National Park"], ["acreage", 759620], ["description", "With over 3.5 million yearly visitors from throughout the world, the iconic Yosemite National Park is known for some of the most beautiful hikes and landscapes in the United States. There are over 800 miles of trails to explore through Yosemite Valley, Tuolumne Meadows, and Wawona. Yosemite has so much to see including the sequoias, the flower filed meadows and valleys left behind from the glaciers, the highest waterfall in the United States, and the spectacular Half Dome and El Capitan."], ["hours", "Monday: All day | Tuesday: All day | Wednesday: All day | Thursday: All day | Friday: All day | Saturday All day | Sunday All day"], ["contact", "209-372-0200"], ["fb_link", "https://www.facebook.com/YosemiteNPS"], ["twitter_link", "https://twitter.com/YosemiteNPS"], ["web_link", "https://www.nps.gov/yose/index.htm"], ["lat", 37.72736], ["lng", -119.57502], ["state", "California"], ["created_at", "2021-11-24 01:17:28.196055"], ["updated_at", "2021-11-24 01:17:28.196055"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mPark Create (0.5ms)[0m  [1m[32mINSERT INTO "parks" ("name", "acreage", "description", "hours", "contact", "web_link", "lat", "lng", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Mount Tamalpais State Park"], ["acreage", 6300], ["description", "With over 3.5 million yearly visitors from throughout the world, the iconic Yosemite National Park is known for some of the most beautiful hikes and landscapes in the United States. There are over 800 miles of trails to explore through Yosemite Valley, Tuolumne Meadows, and Wawona. Yosemite has so much to see including the sequoias, the flower filed meadows and valleys left behind from the glaciers, the highest waterfall in the United States, and the spectacular Half Dome and El Capitan."], ["hours", "Monday 7:00 am - dusk | Tuesday 7:00 am - dusk | Wednesday 7:00 am - dusk | Thursday 7:00 am - dusk |Friday 7:00 am - dusk | Saturday 7:00 am - dusk | Sunday 7:00 am - dusk"], ["contact", "415-388-2070"], ["web_link", "http://www.parks.ca.gov/default.asp?page_id=471"], ["lat", 37.92743], ["lng", -122.57986], ["state", "California"], ["created_at", "2021-11-24 01:17:28.197866"], ["updated_at", "2021-11-24 01:17:28.197866"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[36mTrail Load (1.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:52
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mTrail Destroy (0.6ms)[0m  [1m[31mDELETE FROM "trails" WHERE "trails"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mActiveStorage::Attachment Destroy (0.5ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:52
+[ActiveJob] [ActiveStorage::PurgeJob] [b35d66e9-94df-4a77-9c3d-ddec3cfee0ed] Performing ActiveStorage::PurgeJob (Job ID: b35d66e9-94df-4a77-9c3d-ddec3cfee0ed) from Inline(default) with arguments: #<GlobalID:0x00007fea665b9250 @uri=#<URI::GID gid://hikers-guide/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::PurgeJob] [b35d66e9-94df-4a77-9c3d-ddec3cfee0ed]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [b35d66e9-94df-4a77-9c3d-ddec3cfee0ed]   ↳ db/seeds.rb:52
+[ActiveJob] [ActiveStorage::PurgeJob] [b35d66e9-94df-4a77-9c3d-ddec3cfee0ed]   [1m[36mActiveStorage::Attachment Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b35d66e9-94df-4a77-9c3d-ddec3cfee0ed]   ↳ db/seeds.rb:52
+[ActiveJob] [ActiveStorage::PurgeJob] [b35d66e9-94df-4a77-9c3d-ddec3cfee0ed]   [1m[36mActiveStorage::Blob Destroy (1.1ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 4]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b35d66e9-94df-4a77-9c3d-ddec3cfee0ed]   ↳ db/seeds.rb:52
+[ActiveJob] [ActiveStorage::PurgeJob] [b35d66e9-94df-4a77-9c3d-ddec3cfee0ed]   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [b35d66e9-94df-4a77-9c3d-ddec3cfee0ed]   ↳ db/seeds.rb:52
+[ActiveJob] [ActiveStorage::PurgeJob] [b35d66e9-94df-4a77-9c3d-ddec3cfee0ed]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [b35d66e9-94df-4a77-9c3d-ddec3cfee0ed]   ↳ db/seeds.rb:52
+[ActiveJob] [ActiveStorage::PurgeJob] [b35d66e9-94df-4a77-9c3d-ddec3cfee0ed] [36m  Disk Storage (0.2ms) [0m[31mDeleted file from key: YrCyjPyzVoN5c7JpErXkRGjy[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [b35d66e9-94df-4a77-9c3d-ddec3cfee0ed] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/YrCyjPyzVoN5c7JpErXkRGjy/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [b35d66e9-94df-4a77-9c3d-ddec3cfee0ed] Performed ActiveStorage::PurgeJob (Job ID: b35d66e9-94df-4a77-9c3d-ddec3cfee0ed) from Inline(default) in 18.56ms
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: b35d66e9-94df-4a77-9c3d-ddec3cfee0ed) to Inline(default) with arguments: #<GlobalID:0x00007fea50923a00 @uri=#<URI::GID gid://hikers-guide/ActiveStorage::Blob/4>>
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mTrail Destroy (0.5ms)[0m  [1m[31mDELETE FROM "trails" WHERE "trails"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 18], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mTrail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "trails" WHERE "trails"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mTrail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "trails" WHERE "trails"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 20], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ db/seeds.rb:56
+  [1m[36mTrail Create (0.8ms)[0m  [1m[32mINSERT INTO "trails" ("name", "overview", "description", "difficulty", "length", "elevation", "route_type", "lat", "lng", "park_id", "created_at", "updated_at", "m_photo") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Wildcat Peak Trail"], ["overview", "Wildcat Peak Trail via Laurel Canyon and Sylvan Trail is a 3.2 mile heavily trafficked loop trail located near Berkeley, California that features beautiful wild flowers and is rated as moderate. The trail is primarily used for hiking, running, and nature trips and is accessible year-round."], ["description", "This scenic loop takes you from the Tilden Park Environmental Education Center to the summit of Wildcat Peak via the Jewel Lake, Sylvan, Peak and Laurel Canyon trails. Terrific views of the Bay Area and a variety of plants and birds keep this route interesting throughout. This route may be very muddy in wet weather."], ["difficulty", "Moderate"], ["length", 3.2], ["elevation", 672], ["route_type", "Loop"], ["lat", 37.90486], ["lng", -122.24505], ["park_id", 25], ["created_at", "2021-11-24 01:17:28.365944"], ["updated_at", "2021-11-24 01:17:28.365944"], ["m_photo", "https://hikers-guide.s3.us-west-1.amazonaws.com/HikersGuide_GP2/IMG_8338.jpg"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ db/seeds.rb:73
+  [1m[36mTrail Create (0.5ms)[0m  [1m[32mINSERT INTO "trails" ("name", "overview", "description", "difficulty", "length", "elevation", "route_type", "lat", "lng", "park_id", "created_at", "updated_at", "m_photo") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Inspiration Point Trail"], ["overview", "Inspiration Point to Wildcat Peak is a 4 mile heavily trafficked out and back trail located near Kensington, California that offers the chance to see wildlife and is rated as moderate. The trail is primarily used for hiking, walking, running, and bird watching and is best used from March until October."], ["description", "4.6 mi round trip on paved trail. Beautiful views of whole Bay Area. Good for biking or hiking. Went off pavement at Peace Park sign, about 1/4 mile to stone circle with fabulous views of Bay and Mt Diablo. Room to sit and enjoy early lunch or snack. This was out and back. One can continue on the Nimitz for a longer walk for many miles. Lot can fill up but there is additional parking along the road for a few cars. Suitable any time of the year."], ["difficulty", "Moderate"], ["length", 4.0], ["elevation", 452], ["route_type", "Out & Back"], ["lat", 37.90486], ["lng", -122.24505], ["park_id", 25], ["created_at", "2021-11-24 01:17:28.368939"], ["updated_at", "2021-11-24 01:17:28.368939"], ["m_photo", "https://hikers-guide.s3.us-west-1.amazonaws.com/HikersGuide_GP2/DSCN4130.jpg"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:87
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ db/seeds.rb:87
+  [1m[36mTrail Create (0.4ms)[0m  [1m[32mINSERT INTO "trails" ("name", "overview", "description", "difficulty", "length", "elevation", "route_type", "lat", "lng", "park_id", "created_at", "updated_at", "m_photo") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Glacier Point to Half Dome"], ["overview", "Glacier Point to Half Dome is a 20.3 mile heavily trafficked out and back trail located near Yosemite Valley, California that features a waterfall and is only recommended for very experienced adventurers. The trail is primarily used for hiking and is best used from June until September."], ["description", "Enjoy gorgeous views of Half Dome from Glacier Point before you begin your hike. Soak in the views as you descend from Glacier Point toward Illilouette Falls. Wear sunscreen, as this section of trail is quite exposed. A couple of miles of elevation loss take you over the top of the falls, a great place to filter water or cool off. Continuing onward, the next few miles contain some elevation gains and losses, with plenty of tree cover for shade and breaks. Enjoy continual peeks at Half Dome and the valley floor along this stretch of trail. Approximately 6 miles in, you will approach Nevada Falls, a popular destination which many hike to via 4 mile trail. There is plenty of space at the top of the falls for a lunch or snack break, as well as photo ops before you continue your journey to Half Dome. Pit toilets are also located just past the falls as you continue toward Half Dome. The trail is easy to moderate at this point, as you approach Little Yosemite Valley Backpackers Camp and branch off toward Half Dome. Signs are well marked and easy to follow in this area. Another couple of miles bring you to the approach of Half Dome, where you will begin your +2 mile ascent with permit in hand."], ["difficulty", "Hard"], ["length", 3.2], ["elevation", 672], ["route_type", "Out & Back"], ["lat", 37.72736], ["lng", -119.57502], ["park_id", 26], ["created_at", "2021-11-24 01:17:28.371157"], ["updated_at", "2021-11-24 01:17:28.371157"], ["m_photo", "https://hikers-guide.s3.us-west-1.amazonaws.com/HikersGuide_GP2/IMG_20210913_125258718.jpg"]]
+  ↳ db/seeds.rb:87
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:87
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:101
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ db/seeds.rb:101
+  [1m[36mTrail Create (1.0ms)[0m  [1m[32mINSERT INTO "trails" ("name", "overview", "description", "difficulty", "length", "elevation", "route_type", "lat", "lng", "park_id", "created_at", "updated_at", "m_photo") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["name", "Verna Dunshee Loop"], ["overview", "Verna Dunshee Loop is a 0.8 mile lightly trafficked loop trail located near Mill Valley, California that features beautiful wild flowers and is good for all skill levels. The trail is primarily used for hiking, walking, running, and nature trips and is accessible year-round."], ["description", "According to Access Northern California (http://accessnca.org/access-northern-california/explore/explore-detail-view/?site_id=89): Just north of San Francisco’s Golden Gate Bridge, Mount Tamalpais State Park rises majestically from the heart of Marin County. Its deep canyons and sweeping hillsides are cloaked with cool redwood forests, oak woodlands, open grasslands, and sturdy chaparral. Most of it inaccessible to wheelchair riders."], ["difficulty", "Easy"], ["length", 0.8], ["elevation", 68], ["route_type", "Loop"], ["lat", 37.92743], ["lng", -122.57986], ["park_id", 27], ["created_at", "2021-11-24 01:17:28.373442"], ["updated_at", "2021-11-24 01:17:28.373442"], ["m_photo", "https://hikers-guide.s3.us-west-1.amazonaws.com/HikersGuide_GP2/IMG_8823.jpg"]]
+  ↳ db/seeds.rb:101
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:101
+Started GET "/" for ::1 at 2021-11-23 17:17:32 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/trails" for ::1 at 2021-11-23 17:17:32 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (0.9ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  [1m[36mPark Load (0.7ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mCACHE Park Load (0.0ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (0.7ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (0.9ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 23], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 24], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  Rendered api/trails/index.json.jbuilder (16.2ms)
+Completed 200 OK in 19ms (Views: 12.2ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/api/trails" for ::1 at 2021-11-23 17:17:41 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (2.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  [1m[36mPark Load (1.7ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mCACHE Park Load (0.0ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (0.7ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (1.0ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 23], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 24], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  Rendered api/trails/index.json.jbuilder (24.6ms)
+Completed 200 OK in 30ms (Views: 20.6ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/api/trails" for ::1 at 2021-11-23 17:18:44 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (1.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  [1m[36mPark Load (2.2ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mCACHE Park Load (0.0ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT  "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:3
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 23], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 24], ["record_type", "Trail"], ["name", "main_photo"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:6
+  Rendered api/trails/index.json.jbuilder (20.2ms)
+Completed 200 OK in 25ms (Views: 17.5ms | ActiveRecord: 5.9ms)
+
+
