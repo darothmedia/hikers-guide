@@ -10,7 +10,7 @@ export default (state = {}, action) => {
       });
       return trails;
     case RECEIVE_TRAIL:
-      return Object.assign({}, state, {[action.trail.id]: action.trail})
+      return Object.assign({}, state, {[action.trailId]: action.trail})
     default:
       return state;
   }

@@ -18,7 +18,8 @@ const App = ({ children }) => (
       <Route path='/signup' component={SignUpFormContainer} />
       <Route path='/login' component={LogInFormContainer} />
       <Route path='/explore' component={ExploreContainer} />
-      <Route path='/trails/:trailId' component={TrailPageContainer} />
+      <Route path='/trails/:trailId' component={TrailPageContainer}/>
+      <Route path='/trails' component={ExploreContainer} />
       <Route path='/' component={SplashContainer} />
     </Switch>
     <footer>
