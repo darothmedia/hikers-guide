@@ -13,6 +13,8 @@
   background-size: cover;
 }
 
+
+
 .galaxy #sign-up-background {
   background: url('https://hikers-guide.s3.us-west-1.amazonaws.com/galaxies/potw2141a.jpeg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -59,6 +61,11 @@
   background-color: black;
   color: white;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .4);
+}
+
+#sign-up-form a, #log-in-form a {
+  text-decoration: none;
+  color: #D75B32;
 }
 
 ::placeholder {

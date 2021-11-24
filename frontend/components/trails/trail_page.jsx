@@ -5,9 +5,9 @@ export default class TrailPage extends React.Component {
     super(props)
   }
   
-  componentDidMount(){
-    this.props.fetchTrail(this.props.match.params.trailId)
-  }
+  // componentDidMount(){
+  //   this.props.fetchTrail(this.props.trailId)
+  // }
 
   // componentDidUpdate(prevProps) {
   //   if (prevProps !== this.props) {
@@ -16,10 +16,65 @@ export default class TrailPage extends React.Component {
   // }
   
   render(){
+    const trail = this.props.trail
     return (
-      <div>
-        {console.log(this.props.trailId)}
-        <h1>{this.props.trail ? this.props.trail.name : ""}</h1>
+      <div id='trail-page-container'>
+        <header>
+          <image>
+            {/* <img src={this.props.trail.mPhoto ? this.props.trail.mPhoto : ""} alt="" /> */}
+          </image>
+          <div id='top-info'>
+            <h1>{trail ? trail.name : ""}</h1>
+            <div className='difficulty' id={trail.difficulty}>{trail ? trail.difficulty : ""}</div>
+            <h2>{trail ? trail.park : ""}</h2>
+          </div>
+        </header>
+        <div id='divider'></div>
+        <div id='page-split'>
+          <section id='left-page'>
+            <div id='trail-overview'>
+              <p>{trail ? trail.overview : ""}</p>
+            </div>
+            <hr />
+            <div id='trail-info'>
+              <div id='length'>
+                Length
+                <br />
+                <p>{trail.length} mi </p>
+              </div>
+              <div id='elevation'>
+                Elevation gain
+                <br />
+                <p>{trail.elevation} ft</p>
+              </div>
+              <div id='rtype'>
+                Route Type
+                <br />
+                <p>{trail.route_type}</p>
+              </div>
+            </div>
+            <div id='tags'>
+            </div>
+            <div id='description'>
+              <div id='divider'>Description</div>
+              <p>{this.props.trail ? this.props.trail.description : ""}</p>
+            </div>
+          </section>
+          <section id='right-page'>
+            <div id='map'>
+            </div>
+            <div id='nearby'>
+            </div>
+          </section>
+      </div>
+
+        
+
+        
+        
+
+
+
       </div>
     )
   }

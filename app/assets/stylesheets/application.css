@@ -33,6 +33,11 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  text-decoration: none;
+}
+
+a {
+  color: black;
 }
 
 body {
@@ -42,11 +47,6 @@ body {
 
 body.galaxy {
   background-color: black;
-}
-
-a {
-  text-decoration: none;
-  color: #D75B32;
 }
 
 input {
