@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require 'open-uri'
+# require 'open-uri'
 
 User.destroy_all
 demo = User.create(fname: 'demo', lname: 'user', email: 'demo@user.com', password:'password')
@@ -51,7 +51,9 @@ p3 = Park.create(
 
 Trail.destroy_all
 
-base_url = 'https://hikers-guide.s3.us-west-1.amazonaws.com/HikersGuide_GP2/'
+def purl(img)
+  'https://hikers-guide.s3.us-west-1.amazonaws.com/HikersGuide_GP2/' + img
+end
 
 t1 = Trail.create(
   name: "Wildcat Peak Trail",
@@ -64,7 +66,7 @@ t1 = Trail.create(
   lat: 37.90486,
   lng: -122.24505,
   park_id: p1.id,
-  m_photo: base_url + 'IMG_8338.jpg'
+  m_photo: purl('IMG_8338.jpg')
 )
 
 # tp1 = URI.open('https://hikers-guide.s3.us-west-1.amazonaws.com/HikersGuide_GP2/IMG_8338.jpg')
@@ -81,7 +83,7 @@ t2 = Trail.create(
   lat: 37.90486,
   lng: -122.24505,
   park_id: p1.id,
-  m_photo: base_url + 'DSCN4130.jpg'
+  m_photo: purl('DSCN4130.jpg')
 )
 
 t3 = Trail.create(
@@ -95,7 +97,7 @@ t3 = Trail.create(
   lat: 37.72736,
   lng: -119.57502,
   park_id: p2.id,
-  m_photo: base_url + 'IMG_20210913_125258718.jpg'
+  m_photo: purl('IMG_20210913_125258718.jpg')
 )
 
 t4 = Trail.create(
@@ -109,6 +111,6 @@ t4 = Trail.create(
   lat: 37.92743,
   lng: -122.57986,
   park_id: p3.id,
-  m_photo: base_url + 'IMG_8823.jpg'
+  m_photo: purl('IMG_8823.jpg')
 )
 
