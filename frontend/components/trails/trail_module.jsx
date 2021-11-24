@@ -15,12 +15,16 @@ const TrailModule = ({trail}) => {
 
   return (
     <div id='trail-module'>
+      <image>
+        {console.log(trail.mainPhoto)}
+        <img src={trail.mainPhoto.filename} alt={trail.name} />
+      </image>
       <div id='trail-stats'>
         <h1>{trail.name}</h1>
         <p>{trail.park}</p>
         <div className='difficulty' id={trail.difficulty}>{trail.difficulty}</div>
         <div id='stars'></div>
-        <p><div>Length: {trail.length} mi</div><div>•</div><div>Est {time()}</div></p>
+        <div id='lower-info'><div>Length: {trail.length} mi</div><div>•</div><div>Est {time()}</div></div>
       </div>
     </div>
   )

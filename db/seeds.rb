@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
+
 User.destroy_all
 demo = User.create(fname: 'demo', lname: 'user', email: 'demo@user.com', password:'password')
 
@@ -60,6 +62,9 @@ t1 = Trail.create(
   lng: -122.24505,
   park_id: p1.id
 )
+
+tp1 = URI.open('https://hikers-guide.s3.us-west-1.amazonaws.com/HikersGuide_GP2/IMG_8338.jpg')
+t1.main_photo.attach(io: tp1, filename: 'IMG_8338.jpg')
 
 t2 = Trail.create(
   name: "Inspiration Point Trail",

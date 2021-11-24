@@ -15,11 +15,14 @@
   margin-top: 50px;
   margin-left: 10px;
   align-content: space-around;
+  justify-content: center;
+  min-width: 1200px;
 }
 
 #trail-module {
-  display: flexbox;
-  width: 298px;
+  flex: 0 1 auto;
+  flex-shrink: 0;
+  width: 250px;
   height: 200px;
   background-color: white;
   padding: 20px;
@@ -31,18 +34,20 @@
   
 }
 
-#trail-stats {
-  margin-top: 120px;
-}
+// #trail-stats {
+//   // margin-top: 120px;
+// }
 
 #trail-stats p {
   font-size: 14px;
   color: #767676;
 }
 
-#trail-stats p div {
+#lower-info div {
   display: inline-block;
   margin-right: 10px;
+  font-size: 14px;
+  color: #767676;
 }
 
 #trail-stats h1 {
