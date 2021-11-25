@@ -5,15 +5,15 @@ export default class TrailPage extends React.Component {
     super(props)
   }
   
-  // componentDidMount(){
-  //   this.props.fetchTrail(this.props.trailId)
-  // }
+  componentDidMount(){
+    this.props.fetchTrail(this.props.trailId)
+  }
 
-  // componentDidUpdate(prevProps) {
-  //   if (prevProps !== this.props) {
-  //     this.props.fetchTrail(this.props.trailId)
-  //   }
-  // }
+  componentDidUpdate(prevProps) {
+    if (prevProps !== this.props) {
+      this.props.fetchTrail(this.props.trailId)
+    }
+  }
   
   render(){
     const trail = this.props.trail
@@ -25,7 +25,7 @@ export default class TrailPage extends React.Component {
           </image>
           <div id='top-info'>
             <h1>{trail ? trail.name : ""}</h1>
-            <div className='difficulty' id={trail.difficulty}>{trail ? trail.difficulty : ""}</div>
+            <div className='difficulty' id={trail ? trail.difficulty : ""}>{trail ? trail.difficulty : ""}</div>
             <h2>{trail ? trail.park : ""}</h2>
           </div>
         </header>
@@ -39,24 +39,24 @@ export default class TrailPage extends React.Component {
               <div id='length'>
                 Length
                 <br />
-                <p>{trail.length} mi </p>
+                <p>{trail ? trail.length : ""} mi </p>
               </div>
               <div id='elevation'>
                 Elevation gain
                 <br />
-                <p>{trail.elevation} ft</p>
+                <p>{trail ? trail.elevation : ""} ft</p>
               </div>
               <div id='rtype'>
                 Route Type
                 <br />
-                <p>{trail.route_type}</p>
+                <p>{trail ? trail.route_type : ""}</p>
               </div>
             </div>
             <div id='tags'>
             </div>
             <div id='description'>
               <div id='divider'><p>Description</p></div>
-              <p>{this.props.trail ? this.props.trail.description : ""}</p>
+              <p>{trail ? trail.description : ""}</p>
             </div>
             <div id='bottom'></div>
           </section>
