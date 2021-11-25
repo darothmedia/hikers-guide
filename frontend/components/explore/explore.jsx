@@ -20,6 +20,7 @@ export default class Explore extends React.Component {
           ))
           }
         </div>
+        <div id='placeholder'></div>
       </div>
       
     )

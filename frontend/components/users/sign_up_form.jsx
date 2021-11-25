@@ -54,6 +54,7 @@ class SignUpForm extends React.Component {
   render(){
     return(
       <div id='sign-up-background'>
+      <div id= 'placeholder'></div>
       <div id='sign-up-form'>
         <form onSubmit={this.handleSubmit}>
           <h2>Create your free account</h2>

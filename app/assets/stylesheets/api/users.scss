@@ -3,16 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #sign-up-background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  height: 600px;
   background: url('https://hikers-guide.s3.us-west-1.amazonaws.com/HikersGuide_GP2/IMG_2835.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-attachment: scroll;
 }
-
 
 
 .galaxy #sign-up-background {
@@ -21,28 +19,27 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-attachment: scroll;
 }
 
 #log-in-background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  height: 600px;
   background: url('https://hikers-guide.s3.us-west-1.amazonaws.com/HikersGuide_GP2/IMG_0589.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-attachment: scroll;
 }
 
 .galaxy #log-in-background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  height: 600px;
   background: url('https://hikers-guide.s3.us-west-1.amazonaws.com/galaxies/potw2119a.jpeg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-attachment: scroll;
 }
 
 #sign-up-form, #log-in-form {
@@ -50,7 +47,7 @@
   margin: 0 auto;
   width: 290px;
   align-content: center;
-  margin-top: 50px;
+  // margin-top: 50px;
   padding-top: 20px;
   border-radius: 10px;
   background-color: white;
@@ -152,4 +149,8 @@ input:focus {
   color: #D75B32;
   font-size: 11px;
   font-weight: 800;
+}
+
+#placeholder {
+  height: 50px;
 }

@@ -48,6 +48,7 @@ export default class LogInForm extends React.Component {
   render() {
     return (
       <div id='log-in-background'>
+        <div id='placeholder'></div>
         <div id='log-in-form'>
           <form onSubmit={this.handleSubmit}>
             <h2>Log in and let's get going</h2>

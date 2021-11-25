@@ -22,13 +22,16 @@ export default class TrailPage extends React.Component {
     return (
       <div id='trail-page-container'>
         <header>
-          <image>
-            {/* <img src={this.props.trail.mPhoto ? this.props.trail.mPhoto : ""} alt="" /> */}
-          </image>
-          <div id='top-info'>
-            <h1>{trail ? trail.name : ""}</h1>
-            <div className='difficulty' id={trail ? trail.difficulty : ""}>{trail ? trail.difficulty : ""}</div>
-            <h2>{trail ? trail.park : ""}</h2>
+          <div id='image-cntr'>
+            <img src={trail ? trail.m_photo : ""} alt="" />
+            <div id='gradient' />
+          </div>
+          <div id='gradient'>
+            <div id='top-info'>
+              <h1>{trail ? trail.name : ""}</h1>
+              <div className='difficulty' id={trail ? trail.difficulty : ""}>{trail ? trail.difficulty : ""}</div>
+              <h2>{trail ? trail.park : ""}</h2>
+            </div>
           </div>
         </header>
         <div id='divider'></div>

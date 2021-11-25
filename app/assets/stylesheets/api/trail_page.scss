@@ -5,12 +5,29 @@
   background-color: white;
   margin-top: 20px;
   box-shadow: 0 0px 2px 0 rgba(0, 0, 0, .2);
+  overflow: hidden;
 }
 
 .galaxy #trail-page-container {
   background-color: #1b1b1b;
   color: white;
   box-shadow: 0 0px 4px 0 rgba(112, 112, 112, 0.6);
+}
+
+#image-cntr {
+  width: 800px;
+  height:200px;
+  overflow: hidden;
+}
+
+#image-cntr img {
+  width: 800px;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+  transform: translateY(-30%);
+  position: relative;
+  
 }
 
 .galaxy #trail-page-container p {
@@ -23,9 +40,17 @@
   color: white;
 }
 
+#gradient {
+  position: relative;
+  transform: translateY(-100%);
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6));
+  height: 200px;
+}
+
 #top-info {
   transform: translateY(80%);
   padding: 20px;
+  position: relative;
 }
 
 #top-info h1 {
