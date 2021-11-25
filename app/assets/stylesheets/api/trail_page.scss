@@ -4,7 +4,7 @@
   display: block;
   background-color: white;
   margin-top: 20px;
-  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, .2);
 }
 
 .galaxy #trail-page-container {
@@ -46,7 +46,7 @@
 
 #left-page {
   flex: 2.5;
-  border-right: 1px solid lightgray
+  border-right: 1px solid #e7e7e7;
 }
 
 #left-page hr {
@@ -59,12 +59,12 @@
 }
 
 #trail-overview p {
-  margin-bottom: 20px;
+  margin: 20px;
   font-size: 14px;
   color: #767676;
   line-height: 1.4;
-  padding: 20px;
-  border-bottom: 1px solid lightgray;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e7e7e7;
   border-spacing: 20px;
 }
 
