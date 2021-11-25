@@ -10,7 +10,7 @@
 .galaxy #trail-page-container {
   background-color: #1b1b1b;
   color: white;
-  box-shadow: 0 0px 4px 0 rgba(184, 184, 184, 0.6);
+  box-shadow: 0 0px 4px 0 rgba(112, 112, 112, 0.6);
 }
 
 .galaxy #trail-page-container p {
@@ -22,8 +22,6 @@
   background-color: #233812;
   color: white;
 }
-
-
 
 #top-info {
   transform: translateY(80%);
@@ -57,9 +55,9 @@
   border-right: 1px solid #e7e7e7;
 }
 
-#left-page hr {
-  width: 93%;
-  outline-color: lightgray;
+.galaxy #left-page {
+  flex: 2.5;
+  border-right: 1px solid #2b2b2b;
 }
 
 #right-page {
@@ -77,6 +75,10 @@
   border-bottom: 1px solid #e7e7e7;
   border-spacing: 20px;
   padding-bottom: 20px;
+}
+
+.galaxy #trail-overview #text-block {
+  border-bottom: 1px solid #2b2b2b;
 }
 
 #trail-info {
@@ -121,6 +123,10 @@
   padding-top: 12px;
   padding-bottom: 10px;
   border-bottom: 1px solid #55882C;
+}
+
+.galaxy #divider p {
+  border-bottom: 1px solid white;
 }
 
 #desc-header {
