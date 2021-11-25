@@ -9,11 +9,13 @@ export default class TrailPage extends React.Component {
     this.props.fetchTrail(this.props.trailId)
   }
 
-  componentDidUpdate(prevProps) {
-    if (prevProps !== this.props) {
-      this.props.fetchTrail(this.props.trailId)
-    }
-  }
+  // NEED TO FIX THIS, CONSTANTLY UPDATING
+
+  // componentDidUpdate(prevProps) {
+  //   if (prevProps !== this.props) {
+  //     this.props.fetchTrail(this.props.trailId)
+  //   }
+  // }
   
   render(){
     const trail = this.props.trail
