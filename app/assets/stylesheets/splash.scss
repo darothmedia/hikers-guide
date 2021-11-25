@@ -84,3 +84,32 @@ input#search-field{
   top: 23px;
   cursor: pointer;
 }
+
+#local-favorites {
+  display: block;
+  margin: 0 auto;
+  width: 1080px;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+#fav-header {
+  font-size: 20px;
+  display: block;
+  margin-left: 20px;
+}
+
+.galaxy #fav-header {
+  color: white;
+}
+
+#fav-header h2 {
+  display: inline-block;
+}
+
+#fav-header p {
+  display: inline-block;
+  margin-left: 5px;
+  font-weight: 600;
+  text-decoration: underline;
+}

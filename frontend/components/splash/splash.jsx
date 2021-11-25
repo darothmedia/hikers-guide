@@ -1,5 +1,6 @@
 import React from "react";
 import SearchBar from "./search_bar";
+import ExploreContainer from "../explore/explore_container";
 
 export default class Splash extends React.Component {
   constructor(props){
@@ -22,6 +23,10 @@ export default class Splash extends React.Component {
           <SearchBar />
         </section>
         <section id='local-favorites'>
+          <div id='fav-header'>
+            <h2>Local favorites near </h2><p>Earth</p>
+          </div>
+          <ExploreContainer />
         </section>
       </div>
     )
