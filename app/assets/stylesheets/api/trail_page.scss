@@ -8,7 +8,7 @@
 }
 
 .galaxy #trail-page-container {
-  background-color: #414141;
+  background-color: #1b1b1b;
   color: white;
   box-shadow: 0 0px 4px 0 rgba(184, 184, 184, 0.6);
 }
@@ -17,10 +17,13 @@
   color: white
 }
 
-
 #trail-page-container header {
   height: 200px;
+  background-color: #233812;
+  color: white;
 }
+
+
 
 #top-info {
   transform: translateY(80%);
@@ -33,6 +36,11 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+#top-info h2 {
+  margin-top: 5px;
+  font-size: 12px;
 }
 
 #divider {
@@ -91,6 +99,9 @@
   color: black;
 }
 
+// #description {
+// }
+
 #description #divider {
   margin-top: 20px;
   background-color: #F2F2F2;
@@ -98,7 +109,7 @@
 
 .galaxy #description #divider {
   margin-top: 20px;
-  background-color: black;
+  background-color: rgb(78, 78, 78);
   color: white
 }
 
