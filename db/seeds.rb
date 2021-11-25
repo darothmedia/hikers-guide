@@ -91,7 +91,7 @@ t3 = Trail.create(
   overview:"Glacier Point to Half Dome is a 20.3 mile heavily trafficked out and back trail located near Yosemite Valley, California that features a waterfall and is only recommended for very experienced adventurers. The trail is primarily used for hiking and is best used from June until September.",
   description:"Enjoy gorgeous views of Half Dome from Glacier Point before you begin your hike. Soak in the views as you descend from Glacier Point toward Illilouette Falls. Wear sunscreen, as this section of trail is quite exposed. A couple of miles of elevation loss take you over the top of the falls, a great place to filter water or cool off. Continuing onward, the next few miles contain some elevation gains and losses, with plenty of tree cover for shade and breaks. Enjoy continual peeks at Half Dome and the valley floor along this stretch of trail. Approximately 6 miles in, you will approach Nevada Falls, a popular destination which many hike to via 4 mile trail. There is plenty of space at the top of the falls for a lunch or snack break, as well as photo ops before you continue your journey to Half Dome. Pit toilets are also located just past the falls as you continue toward Half Dome. The trail is easy to moderate at this point, as you approach Little Yosemite Valley Backpackers Camp and branch off toward Half Dome. Signs are well marked and easy to follow in this area. Another couple of miles bring you to the approach of Half Dome, where you will begin your +2 mile ascent with permit in hand.",
   difficulty: "Hard",
-  length: 3.2,
+  length: 20.3,
   elevation: 672,
   route_type: "Out & Back",
   lat: 37.72736,

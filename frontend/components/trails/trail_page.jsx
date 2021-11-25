@@ -35,7 +35,6 @@ export default class TrailPage extends React.Component {
             <div id='trail-overview'>
               <p>{trail ? trail.overview : ""}</p>
             </div>
-            <hr />
             <div id='trail-info'>
               <div id='length'>
                 Length
@@ -56,9 +55,10 @@ export default class TrailPage extends React.Component {
             <div id='tags'>
             </div>
             <div id='description'>
-              <div id='divider'>Description</div>
+              <div id='divider'><p>Description</p></div>
               <p>{this.props.trail ? this.props.trail.description : ""}</p>
             </div>
+            <div id='bottom'></div>
           </section>
           <section id='right-page'>
             <div id='map'>
