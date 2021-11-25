@@ -58,14 +58,17 @@
   flex: 1;
 }
 
-#trail-overview p {
+#text-block {
   margin: 20px;
   font-size: 14px;
   color: #767676;
   line-height: 1.4;
-  padding-bottom: 20px;
+}
+
+#trail-overview #text-block {
   border-bottom: 1px solid #e7e7e7;
   border-spacing: 20px;
+  padding-bottom: 20px;
 }
 
 #trail-info {
@@ -99,7 +102,7 @@
   color: white
 }
 
-#description #divider p {
+#divider p {
   color: #55882C;
   font-size: 14px;
   font-weight: 600;
@@ -107,6 +110,9 @@
   padding-top: 12px;
   padding-bottom: 10px;
   border-bottom: 1px solid #55882C;
+}
+
+#desc-header {
   width: 72px;
 }
 
@@ -114,7 +120,6 @@
   height: 100px;
 }
 
-
-
-
-
+#reviews-header {
+  width: 55px;
+}
