@@ -67,7 +67,7 @@ export default class TrailPage extends React.Component {
           </section>
           <section id='right-page'>
             <div id='map'>
-              {this.renderMap()}
+              {trail ? (<TrailMap lat={trail.lat} lng={trail.lng} token={window.mapboxToken} key={trail.id} />) : ('')}
             </div>
             <div id='nearby'>
             </div>
