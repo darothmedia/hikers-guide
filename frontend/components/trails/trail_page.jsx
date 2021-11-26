@@ -1,21 +1,20 @@
 import React from "react";
+import TrailMap from "../maps/map";
 
 export default class TrailPage extends React.Component {
   constructor(props){
     super(props)
+    this.renderMap = this.renderMap.bind(this)
   }
   
   componentDidMount(){
-    this.props.fetchTrail(this.props.trailId)
+    this.props.fetchTrail(this.props.match.params.trailId)
   }
 
-  // NEED TO FIX THIS, CONSTANTLY UPDATING
-
-  // componentDidUpdate(prevProps) {
-  //   if (prevProps !== this.props) {
-  //     this.props.fetchTrail(this.props.trailId)
-  //   }
-  // }
+  renderMap(){
+    const trail = this.props.trail
+    return (trail.lng ? (<TrailMap lat={trail.lat} lng={trail.lng} token={window.mapboxToken} key={trail.id} />) : (''))
+  }
   
   render(){
     const trail = this.props.trail
@@ -68,19 +67,12 @@ export default class TrailPage extends React.Component {
           </section>
           <section id='right-page'>
             <div id='map'>
+              {this.renderMap()}
             </div>
             <div id='nearby'>
             </div>
           </section>
       </div>
-
-        
-
-        
-        
-
-
-
       </div>
     )
   }

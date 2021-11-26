@@ -1,6 +1,7 @@
 class Api::TrailsController < ApplicationController
   def show
     @trail = select_trail
+    mkey = Figaro.env.mapbox_token
   end
 
   def index

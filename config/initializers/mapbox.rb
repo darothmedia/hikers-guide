@@ -1,0 +1,1 @@
+mapbox_token = Figaro.env.mapbox_token
