@@ -114,3 +114,87 @@ t4 = Trail.create(
   m_photo: purl('IMG_8823.jpg')
 )
 
+t5 = Trail.create(
+  name: "Vernal and Nevada Falls via Mist Trail",
+  overview: "Vernal and Nevada Falls via Mist Trail is a 6 mile heavily trafficked loop trail located near Yosemite Valley, California that features a waterfall and is rated as difficult. The trail is primarily used for hiking and is best used from May until October.",
+  description: "Hike to two breathtaking waterfalls along some of Yosemite Valley's most popular hiking trails. If you only have time for one hike while in Yosemite look no further - the Mist Trail is the hike for you. It is no wonder why this trail is one of the most traveled in Yosemite National Park. You will hike so close to these two massive waterfalls that you may get wet from the trail. The best time to hike this trail is in Spring or early Summer, while the snow runoff is high and the falls are full of water. The Mist Trail starts at Happy Isles Trailhead (YARTS Happy Isles shuttle stop #16, and within walking distance of Curry Village and the parking lot). The park recommends starting early to avoid the larger crowds. After a brief stroll along the river, you climb a pretty steep initial accent over stone steps until you reach the footbridge, which offers the first glimpse of Vernal Falls in the distance. You will also find a water fountain and restrooms. You will then continue up to Vernal Falls, past Emerald Pool, and alongside Nevada Falls until you reach the high-point of this hike. You can choose to take the alternate route down along the John Muir Trail to see great views of Nevada Falls and Liberty Cap in the distance before meeting back up with the Mist Trail near the footbridge. This route back is slightly longer, but offers a change of scenery and is easier on the knees. Before hopping back on the YARTS shuttle, treat yourself to some ice cream or a refreshing drink at the small stand, or head over to Curry Village for a larger variety of choices.",
+  difficulty: "Hard",
+  length: 6.0,
+  elevation: 2162,
+  route_type: "Loop",
+  lat: 37.73279,
+  lng: -119.55782,
+  park_id: p2.id,
+  m_photo: purl('IMG_3063.jpg')
+)
+
+t6 = Trail.create(
+  name: "Upper Yosemite Falls Trail",
+  overview: "Upper Yosemite Falls Trail is a 7.6 mile heavily trafficked out and back trail located near Yosemite Valley, California that features a waterfall and is rated as difficult. The trail is primarily used for hiking, camping, and backpacking and is best used from April until October.",
+  description: "Enjoy the incredible views of looking down from the top of Yosemite Falls, the tallest waterfall in the continental US. Yosemite Falls, dropping 2,425 feet to the bottom of the valley from the top, is one of the most visited places in Yosemite National Park. The falls consists of three sections: upper falls, middle cascade and lower falls. While most people only make the short trip to visit lower falls, upper falls is definitely worthy of visiting due to its panoramic views of Yosemite Valley and the opportunity to see this amazing waterfall up close.",
+  difficulty: "Hard",
+  length: 7.6,
+  elevation: 3218,
+  route_type: "Out & Back",
+  lat: 37.6408178,
+  lng: -119.9443979,
+  park_id: p2.id,
+  m_photo: purl('IMG_3109.jpg')
+)
+
+t7 = Trail.create(
+  name: "Half Dome via the John Muir Trail",
+  overview: "Half Dome via the John Muir Trail (JMT) is a 15 mile heavily trafficked out and back trail located near Yosemite Valley, California that features a waterfall and is only recommended for very experienced adventurers. The trail is primarily used for hiking.",
+  description: "Half Dome is a serious endurance hike taking you 4800 feet above the Yosemite Valley to spectacular views of Vernal and Nevada Falls, Liberty Cap, the Yosemite Valley, and the High Sierra. This is one of Yosemite National Park’s most iconic hikes. You must obtain a permit to hike to the summit of Half Dome. Preparation and safety are key to having a fantastic experience. This is a hike that requires users to be in good shape. Most people take 10 to 12 hours to hike to Half Dome and back, depending on the way chosen to come down. Plan to leave around sunrise (or earlier) and then have a non-negotiable turn-around time. The trail is fairly well marked but make sure to watch for all trail signs as it can be easy to miss them.",
+  difficulty: "Hard",
+  length: 15.0,
+  elevation: 5193,
+  route_type: "Out & Back",
+  lat: 37.7357108,
+  lng: -119.5657707,
+  park_id: p2.id,
+  m_photo: purl('IMG_3681.jpg')
+)
+
+t8 = Trail.create(
+  name: "Clouds Rest Trail",
+  overview: "Clouds Rest Trail is a 14 mile heavily trafficked out and back trail located near Yosemite Valley, California that features a lake and is rated as difficult. The trail is primarily used for hiking, camping, and backpacking and is best used from May until October.",
+  description: "Cloud's Rest, a massive granite formation just northeast of Half Dome in Yosemite Valley, is famous for its very high degree of visual prominence in the valley as well as its razor-sharp ridge near the summit. For people who have hiked Cloud's Rest, they are most impressed with the thrilling feeling they have while scrambling up the narrow ridge, with sheer drop-offs on both sides, to the summit. The fastest way to day hike Cloud's Rest starts from the Sunrise Lakes trailhead on Tioga Road near Tenaya Lake.",
+  difficulty: "Hard",
+  length: 14.0,
+  elevation: 3166,
+  route_type: "Out & Back",
+  lat: 37.82569,
+  lng: -119.46999,
+  park_id: p2.id,
+  m_photo: purl('IMG_8407.jpg')
+)
+
+t9 = Trail.create(
+  name: "Sentinel Dome Trail",
+  overview: "Sentinel Dome Trail is a 2.1 mile heavily trafficked out and back trail located near Yosemite Valley, California that features beautiful wild flowers and is good for all skill levels. The trail is primarily used for hiking and is best used from April until November.",
+  description: "Sentinel Dome starts from Glacier Point Road and scales one of Yosemite's high domes and offers a fully breathtaking 360-degree view. It provides one of the very best NP experiences for the effort you can find. To the west, you'll see almost a reverse Tunnel View of the Yosemite Valley and can see beyond the Merced River canyon. To the north is Yosemite Valley, including El Capitan and Yosemite Falls. You'll see Nevada Falls, Half Dome and Clouds Rest to the east, and many of the High Sierra peaks.",
+  difficulty: "Easy",
+  length: 2.1,
+  elevation: 456,
+  route_type: "Out & Back",
+  lat: 37.71243,
+  lng: -119.58632,
+  park_id: p2.id,
+  m_photo: purl('IMG_20210913_100444372.jpg')
+)
+
+t10 = Trail.create(
+  name: "Four Mile Trail",
+  overview: "Four Mile Trail is a 9.2 mile heavily trafficked out and back trail located near Yosemite Valley, California that features a waterfall and is rated as difficult. The trail is primarily used for hiking and is best used from May until November.",
+  description: "The Four Mile Trail switchbacks 3,200 feet up from Yosemite Valley to Glacier Point, providing wonderful views of the valley.  Views of Half Dome, North Dome, El Capitan, Cathedral Rocks, the Royal Arches, Tenaya Canyon, and Yosemite Falls can be seen here.",
+  difficulty: "Hard",
+  length: 9.2,
+  elevation: 3612,
+  route_type: "Out & Back",
+  lat: 37.73385,
+  lng: -119.60187,
+  park_id: p2.id,
+  m_photo: purl('IMG_8373.jpg')
+)
+
