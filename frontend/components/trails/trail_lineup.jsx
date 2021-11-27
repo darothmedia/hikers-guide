@@ -27,7 +27,6 @@ export default class TrailLineup extends React.Component {
     return (
       <div id='explore-bg'>
         <div id='trails'>
-          {console.log(this.connectFour())}
           {this.connectFour().map((trail, i) => (
             <TrailModule key={trail ? trail.id : i} trail={trail ? trail : ""} />
           ))
