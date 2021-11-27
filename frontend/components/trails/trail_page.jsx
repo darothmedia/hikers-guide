@@ -23,7 +23,6 @@ export default class TrailPage extends React.Component {
         <header>
           <div id='image-cntr'>
             <img src={trail ? trail.m_photo : ""} alt="" />
-            <div id='gradient' />
           </div>
           <div id='gradient'>
             <div id='top-info'>

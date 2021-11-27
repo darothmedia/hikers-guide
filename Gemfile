@@ -33,10 +33,10 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'cloudinary'
+# gem 'cloudinary'
 gem 'figaro'
 gem 'jquery-rails'
-gem 'open-uri'
+# gem 'open-uri'
 # gem "image_processing", ">= 1.2"
 
 group :development, :test do

@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from "./search_bar";
 import ExploreContainer from "../explore/explore_container";
+import TrailLineupContainer from '../trails/trail_lineup_container'
 
 export default class Splash extends React.Component {
   constructor(props){
@@ -26,7 +27,7 @@ export default class Splash extends React.Component {
           <div id='fav-header'>
             <h2>Local favorites near </h2><p>Earth</p>
           </div>
-          <ExploreContainer />
+          <TrailLineupContainer />
         </section>
       </div>
     )
