@@ -167,7 +167,7 @@ t8 = Trail.create(
   lat: 37.82569,
   lng: -119.46999,
   park_id: p2.id,
-  m_photo: purl('IMG_8407.jpg')
+  m_photo: purl('IMG_20210913_100444372.jpg')
 )
 
 t9 = Trail.create(
@@ -181,7 +181,7 @@ t9 = Trail.create(
   lat: 37.71243,
   lng: -119.58632,
   park_id: p2.id,
-  m_photo: purl('IMG_20210913_100444372.jpg')
+  m_photo: purl('IMG_8407.jpg')
 )
 
 t10 = Trail.create(
