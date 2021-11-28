@@ -7,6 +7,7 @@ import LogInFormContainer from './users/log_in_form_container'
 import ExploreContainer from './explore/explore_container'
 import Footer from './splash/footer';
 import TrailPageContainer from './trails/trail_page_container'
+import ParkPageContainer from './parks/park_page_container'
 import { ProtectedRoute, AuthRoute } from '../util/route_util';
 
 const App = ({ children }) => (
@@ -15,11 +16,12 @@ const App = ({ children }) => (
       <NavbarContainer />
     </header>
     <Switch>
-      <Route path='/signup' component={SignUpFormContainer} />
-      <Route path='/login' component={LogInFormContainer} />
+      <AuthRoute path='/signup' component={SignUpFormContainer} />
+      <AuthRoute path='/login' component={LogInFormContainer} />
       <Route path='/explore' component={ExploreContainer} />
       <Route path='/trails/:trailId' component={TrailPageContainer}/>
       <Route path='/trails' component={ExploreContainer} />
+      <Route path='/parks/:parkId' component={ParkPageContainer} />
       <Route path='/' component={SplashContainer} />
     </Switch>
     <footer>

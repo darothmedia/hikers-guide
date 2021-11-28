@@ -1,0 +1,2 @@
+json.extract! @park, :id, :name, :description, :hours, :contact, :fb_link, :twitter_link, :web_link, :lat, :lng, :state, :m_photo
+json.trails @park.trails, :id, :name, :difficulty, :length, :m_photo, :lat, :lng

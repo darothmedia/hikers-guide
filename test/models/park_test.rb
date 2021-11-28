@@ -16,6 +16,7 @@
 #  state        :string           not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  m_photo      :string
 #
 require 'test_helper'
 

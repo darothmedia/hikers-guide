@@ -36,7 +36,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # gem 'cloudinary'
 gem 'figaro'
 gem 'jquery-rails'
-# gem 'open-uri'
 # gem "image_processing", ">= 1.2"
 
 group :development, :test do

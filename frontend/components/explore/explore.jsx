@@ -9,6 +9,7 @@ export default class Explore extends React.Component {
 
   componentDidMount(){
     this.props.fetchTrails()
+    this.props.fetchParks()
   }
 
   render() {
