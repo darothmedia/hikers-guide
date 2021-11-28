@@ -1,5 +1,6 @@
 import React from "react";
 import TrailMap from "../maps/map";
+import ParkInfo from "./park_info";
 
 export default class ParkPage extends React.Component {
   constructor(props) {
@@ -21,16 +22,12 @@ export default class ParkPage extends React.Component {
     return (
       <div id='park-page-container'>
         <header>
-          <div id='image-cntr'>
+          <div id='park-image'>
             <img src={park ? park.m_photo : ""} alt="" />
           </div>
-          <div id='gradient'>
             <div id='top-info'>
-              <h1>{park ? park.name : ""}</h1>
-              <div className='difficulty' id={park ? park.difficulty : ""}>{park ? park.difficulty : ""}</div>
-              <h2>{park ? park.park : ""}</h2>
+              <ParkInfo park={park} />
             </div>
-          </div>
         </header>
         <div id='divider'></div>
         <div id='page-split'>
