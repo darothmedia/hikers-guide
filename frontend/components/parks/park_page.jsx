@@ -7,6 +7,7 @@ export default class ParkPage extends React.Component {
   constructor(props) {
     super(props)
     this.renderMap = this.renderMap.bind(this)
+    this.greatTrails = this.greatTrails.bind(this)
   }
 
   componentDidMount() {
@@ -16,6 +17,15 @@ export default class ParkPage extends React.Component {
   renderMap() {
     const park = this.props.park
     return (park.lng ? (<TrailMap lat={park.lat} lng={park.lng} token={window.mapboxToken} key={park.id} />) : (''))
+  }
+
+  greatTrails() {
+    const park = this.props.park
+    let string = ''
+    let numTrails = 0
+    park ? numTrails = park.trails.length : numTrails = 0
+    if (numTrails === 1) {return string + numTrails + ' great trail '}
+    else {return string + numTrails + ' great trails '}
   }
 
   render() {
@@ -33,8 +43,7 @@ export default class ParkPage extends React.Component {
         </header>
         <section id='overview'>
           Want to find the best trails in {park ? park.name : ""} for an adventurous 
-          hike or a family trip? HikersGuide has {park ? park.trails.length + " " : ""} 
-          great trails to explore!
+          hike or a family trip? HikersGuide has {park ? this.greatTrails() : ""} to explore!
         </section>
         <section id='park-map'>
           {park ? (<TrailMap lat={park.lat} lng={park.lng} token={window.mapboxToken} key={park.id} />) : ('')}
