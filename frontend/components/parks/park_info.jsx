@@ -1,8 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ParkInfo = ({park}) => {
-  return(
+class ParkInfo extends React.Component {
+  constructor(){
+    super(props)
+  }
+  
+  render() {
+    const park = this.props.park
+    return (
     <div id='park-info'>
       <section id='park-left-info'>
         <h1>Park Information</h1>
@@ -24,7 +30,7 @@ const ParkInfo = ({park}) => {
         </div>
       </section>
     </div>
-  )
+  )}
 }
 
 export default ParkInfo
