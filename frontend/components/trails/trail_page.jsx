@@ -1,5 +1,6 @@
 import React from "react";
 import TrailMap from "../maps/map";
+import { Link } from "react-router-dom";
 
 export default class TrailPage extends React.Component {
   constructor(props){
@@ -28,7 +29,7 @@ export default class TrailPage extends React.Component {
             <div id='top-info'>
               <h1>{trail ? trail.name : ""}</h1>
               <div className='difficulty' id={trail ? trail.difficulty : ""}>{trail ? trail.difficulty : ""}</div>
-              <h2>{trail ? trail.park : ""}</h2>
+              <h2>{trail ? <Link to={`/parks/${trail.parkId}`}>{trail.park}</Link> : ""}</h2>
             </div>
           </div>
         </header>
