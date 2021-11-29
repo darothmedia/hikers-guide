@@ -8,6 +8,8 @@
 
 User.destroy_all
 demo = User.create(fname: 'demo', lname: 'user', email: 'demo@user.com', password:'password')
+u1 = User.create(fname: 'Adrian', lname: 'Rothschild', email: 'adrian@hikersguide.com', password:'password')
+u2 = User.create(fname: 'Bono', lname: 'The Great', email: 'bono@u2.com', password: 'password')
 
 Park.destroy_all
 p1 = Park.create(
@@ -191,5 +193,23 @@ t10 = Trail.create(
   lng: -119.60187,
   park_id: p2.id,
   m_photo: purl('IMG_8373.jpg')
+)
+
+Review.destroy_all
+
+r1 = Review.create(
+  body: "It was great!",
+  rating: 5,
+  actdate: '2021-11-29',
+  author_id: u1.id,
+  trail_id: t1.id
+)
+
+r2 = Review.create(
+  body: "I hated it",
+  rating: 1,
+  actdate: '2021-11-27',
+  author_id: u2.id,
+  trail_id: t1.id
 )
 

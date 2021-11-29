@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ReviewModule = ({review}) => {
+const ReviewModule = ({review, fetchUser}) => {
 
   return (
       <div id={`review-module`}>
         <section id='review-stats'>
-          <h1>{review.author.name}</h1>
+          <h1>{review.author}</h1>
           <div id='subheader'>
-            <div id='rating'>{review.rating}</div>
+            <div id='rating'>{`${review.rating}`}</div>
             <p id='actdate'>{review.actdate}</p>
           </div>
           <div id='tags'>

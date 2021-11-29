@@ -1,11 +1,13 @@
 import React from "react";
 import TrailMap from "../maps/map";
 import { Link } from "react-router-dom";
+import ReviewModule from "../reviews/review_module";
 
 export default class TrailPage extends React.Component {
   constructor(props){
     super(props)
     this.renderMap = this.renderMap.bind(this)
+    this.reviews = this.reviews.bind(this)
   }
   
   componentDidMount(){
@@ -15,6 +17,17 @@ export default class TrailPage extends React.Component {
   renderMap(){
     const trail = this.props.trail
     return (trail.lng ? (<TrailMap lat={trail.lat} lng={trail.lng} token={window.mapboxToken} key={trail.id} />) : (''))
+  }
+
+  reviews(){
+    const trail = this.props.trail
+    const reviews = trail ? trail.reviews : []
+
+    return(
+      reviews.map((review, i) => (
+        <ReviewModule key={review ? review.id : i} review={review ? review : {}} fetchUser={this.props.fetchUser}  />
+      ))
+    ) 
   }
   
   render(){
@@ -61,7 +74,10 @@ export default class TrailPage extends React.Component {
             <div id='description'>
               <div id='divider'><p id='desc-header'>Description</p></div>
               <p id='text-block'>{trail ? trail.description : ""}</p>
+            </div>
+            <div id='reviews'>
               <div id='divider'><p id='reviews-header'>Reviews</p></div>
+              {this.reviews()}
             </div>
             <div id='bottom'></div>
           </section>
