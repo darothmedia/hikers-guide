@@ -31,6 +31,7 @@ export default class ParkPage extends React.Component {
   render() {
     const park = this.props.park
     return (
+      <div id='park-bg'>
       <div id='park-page-container'>
         <header id='park-header'>
           <div id='state'>
@@ -46,7 +47,7 @@ export default class ParkPage extends React.Component {
           hike or a family trip? HikersGuide has {park ? this.greatTrails() : ""} to explore!
         </section>
         <section id='park-map'>
-          {park ? (<TrailMap lat={park.lat} lng={park.lng} token={window.mapboxToken} key={park.id} />) : ('')}
+          {park ? this.renderMap() : ('')}
         </section>
         <h1>Park Information</h1>
         <section id='park-info'>
@@ -72,6 +73,7 @@ export default class ParkPage extends React.Component {
         </section>
         <section id='park-trails'>
         </section>
+      </div>
       </div>
     )
   }

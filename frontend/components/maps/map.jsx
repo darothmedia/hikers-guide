@@ -15,7 +15,7 @@ export default class TrailMap extends React.Component {
       container: this.mapContainer,
       style: 'mapbox://styles/mapbox/outdoors-v11',
       center: [this.lng, this.lat],
-      zoom: 13
+      zoom: 10
     })
 
     const mapnav = new mapboxgl.NavigationControl({

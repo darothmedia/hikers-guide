@@ -2,8 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#park-bg {
+  background-color: white;
+}
 #park-page-container {
-  width: 100%;
+  width: 800px;
   margin: 0 auto;
   display: block;
   background-color: white;
@@ -24,7 +27,7 @@
 }
 
 #park-header h1 {
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 600;
 }
 
@@ -37,8 +40,8 @@
 }
 
 #park-map {
-  margin: 20px;
-  width: 600px;
+  width: 650px;
+  margin-left: -10px;
   border-radius: 10px;
 }
 
@@ -46,17 +49,21 @@
   margin: 20px;
   display: flex;
   flex-direction: row;
-  width: 300px;
+  align-content: space-between;
+  width: 400px;
   font-size: 14px;
   color: #5A5A5A;
 }
 
 #park-left-info {
   flex: 2;
+  margin-right: 50px;
+
 }
 
 #park-right-info {
-  flex: 1
+  flex: 1;
+  margin-left: 20px;
 }
 
 #park-page-container>h1 {
