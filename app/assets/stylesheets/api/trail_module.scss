@@ -12,6 +12,17 @@
   min-width: 1080px;
 }
 
+#explore-bg #trails {
+  display: block;
+  margin: 0 auto;
+  width: 800px;
+}
+
+#trails .gridrow {
+  display: flex;
+  flex-direction: row;
+}
+
 #trail-module {
   flex: 0 1 auto;
   flex-shrink: 0;
