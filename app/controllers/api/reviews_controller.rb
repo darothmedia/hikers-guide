@@ -3,7 +3,7 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     if @review.save
-      render '/api/trails'
+      render `/api/trails/#{@review.trail_id}`
     else
       render json: @review.errors.full_messages, status: 401
     end
@@ -13,7 +13,7 @@ class Api::ReviewsController < ApplicationController
   def update
     @review = select_review
     if @review.update(review_params)
-      render '/api/trails'
+      render `/api/trails/#{@review.trail_id}`
     else
       render json: @review.errors.full_messages, status: 401
     end
@@ -23,7 +23,7 @@ class Api::ReviewsController < ApplicationController
     @review = select_review
     if @review
       @review.destroy
-      render '/'
+      render `/api/trails/#{@review.trail_id}`
     else
       render ['Review does not exist']
     end
