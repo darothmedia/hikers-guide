@@ -2,4 +2,4 @@ json.extract! @trail, :id, :name, :overview, :description, :difficulty, :length,
 json.park @trail.park.name
 json.parkId @trail.park.id
 json.mainPhoto @trail.main_photo
-json.reviews @trail.reviews
+json.reviews @trail.reviews, :id, :body
