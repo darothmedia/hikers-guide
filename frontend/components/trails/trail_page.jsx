@@ -25,7 +25,7 @@ export default class TrailPage extends React.Component {
 
     return(
       reviews.map((review, i) => (
-        <ReviewModule key={review ? review.id : i} review={review ? review : {}} fetchUser={this.props.fetchUser}  />
+        <ReviewModule key={review ? review.id : i} review={review ? review : {}} />
       ))
     ) 
   }

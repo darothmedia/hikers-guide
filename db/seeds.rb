@@ -200,7 +200,7 @@ Review.destroy_all
 r1 = Review.create(
   body: "It was great!",
   rating: 5,
-  actdate: '2021-11-29',
+  actdate: Date.parse('2021-11-29'),
   author_id: u1.id,
   trail_id: t1.id
 )
@@ -208,7 +208,7 @@ r1 = Review.create(
 r2 = Review.create(
   body: "I hated it",
   rating: 1,
-  actdate: '2021-11-27',
+  actdate: Date.parse('2021-11-27'),
   author_id: u2.id,
   trail_id: t1.id
 )

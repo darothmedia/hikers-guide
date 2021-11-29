@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ReviewModule = ({review, fetchUser}) => {
+const ReviewModule = ({review}) => {
 
   return (
       <div id={`review-module`}>
@@ -9,7 +9,7 @@ const ReviewModule = ({review, fetchUser}) => {
           <h1>{review.author}</h1>
           <div id='subheader'>
             <div id='rating'>{`${review.rating}`}</div>
-            <p id='actdate'>{review.actdate}</p>
+          <p id='actdate'>{review.actdate}</p>
           </div>
           <div id='tags'>
             {/* {review.tags.map((tag) => (
