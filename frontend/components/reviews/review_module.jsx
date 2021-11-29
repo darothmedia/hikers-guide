@@ -10,7 +10,7 @@ const ReviewModule = ({review}) => {
   
   let stars = ''
   for(let i=0; i< review.rating; i++){
-    stars += '⭐'
+    stars += '\u2B50'
   }
   
   return (

@@ -39,7 +39,7 @@ export default class Explore extends React.Component {
       <div id='explore-bg'>
         <div id='trails'>
           {this.connectGrid().map((row, i) => (
-            <div className='gridrow' id={`row${i}`}>
+            <div className='gridrow' id={`row${i}`} key={i}>
               {row.map((trail, i) => (
                 <TrailModule key={trail ? trail.id : i} trail={trail ? trail : ""} type='trail' />
               ))}

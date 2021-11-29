@@ -2,12 +2,16 @@ import React from "react";
 import TrailMap from "../maps/map";
 import { Link } from "react-router-dom";
 import ReviewModule from "../reviews/review_module";
+import ReviewFormContainer from '../reviews/review_form_container'
+import ReviewForm from "../reviews/review_form";
 
 export default class TrailPage extends React.Component {
   constructor(props){
     super(props)
     this.renderMap = this.renderMap.bind(this)
     this.reviews = this.reviews.bind(this)
+    this.reviewAverage = this.reviewAverage.bind(this)
+    this.formToggle = this.formToggle.bind(this)
   }
   
   componentDidMount(){
@@ -28,6 +32,25 @@ export default class TrailPage extends React.Component {
         <ReviewModule key={review ? review.id : i} review={review ? review : {}} />
       ))
     ) 
+  }
+
+  reviewAverage(){
+    const trail = this.props.trail
+    const reviews = trail ? trail.reviews : []
+    let sum = 0
+
+    reviews.forEach((review) => {sum += review.rating})
+
+    if (sum === 0) {return 'No reviews yet'}
+    let avg = sum / reviews.length
+
+    return `Average rating: ${avg.toFixed(1)}`
+  }
+
+  formToggle(){
+    return (
+      <ReviewFormContainer />
+    )
   }
   
   render(){
@@ -74,9 +97,11 @@ export default class TrailPage extends React.Component {
             <div id='description'>
               <div id='divider'><p id='desc-header'>Description</p></div>
               <p id='text-block'>{trail ? trail.description : ""}</p>
+              <div id='divider'><p id='reviews-header'>Reviews</p></div>
             </div>
             <div id='reviews'>
-              <div id='divider'><p id='reviews-header'>Reviews</p></div>
+              <p id='avg-rating'>{this.reviewAverage()}</p>
+              <button onClick={() => this.formToggle}>Write review</button>
               {this.reviews()}
             </div>
             <div id='bottom'></div>
