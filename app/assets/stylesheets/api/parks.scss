@@ -6,12 +6,23 @@
   background-color: white;
   border-top: 1px solid #e7e7e7;
 }
+
+.galaxy #park-bg {
+  background-color: black;
+  border-top: 1px solid #252525;
+}
+
 #park-page-container {
   width: 800px;
   margin: 0 auto;
   display: block;
   background-color: white;
   overflow: hidden;
+}
+
+.galaxy #park-page-container {
+  background-color: black;
+  color: white;
 }
 
 #park-header {
@@ -26,6 +37,10 @@
   color: #767676;
 }
 
+.galaxy #state div {
+  color: white;
+}
+
 #park-header h1 {
   font-size: 30px;
   font-weight: 600;
@@ -37,6 +52,10 @@
   font-size: 14px;
   color: #5A5A5A;
   line-height: 1.4;
+}
+
+.galaxy #overview {
+  color: white;
 }
 
 #park-map {
@@ -53,6 +72,10 @@
   width: 400px;
   font-size: 14px;
   color: #5A5A5A;
+}
+
+.galaxy #park-info {
+  color: white;
 }
 
 #park-left-info {
