@@ -78,3 +78,30 @@
 #park-info h2 {
   font-weight: 600;
 }
+
+#park-module {
+  width: 580px;
+  height: 250px;
+  background-color: white;
+  margin: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, .2);
+}
+
+.galaxy #park-module {
+  background-color: #252525;
+}
+
+#park-module>div {
+  width: 580px;
+  height: 150px;
+  overflow: hidden;
+}
+
+#park-module img {
+  width: 580px;
+  height: auto;
+  object-fit: cover;
+  transform: translateY(-20%);
+}

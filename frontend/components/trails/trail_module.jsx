@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const TrailModule = ({trail}) => {
+const TrailModule = ({trail, type}) => {
 
   const time = () => {
     let hrs = trail.length / 2
@@ -17,7 +17,7 @@ const TrailModule = ({trail}) => {
 
   return (
     <Link to={`/trails/${trail.id}`}>
-    <div id='trail-module'>
+    <div id={`${type}-module`}>
       <div><img src={trail.m_photo} alt={trail.name} /></div>
       <div id='trail-stats'>
         <h1>{trail.name}</h1>

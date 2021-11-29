@@ -8,8 +8,7 @@ const mSTP = state => ({
 })
 
 const mDTP = dispatch => ({
-  fetchTrails: () => dispatch(fetchAllTrails()),
-  fetchParks: () => dispatch(fetchAllParks())
+  fetchTrails: () => dispatch(fetchAllTrails())
 })
 
 export default connect(mSTP, mDTP)(Explore)

@@ -10,7 +10,6 @@ export default class Explore extends React.Component {
 
   componentDidMount(){
     this.props.fetchTrails()
-    this.props.fetchParks()
   }
 
   connectGrid() {
@@ -42,7 +41,7 @@ export default class Explore extends React.Component {
           {this.connectGrid().map((row, i) => (
             <div className='gridrow' id={`row${i}`}>
               {row.map((trail, i) => (
-                <TrailModule key={trail ? trail.id : i} trail={trail ? trail : ""} />
+                <TrailModule key={trail ? trail.id : i} trail={trail ? trail : ""} type='trail' />
               ))}
             </div>
           ))

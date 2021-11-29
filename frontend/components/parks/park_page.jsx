@@ -2,12 +2,17 @@ import React from "react";
 import TrailMap from "../maps/map";
 import ParkInfo from "./park_info";
 import { Link } from "react-router-dom";
+import parkTrailsContainer from "./park_trails_container";
+import ParkTrails from "./park_trails";
+import Explore from "../explore/explore";
+import TrailModule from "../trails/trail_module";
 
 export default class ParkPage extends React.Component {
   constructor(props) {
     super(props)
     this.renderMap = this.renderMap.bind(this)
     this.greatTrails = this.greatTrails.bind(this)
+    this.ParkTrails = this.parkTrails.bind(this)
   }
 
   componentDidMount() {
@@ -26,6 +31,16 @@ export default class ParkPage extends React.Component {
     park ? numTrails = park.trails.length : numTrails = 0
     if (numTrails === 1) {return string + numTrails + ' great trail '}
     else {return string + numTrails + ' great trails '}
+  }
+
+  parkTrails(){
+    const park = this.props.park
+    const trails = park ? park.trails : []
+    return(
+        trails.map((trail, i) => (
+          <TrailModule key={trail ? trail.id : i} trail={trail ? trail : ""} type='park' />
+        ))
+    )
   }
 
   render() {
@@ -71,7 +86,8 @@ export default class ParkPage extends React.Component {
             </section>
           {/* <ParkInfo park={park} /> */}
         </section>
-        <section id='park-trails'>
+        <section className='park-trails'>
+            {this.parkTrails()}
         </section>
       </div>
       </div>
