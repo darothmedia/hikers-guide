@@ -2,9 +2,6 @@ import React from "react";
 import TrailMap from "../maps/map";
 import ParkInfo from "./park_info";
 import { Link } from "react-router-dom";
-import parkTrailsContainer from "./park_trails_container";
-import ParkTrails from "./park_trails";
-import Explore from "../explore/explore";
 import TrailModule from "../trails/trail_module";
 
 export default class ParkPage extends React.Component {
