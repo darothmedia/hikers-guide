@@ -1,4 +1,5 @@
 import React from "react";
+import { FaStar } from 'react-icons/fa'
 
 export default class ReviewForm extends React.Component {
   constructor(props){
@@ -9,7 +10,8 @@ export default class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    this.props.submitEvent(this.state)
+    this.props.submitReview(this.state)
+      .then(() => this.props.history.push(`/trails/${this.props.trailId}`))
   }
 
   updateField(field) {
@@ -17,8 +19,23 @@ export default class ReviewForm extends React.Component {
   }
   
   render(){
-    <form action="">
-      <input type="text" />
-    </form>
+
+
+    return(
+      <form action="">
+        <textarea placeholder='Write review' onChange={this.updateField('body')} />
+        <br />
+        <label>Activity Date: <input type="date" onChange={this.updateField('actdate')} /></label>
+        <br />
+        <label className="star" id='1'><input type="radio" value="1" name="rating" onClick={this.updateField('rating')} />{<FaStar key='1' size={30} color={this.state.rating >= 1 ? 'gold' : 'gray'} />}</label>
+        <label className="star"><input type="radio" value="2" name="rating" onClick={this.updateField('rating')} />{<FaStar key='2' size={30} color={this.state.rating >= 2 ? 'gold' : 'gray'}/>}</label>
+        <label className="star"><input type="radio" value="3" name="rating" onClick={this.updateField('rating')} />{<FaStar key='3' size={30} color={this.state.rating >= 3 ? 'gold' : 'gray'}/>}</label>
+        <label className="star"><input type="radio" value="4" name="rating" onClick={this.updateField('rating')} />{<FaStar key='4' size={30} color={this.state.rating >= 4 ? 'gold' : 'gray'}/>}</label>
+        <label className="star"><input type="radio" value="5" name="rating" onClick={this.updateField('rating')} />{<FaStar key='5' size={30} color={this.state.rating >= 5 ? 'gold' : 'gray'}/>}</label>
+        <br />
+        <button onClick={(e) => this.handleSubmit(e)}>Submit review</button>
+      </form>
+    )
+    
   }
 }

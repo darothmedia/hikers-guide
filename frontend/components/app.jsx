@@ -9,6 +9,7 @@ import Footer from './splash/footer';
 import TrailPageContainer from './trails/trail_page_container'
 import ParkPageContainer from './parks/park_page_container'
 import { ProtectedRoute, AuthRoute } from '../util/route_util';
+import ReviewFormContainer from './reviews/review_form_container';
 
 const App = ({ children }) => (
   <div>
@@ -18,6 +19,7 @@ const App = ({ children }) => (
     <Switch>
       <AuthRoute path='/signup' component={SignUpFormContainer} />
       <AuthRoute path='/login' component={LogInFormContainer} />
+      <ProtectedRoute path='/trails/:trailId/reviews' component={ReviewFormContainer} />
       <Route path='/explore' component={ExploreContainer} />
       <Route path='/trails/:trailId' component={TrailPageContainer}/>
       <Route path='/trails' component={ExploreContainer} />

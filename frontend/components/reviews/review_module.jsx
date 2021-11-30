@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {FaStar} from 'react-icons/fa'
 
 const ReviewModule = ({review}) => {
 
@@ -8,9 +9,9 @@ const ReviewModule = ({review}) => {
   let datestring = ''
   datestring += fulldate[0] + ' ' + fulldate[1] + ', ' + fulldate[2]
   
-  let stars = ''
+  let stars = []
   for(let i=0; i< review.rating; i++){
-    stars += '\u2B50'
+    stars.push(<FaStar key={i} size={20} color={'gold'} />)
   }
   
   return (

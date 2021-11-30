@@ -3,7 +3,7 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     if @review.save
-      render `/api/trails/#{@review.trail_id}`
+      render `/api/trails`
     else
       render json: @review.errors.full_messages, status: 401
     end

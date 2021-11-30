@@ -101,7 +101,7 @@ export default class TrailPage extends React.Component {
             </div>
             <div id='reviews'>
               <p id='avg-rating'>{this.reviewAverage()}</p>
-              <button onClick={() => this.formToggle}>Write review</button>
+              <Link to={`/trails/${trail ? trail.id : 0}/reviews`}><button>Write review</button></Link>
               {this.reviews()}
             </div>
             <div id='bottom'></div>
