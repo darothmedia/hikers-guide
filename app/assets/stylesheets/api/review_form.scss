@@ -1,0 +1,79 @@
+#review-form {
+  display: block;
+  margin: 0 auto;
+  width: 290px;
+  align-content: center;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
+}
+
+#form-bg {
+  height: 500px;
+}
+
+.galaxy #review-form {
+  background-color: black;
+  color: white;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .4);
+}
+
+.galaxy #review-form input::placeholder, .galaxy #review-form input::placeholder  {
+  color: white;
+  opacity: 0.5;
+}
+
+#review-form input, #review-form textarea {
+  padding: 10px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  width: 230px;
+  border-radius: 5px;
+  border: 1px solid #C4C4C4;
+}
+
+#review-form button {
+  background-color: #D75B32;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  border: 0px;
+  border-radius: 5px;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  align-content: center;
+}
+
+#form-spacer {
+  height: 20px;
+}
+
+#review-form label {
+  margin-left: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label#star {
+  cursor: pointer;
+  padding: 0;
+}
+
+.stars {
+  display: block;
+  margin: 0 auto;
+  width: 270px;
+  padding-top: 10px;
+}
+
+#review-form .errors {
+  padding: 20px;
+}
