@@ -3,7 +3,7 @@ import TrailMap from "../maps/map";
 import { Link } from "react-router-dom";
 import ReviewModule from "../reviews/review_module";
 import ReviewFormContainer from '../reviews/review_form_container'
-import ReviewForm from "../reviews/review_form";
+import {FaStar} from 'react-icons/fa'
 
 export default class TrailPage extends React.Component {
   constructor(props){
@@ -20,7 +20,13 @@ export default class TrailPage extends React.Component {
 
   renderMap(){
     const trail = this.props.trail
-    return (trail.lng ? (<TrailMap lat={trail.lat} lng={trail.lng} token={window.mapboxToken} key={trail.id} />) : (''))
+    return (trail.lng ? (
+    <TrailMap 
+      lat={trail.lat} 
+      lng={trail.lng} 
+      token={window.mapboxToken} 
+      key={trail.id} />
+    ) : (''))
   }
 
   reviews(){
@@ -29,7 +35,11 @@ export default class TrailPage extends React.Component {
 
     return(
       reviews.map((review, i) => (
-        <ReviewModule key={review ? review.id : i} review={review ? review : {}} currentUser={this.props.currentUser} deleteReview={this.props.deleteReview} />
+        <ReviewModule 
+          key={review ? review.id : i} 
+          review={review ? review : {}} 
+          currentUser={this.props.currentUser} 
+          deleteReview={this.props.deleteReview} />
       ))
     ) 
   }
@@ -41,10 +51,27 @@ export default class TrailPage extends React.Component {
 
     reviews.forEach((review) => {sum += review.rating})
 
-    if (sum === 0) {return 'No reviews yet'}
+    if (sum === 0) {return (<div id='no-reviews'>No reviews yet</div>)}
     let avg = sum / reviews.length
+    let stars = []
+    for (let i = 0; i < avg; i++) {
+      stars.push(<FaStar key={i} size={20} color={'gold'} />)
+    }
 
-    return `Average rating: ${avg.toFixed(1)}`
+    while (stars.length < 5) {
+      let i = stars.length
+      stars.push(<FaStar key={i} size={20} color={'#e9e9e9'} />)
+    }
+
+    let plural = ' reviews'
+    if (reviews.length < 2) {plural = ' review'}
+
+    return (
+      <div id='avg-rating'>
+        <p>{avg.toFixed(1)}</p>
+        <div id='stars'>{stars}</div>
+        <h3>{reviews.length}{plural}</h3>
+      </div>)
   }
 
   formToggle(){
@@ -100,8 +127,8 @@ export default class TrailPage extends React.Component {
               <div id='divider'><p id='reviews-header'>Reviews</p></div>
             </div>
             <div id='reviews'>
-              <p id='avg-rating'>{this.reviewAverage()}</p>
-              {this.props.currentUser ? <Link to={`/trails/${trail ? trail.id : 0}/reviews`}><button>Write review</button></Link> : ""}
+              {this.reviewAverage()}
+              {this.props.currentUser ? <Link to={`/trails/${trail ? trail.id : 0}/reviews`}><button id='rev-button'>Write review</button></Link> : ""}
               {this.reviews()}
             </div>
             <div id='bottom'></div>
