@@ -22,8 +22,8 @@ const ReviewModule = ({review, currentUser, deleteReview, author}) => {
   return (
       <div id={`review-module`}>
         <section id='review-stats'>
-        {(currentUser && currentUser.id === review.author_id) ? <h1>Your Review:</h1> : ""}
-          <h2>{author.fname} {author.lname}</h2>
+        {(currentUser && currentUser.id === review.author_id) ? <h1>Your review:</h1> : ""}
+          <h2>{author ? author.fname : ""} {author ? author.lname : ""}</h2>
           <div id='subheader'>
             <div id='rating'>{stars}</div>
             <p id='actdate'>{datestring}</p>
@@ -39,7 +39,7 @@ const ReviewModule = ({review, currentUser, deleteReview, author}) => {
         </section>
         <section id='mod-delete'>
         {(currentUser && currentUser.id === review.author_id) ? 
-        <button id="edit-btn" >Edit</button> : ""}
+          <Link to={`/trails/${review.trail_id}/reviews/${review.id}/edit`}><button id="edit-btn" >Edit</button></Link> : ""}
         {(currentUser && currentUser.id === review.author_id) ? 
         <button id='dlt-btn' onClick={() => deleteReview(review.id)}>Delete</button> : ""}
         </section>

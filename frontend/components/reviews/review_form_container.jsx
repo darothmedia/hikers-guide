@@ -7,7 +7,8 @@ const mSTP = (state, ownProps) => ({
   review: { body: "", actdate: "", author_id: state.session.currentUser.id, trail_id: parseInt(ownProps.match.params.trailId)},
   trailId: parseInt(ownProps.match.params.trailId),
   trail: state.entities.trails[ownProps.match.params.trailId],
-  errors: state.errors.reviews
+  errors: state.errors.reviews,
+  type: 'Submit'
 })
 
 const mDTP = dispatch => ({

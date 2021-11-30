@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaStar } from 'react-icons/fa'
 
 export default class ReviewForm extends React.Component {
@@ -58,15 +58,15 @@ export default class ReviewForm extends React.Component {
         <img id='form-bg-photo' src={trail ? trail.m_photo : ""} alt={trail ? trail.name : ""} />
       <form id='review-form'>
         <h1>{trail ? trail.name : ""}</h1>
-        <textarea placeholder='Write review' onChange={this.updateField('body')} />
+        <textarea placeholder='Write review' value={this.state.body} onChange={this.updateField('body')} />
         <label>Activity Date: <input type="date" onChange={this.updateField('actdate')} /></label>
         <div className='stars'>
           <label id="star">
             <input type="radio" value="1" name="rating"
-            // onMouseOver={() => { hover = 1 }} onMouseOut={() => { hover = 0 }} 
+            onMouseOver={() => { hover = 1 }} onMouseOut={(e) => { hover = 0 }} 
             onClick={this.updateField('rating')} />
             {<FaStar key='1' size={30} 
-            color={(hover || this.state.rating) >= 1 ? 'gold' : 'gray'} />}
+              color={(hover || this.state.rating) >= 1 ? 'gold' : 'gray'} />}
             </label>
           <label id="star">
             <input type="radio" value="2" name="rating"
@@ -98,7 +98,7 @@ export default class ReviewForm extends React.Component {
             </label>
         </div>
         <div id='form-spacer'></div>
-        <button onClick={(e) => this.handleSubmit(e)}>Submit review</button>
+        <button onClick={(e) => this.handleSubmit(e)}>{this.props.type} review</button>
         <div className='errors'>
           {this.renderErrors()}
         </div>

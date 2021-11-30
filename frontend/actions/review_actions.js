@@ -35,7 +35,7 @@ export const clearErrors = () => ({
 export const fetchAllReviews = (trailId) => dispatch => APIUtil.fetchReviews(trailId)
   .then(reviews => dispatch(receiveAllReviews(reviews)))
 
-export const fetchReview = (review) => dispatch => APIUtil.fetchReview(review)
+export const fetchReview = (reviewId) => dispatch => APIUtil.fetchReview(reviewId)
   .then(review => dispatch(receiveReview(review)))
 
 export const createReview = review => dispatch => APIUtil.createReview(review)

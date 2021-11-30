@@ -11,7 +11,7 @@
 }
 
 #form-bg {
-  height: 500px;
+  height: 600px;
   overflow: hidden;
   position: relative;
 }
@@ -98,4 +98,8 @@ label#star {
 
 #review-form .errors {
   padding: 20px;
+}
+
+textarea {
+  resize: vertical;
 }

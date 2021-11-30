@@ -13,11 +13,10 @@ export const fetchReviews = (trailId) => (
   })
 )
 
-export const fetchReview = (review) => (
+export const fetchReview = (reviewId) => (
   $.ajax({
-    url: `/api/trails/${review.trail_id}/reviews/${review.id}`,
-    type: `GET`,
-    data: {review}
+    url: `/api/reviews/${reviewId}`,
+    type: `GET`
   })
 )
 
@@ -30,7 +29,7 @@ export const deleteReview = (reviewId) => (
 
 export const updateReview = (review) => (
   $.ajax({
-    url: `/api/trails/${review.trail_id}/reviews/${review.id}/edit`,
+    url: `/api/reviews/${review.id}`,
     type: `PATCH`,
     data: { review }
   })

@@ -13,7 +13,7 @@ class Api::ReviewsController < ApplicationController
   def update
     @review = select_review
     if @review.update(review_params)
-      render :show
+      render :update
     else
       render json: @review.errors.full_messages, status: 422
     end

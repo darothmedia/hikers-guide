@@ -1,7 +1,7 @@
 import TrailPage from './trail_page'
 import { connect } from "react-redux";
 import { fetchTrail } from "../../actions/trail_actions";
-import { fetchUser } from '../../actions/user_actions';
+import { requestUser } from '../../actions/user_actions';
 import { deleteReview, fetchAllReviews } from '../../actions/review_actions';
 import { withRouter } from 'react-router';
 
