@@ -22,6 +22,10 @@ export default class ReviewForm extends React.Component {
     this.props.clearErrors()
   }
 
+  componentDidMount() {
+    this.props.fetchTrail(this.props.trailId)
+  }
+
   renderErrors() {
     return (
       <ul>
@@ -47,10 +51,13 @@ export default class ReviewForm extends React.Component {
   
   render(){
     let hover = 0;
+    const trail = this.props.trail
 
     return(
       <div id='form-bg'>
+        <img id='form-bg-photo' src={trail ? trail.m_photo : ""} alt={trail ? trail.name : ""} />
       <form id='review-form'>
+        <h1>{trail ? trail.name : ""}</h1>
         <textarea placeholder='Write review' onChange={this.updateField('body')} />
         <label>Activity Date: <input type="date" onChange={this.updateField('actdate')} /></label>
         <div className='stars'>

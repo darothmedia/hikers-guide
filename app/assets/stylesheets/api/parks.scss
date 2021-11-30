@@ -104,7 +104,7 @@
 
 #park-module {
   width: 580px;
-  height: 250px;
+  height: 235px;
   background-color: white;
   margin: 30px;
   border-radius: 10px;
@@ -127,4 +127,8 @@
   height: auto;
   object-fit: cover;
   transform: translateY(-20%);
+}
+
+#park-module #trail-stats h1 {
+  width: 560px;
 }
