@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {FaStar} from 'react-icons/fa'
 
-const ReviewModule = ({review, currentUser, deleteReview}) => {
+const ReviewModule = ({review, currentUser, deleteReview, author}) => {
 
   const date = new Date(review.actdate)
   const fulldate = date.toDateString().split(' ').slice(1)
@@ -22,8 +22,8 @@ const ReviewModule = ({review, currentUser, deleteReview}) => {
   return (
       <div id={`review-module`}>
         <section id='review-stats'>
-          <h1></h1>
         {(currentUser && currentUser.id === review.author_id) ? <h1>Your Review:</h1> : ""}
+          <h2>{author.fname} {author.lname}</h2>
           <div id='subheader'>
             <div id='rating'>{stars}</div>
             <p id='actdate'>{datestring}</p>
@@ -38,8 +38,10 @@ const ReviewModule = ({review, currentUser, deleteReview}) => {
           <p>{review.body}</p>
         </section>
         <section id='mod-delete'>
-        {(currentUser && currentUser.id === review.author_id) ? <button id="edit-btn" >Edit</button> : ""}
-        {(currentUser && currentUser.id === review.author_id) ? <button id='dlt-btn' onClick={() => deleteReview(review.id)}>Delete</button> : ""}
+        {(currentUser && currentUser.id === review.author_id) ? 
+        <button id="edit-btn" >Edit</button> : ""}
+        {(currentUser && currentUser.id === review.author_id) ? 
+        <button id='dlt-btn' onClick={() => deleteReview(review.id)}>Delete</button> : ""}
         </section>
       </div>
   )

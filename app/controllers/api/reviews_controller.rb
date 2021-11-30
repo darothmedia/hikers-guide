@@ -3,7 +3,7 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     if @review.save
-      render `/api/trails`
+      render :create
     else
       render json: @review.errors.full_messages, status: 422
     end
@@ -13,7 +13,7 @@ class Api::ReviewsController < ApplicationController
   def update
     @review = select_review
     if @review.update(review_params)
-      render `/api/trails/#{@review.trail_id}`
+      render :show
     else
       render json: @review.errors.full_messages, status: 422
     end
@@ -23,7 +23,7 @@ class Api::ReviewsController < ApplicationController
     @review = select_review
     if @review
       @review.destroy
-      render `/api/trails/#{@review.trail_id}`
+      render :show
     else
       render ['Review does not exist']
     end
@@ -34,7 +34,8 @@ class Api::ReviewsController < ApplicationController
   end
 
   def index
-    @reviews = Review.all
+    @reviews = Review.where(trail_id: params[:trail_id])
+    render :index
   end
 
   private

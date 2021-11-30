@@ -16,6 +16,7 @@ export default class TrailPage extends React.Component {
   
   componentDidMount(){
     this.props.fetchTrail(this.props.match.params.trailId)
+      .then(() => (this.props.fetchAllReviews()))
   }
 
   renderMap(){
@@ -30,23 +31,23 @@ export default class TrailPage extends React.Component {
   }
 
   reviews(){
-    const trail = this.props.trail
-    const reviews = trail ? trail.reviews : []
+    const reviews = this.props.reviews
+    // const reviews = trail ? trail.reviews : []
 
     return(
       reviews.map((review, i) => (
         <ReviewModule 
-          key={review ? review.id : i} 
+          key={review.id} 
           review={review ? review : {}} 
           currentUser={this.props.currentUser} 
-          deleteReview={this.props.deleteReview} />
+          deleteReview={this.props.deleteReview}
+          author={review.author} />
       ))
     ) 
   }
 
   reviewAverage(){
-    const trail = this.props.trail
-    const reviews = trail ? trail.reviews : []
+    const reviews = this.props.reviews
     let sum = 0
 
     reviews.forEach((review) => {sum += review.rating})
@@ -140,7 +141,7 @@ export default class TrailPage extends React.Component {
           </section>
           <section id='right-page'>
             <div id='map'>
-              {trail ? (<TrailMap lat={trail.lat} lng={trail.lng} token={window.mapboxToken} key={trail.id} />) : ('')}
+              {/* {trail ? (<TrailMap lat={trail.lat} lng={trail.lng} token={window.mapboxToken} key={trail.id} />) : ('')} */}
             </div>
             <div id='nearby'>
             </div>

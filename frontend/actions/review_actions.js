@@ -32,7 +32,7 @@ export const clearErrors = () => ({
   type: CLEAR_ERRORS
 })
 
-export const fetchAllReviews = () => dispatch => APIUtil.fetchReviews()
+export const fetchAllReviews = (trailId) => dispatch => APIUtil.fetchReviews(trailId)
   .then(reviews => dispatch(receiveAllReviews(reviews)))
 
 export const fetchReview = (review) => dispatch => APIUtil.fetchReview(review)
