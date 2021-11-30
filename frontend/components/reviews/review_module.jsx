@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {FaStar} from 'react-icons/fa'
 
-const ReviewModule = ({review}) => {
+const ReviewModule = ({review, currentUser, deleteReview, ...props}) => {
 
   const date = new Date(review.actdate)
   const fulldate = date.toDateString().split(' ').slice(1)
@@ -30,6 +30,9 @@ const ReviewModule = ({review}) => {
         </section>
         <section id='body'>
           <p>{review.body}</p>
+        </section>
+        <section id='mod-delete'>
+        {(currentUser && currentUser.id === review.author_id) ? <button onClick={() => deleteReview(review.id)}>Delete</button> : ""}
         </section>
       </div>
   )

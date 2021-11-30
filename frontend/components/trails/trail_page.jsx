@@ -29,7 +29,7 @@ export default class TrailPage extends React.Component {
 
     return(
       reviews.map((review, i) => (
-        <ReviewModule key={review ? review.id : i} review={review ? review : {}} />
+        <ReviewModule key={review ? review.id : i} review={review ? review : {}} currentUser={this.props.currentUser} deleteReview={this.props.deleteReview} />
       ))
     ) 
   }
@@ -101,7 +101,7 @@ export default class TrailPage extends React.Component {
             </div>
             <div id='reviews'>
               <p id='avg-rating'>{this.reviewAverage()}</p>
-              <Link to={`/trails/${trail ? trail.id : 0}/reviews`}><button>Write review</button></Link>
+              {this.props.currentUser ? <Link to={`/trails/${trail ? trail.id : 0}/reviews`}><button>Write review</button></Link> : ""}
               {this.reviews()}
             </div>
             <div id='bottom'></div>

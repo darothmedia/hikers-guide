@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaStar } from 'react-icons/fa'
 
 export default class ReviewForm extends React.Component {
@@ -46,7 +46,7 @@ export default class ReviewForm extends React.Component {
   }
   
   render(){
-
+    let hover = 0;
 
     return(
       <form action="">
@@ -54,11 +54,11 @@ export default class ReviewForm extends React.Component {
         <br />
         <label>Activity Date: <input type="date" onChange={this.updateField('actdate')} /></label>
         <br />
-        <label className="star" id='1'><input type="radio" value="1" name="rating" onClick={this.updateField('rating')} />{<FaStar key='1' size={30} color={this.state.rating >= 1 ? 'gold' : 'gray'} />}</label>
-        <label className="star"><input type="radio" value="2" name="rating" onClick={this.updateField('rating')} />{<FaStar key='2' size={30} color={this.state.rating >= 2 ? 'gold' : 'gray'}/>}</label>
-        <label className="star"><input type="radio" value="3" name="rating" onClick={this.updateField('rating')} />{<FaStar key='3' size={30} color={this.state.rating >= 3 ? 'gold' : 'gray'}/>}</label>
-        <label className="star"><input type="radio" value="4" name="rating" onClick={this.updateField('rating')} />{<FaStar key='4' size={30} color={this.state.rating >= 4 ? 'gold' : 'gray'}/>}</label>
-        <label className="star"><input type="radio" value="5" name="rating" onClick={this.updateField('rating')} />{<FaStar key='5' size={30} color={this.state.rating >= 5 ? 'gold' : 'gray'}/>}</label>
+        <label className="star"><input type="radio" value="1" name="rating" onMouseOver={() => {hover = 1}} onMouseOut={() => {hover = 0}} onClick={this.updateField('rating')} />{<FaStar key='1' size={30} color={(hover || this.state.rating) >= 1 ? 'gold' : 'gray'} />}</label>
+        <label className="star"><input type="radio" value="2" name="rating" onMouseOver={() => {hover = 2}} onMouseOut={() => {hover = 0}} onClick={this.updateField('rating')} />{<FaStar key='2' size={30} color={(hover || this.state.rating) >= 2 ? 'gold' : 'gray'}/>}</label>
+        <label className="star"><input type="radio" value="3" name="rating" onMouseOver={() => {hover = 3}} onMouseOut={() => {hover = 0}} onClick={this.updateField('rating')} />{<FaStar key='3' size={30} color={(hover || this.state.rating) >= 3 ? 'gold' : 'gray'}/>}</label>
+        <label className="star"><input type="radio" value="4" name="rating" onMouseOver={() => {hover = 4}} onMouseOut={() => {hover = 0}} onClick={this.updateField('rating')} />{<FaStar key='4' size={30} color={(hover || this.state.rating) >= 4 ? 'gold' : 'gray'}/>}</label>
+        <label className="star"><input type="radio" value="5" name="rating" onMouseOver={() => {hover = 5}} onMouseOut={() => {hover = 0}} onClick={this.updateField('rating')} />{<FaStar key='5' size={30} color={(hover || this.state.rating) >= 5 ? 'gold' : 'gray'}/>}</label>
         <br />
         <button onClick={(e) => this.handleSubmit(e)}>Submit review</button>
         <div className='errors'>
