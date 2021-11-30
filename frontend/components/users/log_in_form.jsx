@@ -61,7 +61,7 @@ export default class LogInForm extends React.Component {
             <button type="submit">Log in</button>
           </form>
           <div id='log-in-footer'>
-            Don't have an account?
+            Don't have an account? <Link to='/signup'>Sign up</Link>
             <br />
             <br />
             <button onClick={this.demoUserLogin} className='demo'>Log in as demo user</button>
