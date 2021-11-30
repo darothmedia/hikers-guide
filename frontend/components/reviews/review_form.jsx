@@ -17,6 +17,33 @@ export default class ReviewForm extends React.Component {
   updateField(field) {
     return e => this.setState({ [field]: e.currentTarget.value })
   }
+
+  componentWillUnmount() {
+    this.props.clearErrors()
+  }
+
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => {
+          if (error.includes('Actdate')) {
+            error = `Please enter the date you were on this trail.`
+          }
+          if (error.includes('Rating')) {
+            error = `Please give the trail a rating.`
+          }
+          if (error.includes('Body')) {
+            error = `Please enter some text in your review.`
+          }
+          return (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          )
+        })}
+      </ul>
+    )
+  }
   
   render(){
 
@@ -34,6 +61,9 @@ export default class ReviewForm extends React.Component {
         <label className="star"><input type="radio" value="5" name="rating" onClick={this.updateField('rating')} />{<FaStar key='5' size={30} color={this.state.rating >= 5 ? 'gold' : 'gray'}/>}</label>
         <br />
         <button onClick={(e) => this.handleSubmit(e)}>Submit review</button>
+        <div className='errors'>
+          {this.renderErrors()}
+        </div>
       </form>
     )
     

@@ -5,7 +5,7 @@ class Api::ReviewsController < ApplicationController
     if @review.save
       render `/api/trails`
     else
-      render json: @review.errors.full_messages, status: 401
+      render json: @review.errors.full_messages, status: 422
     end
 
   end
@@ -15,7 +15,7 @@ class Api::ReviewsController < ApplicationController
     if @review.update(review_params)
       render `/api/trails/#{@review.trail_id}`
     else
-      render json: @review.errors.full_messages, status: 401
+      render json: @review.errors.full_messages, status: 422
     end
   end
 
