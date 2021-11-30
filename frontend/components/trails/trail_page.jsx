@@ -3,7 +3,7 @@ import TrailMap from "../maps/map";
 import { Link } from "react-router-dom";
 import ReviewModule from "../reviews/review_module";
 import ReviewFormContainer from '../reviews/review_form_container'
-import {FaStar} from 'react-icons/fa'
+import {FaStar, FaStarHalfAlt} from 'react-icons/fa'
 
 export default class TrailPage extends React.Component {
   constructor(props){
@@ -53,10 +53,13 @@ export default class TrailPage extends React.Component {
 
     if (sum === 0) {return (<div id='no-reviews'>No reviews yet</div>)}
     let avg = sum / reviews.length
+
     let stars = []
-    for (let i = 0; i < avg; i++) {
+    for (let i = 0; i < Math.floor(avg); i++) {
       stars.push(<FaStar key={i} size={20} color={'gold'} />)
     }
+
+    if (avg - Math.floor(avg) > 0.1) {stars.push(<FaStarHalfAlt key={0.5} size={20} color={'gold'} />)}
 
     while (stars.length < 5) {
       let i = stars.length
@@ -135,7 +138,7 @@ export default class TrailPage extends React.Component {
           </section>
           <section id='right-page'>
             <div id='map'>
-              {/* {trail ? (<TrailMap lat={trail.lat} lng={trail.lng} token={window.mapboxToken} key={trail.id} />) : ('')} */}
+              {trail ? (<TrailMap lat={trail.lat} lng={trail.lng} token={window.mapboxToken} key={trail.id} />) : ('')}
             </div>
             <div id='nearby'>
             </div>

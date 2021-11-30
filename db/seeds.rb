@@ -218,6 +218,6 @@ r3 = Review.create(
   rating: 2,
   actdate: Date.parse('2021-11-24'),
   author_id: u2.id,
-  trail_id: t1.id
+  trail_id: t2.id
 )
 
