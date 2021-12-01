@@ -3,14 +3,13 @@ import TrailMap from "../maps/map";
 import { Link } from "react-router-dom";
 import ReviewModule from "../reviews/review_module";
 import ReviewFormContainer from '../reviews/review_form_container'
-import {FaStar, FaStarHalfAlt} from 'react-icons/fa'
+import reviewAverage from "../../util/avg_review_util";
 
 export default class TrailPage extends React.Component {
   constructor(props){
     super(props)
     this.renderMap = this.renderMap.bind(this)
     this.reviews = this.reviews.bind(this)
-    this.reviewAverage = this.reviewAverage.bind(this)
     this.formToggle = this.formToggle.bind(this)
   }
   
@@ -44,38 +43,6 @@ export default class TrailPage extends React.Component {
           author={review.author} />
       ))
     ) 
-  }
-
-  reviewAverage(){
-    const reviews = this.props.reviews
-    let sum = 0
-
-    reviews.forEach((review) => {sum += review.rating})
-
-    if (sum === 0) {return (<div id='no-reviews'>No reviews yet</div>)}
-    let avg = sum / reviews.length
-
-    let stars = []
-    for (let i = 0; i < Math.floor(avg); i++) {
-      stars.push(<FaStar key={i} size={20} color={'gold'} />)
-    }
-
-    if (avg - Math.floor(avg) > 0.1) {stars.push(<FaStarHalfAlt key={0.5} size={20} color={'gold'} />)}
-
-    while (stars.length < 5) {
-      let i = stars.length
-      stars.push(<FaStar key={i} size={20} color={'#e9e9e9'} />)
-    }
-
-    let plural = ' reviews'
-    if (reviews.length < 2) {plural = ' review'}
-
-    return (
-      <div id='avg-rating'>
-        <p>{avg.toFixed(1)}</p>
-        <div id='stars'>{stars}</div>
-        <h3>{reviews.length}{plural}</h3>
-      </div>)
   }
 
   formToggle(){
@@ -132,7 +99,7 @@ export default class TrailPage extends React.Component {
               <div id='divider'><p id='reviews-header'>Reviews</p></div>
             </div>
             <div id='reviews'>
-              {this.reviewAverage()}
+              {reviewAverage(this.props.reviews)}
               {this.props.currentUser ? 
                 <Link to={`/trails/${trail ? trail.id : 0}/reviews`}><button id='rev-button'>Write review</button></Link> : 
                 <Link to={`/login`}><button className='login-btn' id='rev-button'>Log in to write a review</button></Link> }
