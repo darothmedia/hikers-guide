@@ -71,8 +71,8 @@ t1 = Trail.create(
   m_photo: purl('IMG_8338.jpg')
 )
 
-ph1 = open('https://hikers-guide-dev.s3.us-west-1.amazonaws.com/img/IMG_8338.jpg')
-t1.main_photo.attach(io: ph1, filename: 'IMG_8338.jpg')
+# ph1 = URI.open('https://hikers-guide-dev.s3.us-west-1.amazonaws.com/img/IMG_8338.jpg')
+# t1.main_photo.attach(io: ph1, filename: 'IMG_8338.jpg')
 
 t2 = Trail.create(
   name: "Inspiration Point Trail",
