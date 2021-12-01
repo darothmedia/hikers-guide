@@ -87,6 +87,7 @@ export default class TrailPage extends React.Component {
   render(){
     const trail = this.props.trail
     return (
+      <div id='bg'>
       <div id='trail-page-container'>
         <header>
           <div id='image-cntr'>
@@ -146,6 +147,7 @@ export default class TrailPage extends React.Component {
             <div id='nearby'>
             </div>
           </section>
+        </div>
       </div>
       </div>
     )

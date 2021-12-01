@@ -36,7 +36,7 @@ export default class Explore extends React.Component {
 
   render() {
     return (
-      <div id='explore-bg'>
+      <div id='bg'>
         <div id='trails'>
           {this.connectGrid().map((row, i) => (
             <div className='gridrow' id={`row${i}`} key={i}>

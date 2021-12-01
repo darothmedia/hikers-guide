@@ -16,7 +16,7 @@ export default class Splash extends React.Component {
 
   render(){
     return (
-      <div id='splash'>
+      <div id='bg'>
         <section id='search-spread'>
           <header>
             <h1>Find your next {this.tagline()}</h1>

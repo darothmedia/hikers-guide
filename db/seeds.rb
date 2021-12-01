@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require 'open-uri'
+require "open-uri"
 
 User.destroy_all
 demo = User.create(fname: 'demo', lname: 'user', email: 'demo@user.com', password:'password')
@@ -54,7 +54,7 @@ p3 = Park.create(
 Trail.destroy_all
 
 def purl(img)
-  'https://hikers-guide.s3.us-west-1.amazonaws.com/HikersGuide_GP2/' + img
+  'https://hikers-guide-dev.s3.us-west-1.amazonaws.com/img/' + img
 end
 
 t1 = Trail.create(
@@ -71,8 +71,8 @@ t1 = Trail.create(
   m_photo: purl('IMG_8338.jpg')
 )
 
-# ph1 = URI.open('https://hikers-guide-dev.s3.us-west-1.amazonaws.com/img/IMG_8338.jpg')
-# t1.main_photo.attach(io: ph1, filename: 'IMG_8338.jpg')
+ph1 = URI.open("https://hikers-guide-dev.s3.us-west-1.amazonaws.com/img/IMG_8338.jpg")
+t1.main_photo.attach(io: ph1, filename: 'IMG_8338.jpg')
 
 t2 = Trail.create(
   name: "Inspiration Point Trail",
@@ -88,6 +88,9 @@ t2 = Trail.create(
   m_photo: purl('DSCN4130.jpg')
 )
 
+ph2 = URI.open(purl('DSCN4130.jpg'))
+t2.main_photo.attach(io: ph2, filename: 'DSCN4130.jpg')
+
 t3 = Trail.create(
   name: "Glacier Point to Half Dome",
   overview:"Glacier Point to Half Dome is a 20.3 mile heavily trafficked out and back trail located near Yosemite Valley, California that features a waterfall and is only recommended for very experienced adventurers. The trail is primarily used for hiking and is best used from June until September.",
@@ -101,6 +104,9 @@ t3 = Trail.create(
   park_id: p2.id,
   m_photo: purl('IMG_20210913_125258718.jpg')
 )
+
+ph3 = URI.open(purl('IMG_20210913_125258718.jpg'))
+t3.main_photo.attach(io: ph3, filename: 'IMG_20210913_125258718.jpg')
 
 t4 = Trail.create(
   name: "Verna Dunshee Loop",
@@ -116,6 +122,9 @@ t4 = Trail.create(
   m_photo: purl('IMG_8823.jpg')
 )
 
+ph4 = URI.open(purl('IMG_8823.jpg'))
+t4.main_photo.attach(io: ph4, filename: 'IMG_8823.jpg')
+
 t5 = Trail.create(
   name: "Vernal and Nevada Falls via Mist Trail",
   overview: "Vernal and Nevada Falls via Mist Trail is a 6 mile heavily trafficked loop trail located near Yosemite Valley, California that features a waterfall and is rated as difficult. The trail is primarily used for hiking and is best used from May until October.",
@@ -129,6 +138,9 @@ t5 = Trail.create(
   park_id: p2.id,
   m_photo: purl('IMG_3063.jpg')
 )
+
+ph5 = URI.open(purl('IMG_3063.jpg'))
+t5.main_photo.attach(io: ph5, filename: 'IMG_3063.jpg')
 
 t6 = Trail.create(
   name: "Upper Yosemite Falls Trail",
@@ -144,6 +156,9 @@ t6 = Trail.create(
   m_photo: purl('IMG_3109.jpg')
 )
 
+ph6 = URI.open(purl('IMG_3109.jpg'))
+t6.main_photo.attach(io: ph6, filename: 'IMG_3109.jpg')
+
 t7 = Trail.create(
   name: "Half Dome via the John Muir Trail",
   overview: "Half Dome via the John Muir Trail (JMT) is a 15 mile heavily trafficked out and back trail located near Yosemite Valley, California that features a waterfall and is only recommended for very experienced adventurers. The trail is primarily used for hiking.",
@@ -157,6 +172,9 @@ t7 = Trail.create(
   park_id: p2.id,
   m_photo: purl('IMG_3681.jpg')
 )
+
+ph7 = URI.open(purl('IMG_3681.jpg'))
+t7.main_photo.attach(io: ph7, filename: 'IMG_3681.jpg')
 
 t8 = Trail.create(
   name: "Clouds Rest Trail",
@@ -172,6 +190,9 @@ t8 = Trail.create(
   m_photo: purl('IMG_20210913_100444372.jpg')
 )
 
+ph8 = URI.open(purl('IMG_20210913_100444372.jpg'))
+t8.main_photo.attach(io: ph8, filename: 'IMG_20210913_100444372.jpg')
+
 t9 = Trail.create(
   name: "Sentinel Dome Trail",
   overview: "Sentinel Dome Trail is a 2.1 mile heavily trafficked out and back trail located near Yosemite Valley, California that features beautiful wild flowers and is good for all skill levels. The trail is primarily used for hiking and is best used from April until November.",
@@ -186,6 +207,9 @@ t9 = Trail.create(
   m_photo: purl('IMG_8407.jpg')
 )
 
+ph9 = URI.open(purl('IMG_8407.jpg'))
+t9.main_photo.attach(io: ph9, filename: 'IMG_8407.jpg')
+
 t10 = Trail.create(
   name: "Four Mile Trail",
   overview: "Four Mile Trail is a 9.2 mile heavily trafficked out and back trail located near Yosemite Valley, California that features a waterfall and is rated as difficult. The trail is primarily used for hiking and is best used from May until November.",
@@ -199,6 +223,9 @@ t10 = Trail.create(
   park_id: p2.id,
   m_photo: purl('IMG_8373.jpg')
 )
+
+ph10 = URI.open(purl('IMG_8373.jpg'))
+t10.main_photo.attach(io: ph10, filename: 'IMG_8373.jpg')
 
 Review.destroy_all
 
