@@ -4,7 +4,7 @@ import {FaStar} from 'react-icons/fa'
 
 const ReviewModule = ({review, currentUser, deleteReview, author}) => {
 
-  const date = new Date(review.actdate)
+  const date = new Date(review.actdate + 'T00:00')
   const fulldate = date.toDateString().split(' ').slice(1)
   let datestring = ''
   datestring += fulldate[0] + ' ' + fulldate[1] + ', ' + fulldate[2]
@@ -21,6 +21,9 @@ const ReviewModule = ({review, currentUser, deleteReview, author}) => {
   
   return (
       <div id={`review-module`}>
+        {console.log(review.actdate)}
+        {console.log(date)}
+        {console.log(fulldate)}
         <section id='review-stats'>
         {(currentUser && currentUser.id === review.author_id) ? <h1>Your review:</h1> : ""}
           <h2>{author ? author.fname : ""} {author ? author.lname : ""}</h2>

@@ -115,6 +115,24 @@
 //   background-color: black;
 // }
 
+#flex {
+  display: flex;
+}
+
+#mod-avg-rating {
+  display: flex;
+}
+
+#mod-stars {
+  padding-top: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#num-reviews {
+  padding-top: 8px;
+}
+
 .difficulty#Moderate {
   background-color: #4B98D3;
 }

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 
 const mSTP = props => ({
-  tagline: localStorage.theme
+
 })
 
 const mDTP = dispatch => ({

@@ -1,6 +1,16 @@
 import React from "react";
 
 export default class SearchBar extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {query: ""}
+  }
+
+  handleInput(e) {
+    e.preventDefault();
+    return e => this.setState({ query: e.target.value })
+  }
+
   render(){
     return(
       <div id='search-wrp'>
@@ -10,6 +20,7 @@ export default class SearchBar extends React.Component {
           type="text" 
           id='search-field' 
           placeholder='Search by city, park, or trail name'
+          onChange={(e) => this.handleInput(e)}
           />
         </form>
         <button id="go-button"></button>

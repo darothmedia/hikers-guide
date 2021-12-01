@@ -99,7 +99,7 @@ export default class TrailPage extends React.Component {
               <div id='divider'><p id='reviews-header'>Reviews</p></div>
             </div>
             <div id='reviews'>
-              {reviewAverage(this.props.reviews)}
+              {reviewAverage(this.props.reviews, 'Page')}
               {this.props.currentUser ? 
                 <Link to={`/trails/${trail ? trail.id : 0}/reviews`}><button id='rev-button'>Write review</button></Link> : 
                 <Link to={`/login`}><button className='login-btn' id='rev-button'>Log in to write a review</button></Link> }

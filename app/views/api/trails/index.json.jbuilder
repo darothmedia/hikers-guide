@@ -3,5 +3,5 @@ json.array! @trails do |trail|
   json.park trail.park.name
   json.mainPhoto trail.main_photo
   json.mainPhotoUrl url_for(trail.main_photo)
-  json.reviews trail.reviews, :id
+  json.reviews trail.reviews, :id, :rating
 end
