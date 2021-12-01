@@ -54,7 +54,7 @@ p3 = Park.create(
 Trail.destroy_all
 
 def purl(img)
-  'https://hikers-guide-dev.s3.us-west-1.amazonaws.com/img/' + img
+  'https://hikers-guide-seeds.s3.us-west-1.amazonaws.com/img/' + img
 end
 
 t1 = Trail.create(
@@ -71,7 +71,7 @@ t1 = Trail.create(
   m_photo: purl('IMG_8338.jpg')
 )
 
-ph1 = URI.open("https://hikers-guide-dev.s3.us-west-1.amazonaws.com/img/IMG_8338.jpg")
+ph1 = open(purl('IMG_8338.jpg'))
 t1.main_photo.attach(io: ph1, filename: 'IMG_8338.jpg')
 
 t2 = Trail.create(
@@ -88,7 +88,7 @@ t2 = Trail.create(
   m_photo: purl('DSCN4130.jpg')
 )
 
-ph2 = URI.open(purl('DSCN4130.jpg'))
+ph2 = open(purl('DSCN4130.jpg'))
 t2.main_photo.attach(io: ph2, filename: 'DSCN4130.jpg')
 
 t3 = Trail.create(
@@ -105,7 +105,7 @@ t3 = Trail.create(
   m_photo: purl('IMG_20210913_125258718.jpg')
 )
 
-ph3 = URI.open(purl('IMG_20210913_125258718.jpg'))
+ph3 = open(purl('IMG_20210913_125258718.jpg'))
 t3.main_photo.attach(io: ph3, filename: 'IMG_20210913_125258718.jpg')
 
 t4 = Trail.create(
@@ -122,7 +122,7 @@ t4 = Trail.create(
   m_photo: purl('IMG_8823.jpg')
 )
 
-ph4 = URI.open(purl('IMG_8823.jpg'))
+ph4 = open(purl('IMG_8823.jpg'))
 t4.main_photo.attach(io: ph4, filename: 'IMG_8823.jpg')
 
 t5 = Trail.create(
@@ -139,7 +139,7 @@ t5 = Trail.create(
   m_photo: purl('IMG_3063.jpg')
 )
 
-ph5 = URI.open(purl('IMG_3063.jpg'))
+ph5 = open(purl('IMG_3063.jpg'))
 t5.main_photo.attach(io: ph5, filename: 'IMG_3063.jpg')
 
 t6 = Trail.create(
@@ -156,7 +156,7 @@ t6 = Trail.create(
   m_photo: purl('IMG_3109.jpg')
 )
 
-ph6 = URI.open(purl('IMG_3109.jpg'))
+ph6 = open(purl('IMG_3109.jpg'))
 t6.main_photo.attach(io: ph6, filename: 'IMG_3109.jpg')
 
 t7 = Trail.create(
@@ -173,7 +173,7 @@ t7 = Trail.create(
   m_photo: purl('IMG_3681.jpg')
 )
 
-ph7 = URI.open(purl('IMG_3681.jpg'))
+ph7 = open(purl('IMG_3681.jpg'))
 t7.main_photo.attach(io: ph7, filename: 'IMG_3681.jpg')
 
 t8 = Trail.create(
@@ -190,7 +190,7 @@ t8 = Trail.create(
   m_photo: purl('IMG_20210913_100444372.jpg')
 )
 
-ph8 = URI.open(purl('IMG_20210913_100444372.jpg'))
+ph8 = open(purl('IMG_20210913_100444372.jpg'))
 t8.main_photo.attach(io: ph8, filename: 'IMG_20210913_100444372.jpg')
 
 t9 = Trail.create(
@@ -207,7 +207,7 @@ t9 = Trail.create(
   m_photo: purl('IMG_8407.jpg')
 )
 
-ph9 = URI.open(purl('IMG_8407.jpg'))
+ph9 = open(purl('IMG_8407.jpg'))
 t9.main_photo.attach(io: ph9, filename: 'IMG_8407.jpg')
 
 t10 = Trail.create(
@@ -224,7 +224,7 @@ t10 = Trail.create(
   m_photo: purl('IMG_8373.jpg')
 )
 
-ph10 = URI.open(purl('IMG_8373.jpg'))
+ph10 = open(purl('IMG_8373.jpg'))
 t10.main_photo.attach(io: ph10, filename: 'IMG_8373.jpg')
 
 Review.destroy_all

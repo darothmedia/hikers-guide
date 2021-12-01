@@ -18,7 +18,7 @@ const TrailModule = ({trail, type}) => {
   return (
     <Link to={`/trails/${trail.id}`}>
     <div id={`${type}-module`}>
-      <div><img src={trail.m_photo} alt={trail.name} /></div>
+      <div><img src={trail.mainPhotoUrl} alt={trail.name} /></div>
       <div id='trail-stats'>
         <h1>{trail.name}</h1>
         <p>{trail.park}</p>
