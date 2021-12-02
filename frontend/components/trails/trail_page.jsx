@@ -42,7 +42,7 @@ export default class TrailPage extends React.Component {
     return(
       reviews.map((review, i) => (
         <ReviewModule 
-          key={review.id + i} 
+          key={i} 
           review={review ? review : {}} 
           currentUser={this.props.currentUser} 
           deleteReview={this.props.deleteReview}
@@ -115,7 +115,7 @@ export default class TrailPage extends React.Component {
           </section>
           <section id='right-page'>
             <div id='map'>
-              {trail ? (<TrailMap lat={trail.lat} lng={trail.lng} token={window.mapboxToken} key={trail.id} />) : ('')}
+              {trail ? (<TrailMap lat={trail.lat} lng={trail.lng} token={window.mapboxToken} key={trail.lat} />) : ('')}
             </div>
             <div id='nearby'>
             </div>
