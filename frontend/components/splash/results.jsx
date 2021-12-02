@@ -15,10 +15,12 @@ export default class Results extends React.Component {
     this.props.results.map((result, i) => (
       <div>
         {(result.type === trail) ? (
-        <Link to={`/trails/${result.id}`} key={i}>
+        <Link to={`/trails/${result.id}`} key={result.id} className={result} id={i}>
+          <FaMapSigns color='gold' /> <p>{result.name}</p>
         </Link>) 
         : (
-        <Link to={`/parks/${result.id}`} key={i}>
+            <Link to={`/parks/${result.id}`} key={result.id} className={result} id={i}>
+          <FaTree color='green' /> <p>{result.name}</p>
         </Link>
         )}
       </div>

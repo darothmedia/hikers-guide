@@ -1,4 +1,5 @@
 import React from "react";
+import Results from "./results";
 
 export default class SearchBar extends React.Component {
   constructor(props){
@@ -46,8 +47,8 @@ export default class SearchBar extends React.Component {
         <img src="https://hikers-guide.s3.us-west-1.amazonaws.com/icons/arrow.png" alt="go arrow" id='arrow-btn' />
         {this.state.searching === true ? 
         <div id='search-results'>
-          
           <p>Start typing to populate results</p>
+          <Results />
         </div>
         : null }
       </div>
