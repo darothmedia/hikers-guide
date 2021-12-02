@@ -23,11 +23,14 @@ export default class ParkPage extends React.Component {
 
   greatTrails() {
     const park = this.props.park
-    let string = ''
+    let string = 'HikersGuide has '
     let numTrails = 0
     park ? numTrails = park.trails.length : numTrails = 0
-    if (numTrails === 1) {return string + numTrails + ' great trail '}
-    else {return string + numTrails + ' great trails '}
+    if (numTrails === 1) { return string + numTrails + ' great trail to explore!'}
+    else if (numTrails > 1) { return string + numTrails + ' great trails to explore!'}
+    else { return <div>HikersGuide has no trails for this park yet. 
+      {/* <Link to={`/`}>Click here</Link> to suggest a trail! */}
+      </div> }
   }
 
   parkTrails(){
@@ -44,50 +47,58 @@ export default class ParkPage extends React.Component {
     const park = this.props.park
     return (
       <div id='park-bg'>
-      <div id='park-page-container'>
+      {park ?
+        (<div id='park-page-container'>
         <header id='park-header'>
           <div id='state'>
-            <div>United States of America</div><div>•</div><div>{park ? park.state : ""}</div><div>•</div><div>{park ? park.name : ""}</div>
+            <div>United States of America</div><div>•</div><div>{park.state}</div><div>•</div><div>{park ? park.name : ""}</div>
           </div>
           <div id='park-image'>
             {/* <img src={park ? park.m_photo : ""} alt="" /> */}
           </div>
-          <h1>Best trails in {park ? park.name : ""}</h1>
+          <h1>Best trails in {park.name}</h1>
         </header>
         <section id='overview'>
-          Want to find the best trails in {park ? park.name : ""} for an adventurous 
-          hike or a family trip? HikersGuide has {park ? this.greatTrails() : ""} to explore!
+          Want to find the best trails in {park.name} for an adventurous 
+          hike or a family trip? {this.greatTrails()}
         </section>
         <section id='park-map'>
-          {park ? this.renderMap() : ('')}
+          {this.renderMap()}
         </section>
         <h1>Park Information</h1>
-        <section id='park-info'>
-            <section id='park-left-info'>
+            <section id='park-info'>
+              <section id='park-left-info'>
               <div id='acreage'>
                 <h2>Acreage:</h2>
-                <p>{park ? park.acreage : ""} acres</p>
+                <p>{park.acreage} acres</p>
               </div>
-              <div id='park-hours'>
-                <h2>Park hours</h2>
-                <p>{park ? park.hours : ""}</p>
-              </div>
-            </section>
+                {park.hours ? 
+                (<div id='park-hours'>
+                  <h2>Park hours</h2>
+                  <p>{park.hours}</p>
+                </div>) : null}
+              </section> 
             <section id='park-right-info'>
-              <div id='links'>
-                <h2>Helpful links</h2>
-                {/* {park ? <Link to={`${park.fb_link}`}>Facebook</Link> : <></>}
-                {park ? (<Link to={`${park.twitter_link}`}>Twitter</Link>) : (<></>)}
-                {park ? (<Link to={`${park.web_link}`}>Website</Link>) : (<></>)} */}
-              </div>
+              {((park.fb_link || park.twitter_link) || park.web_link) ?
+                  (<div id='links'>
+                    <h2>Helpful links</h2>
+                    <ul>
+                      <li>{park.fb_link ? (<a target='_blank' href={`${park.fb_link}`}>Facebook</a>) : null}</li>
+                      <li>{park.twitter_link ? (<a target='_blank' href={`${park.twitter_link}`}>Twitter</a>) : null}</li>
+                      <li>{park.web_link ? (<a target='_blank' href={`${park.web_link}`}>Website</a>) : null}</li>
+                    </ul>
+                  </div>) : null
+            }
+              
             </section>
           {/* <ParkInfo park={park} /> */}
-        </section>
+            </section> 
         <section className='park-trails'>
             {this.parkTrails()}
         </section>
-      </div>
+          </div>) : null
+      }
       </div>
     )
   }
-}
+  }
