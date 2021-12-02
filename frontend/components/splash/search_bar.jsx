@@ -45,7 +45,7 @@ export default class SearchBar extends React.Component {
           // onBlur={this.handleStopSearch}
           type="text" 
           id='search-field' 
-          placeholder='Search by city, park, or trail name'
+          placeholder='Search by park or trail name'
           autoComplete='off'
           onChange={this.handleInput()}
           />

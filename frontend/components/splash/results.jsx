@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaMapSigns, FaTree } from "react-icons/fa";
+import { FaMapMarkerAlt, FaTree } from "react-icons/fa";
 
 export default class Results extends React.Component {
   constructor(props) {
@@ -16,7 +16,7 @@ export default class Results extends React.Component {
   trailLink(result) {
     return(
       <Link to={`/trails/${result.id}`} key={result.id} className={result} id={result.id}>
-        <div id='result-icon'><FaMapSigns color='gold' size={30} key={result.id} /> </div>
+        <div id='result-icon'><FaMapMarkerAlt color='#629730' size={30} key={result.id} /> </div>
         <p id='result-name'>{result.name}</p>
       </Link>
     )
@@ -25,7 +25,7 @@ export default class Results extends React.Component {
   parkLink(result) {
     return (
       <Link to={`/parks/${result.id}`} key={result.id} className={result} id={result.id}>
-        <div id='result-icon'><FaMapSigns color='gold' size={30} key={result.id} /> </div>
+        <div id='result-icon'><FaTree color='#629730' size={30} key={result.id} /> </div>
         <p id='result-name'>{result.name}</p>
       </Link>
     )
