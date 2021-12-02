@@ -1,11 +1,23 @@
+#search-cntr {
+  display: flex;
+  flex-direction: column;
+}
+
 #search-results {
-  display: block;
   margin: 0 auto;
-  height: 50px;
-  width: 90%;
-  background-color: white;
-  margin-top: -1px;
-  border-radius: 0 0 10px 10px;
+  height: 100px;
+  width: 600px;
+  transform: translateY(150%);
+  background-color: #F2F2F2;
+  margin-top: -30px;
+  border-radius: 0 0 30px 30px;
   text-align: center;
   padding-top: 10px;
+  position: static;
+  z-index: 0;
+  transition: height 2s;
+}
+
+#search-results p {
+  margin-top: 60px;
 }

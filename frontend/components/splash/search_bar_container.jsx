@@ -2,7 +2,8 @@ import SearchBar from "./search_bar";
 import { connect } from "react-redux";
 import { fetchResults, clearResults } from "../../actions/search_actions";
 
-const mSTP = props => ({
+const mSTP = state => ({
+  results: state.search
 })
 
 const mDTP = dispatch => ({
