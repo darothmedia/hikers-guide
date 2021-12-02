@@ -55,7 +55,7 @@ export default class ReviewForm extends React.Component {
 
     return(
       <div id='form-bg'>
-        <img id='form-bg-photo' src={trail ? trail.m_photo : ""} alt={trail ? trail.name : ""} />
+        <img id='form-bg-photo' src={trail ? trail.mainPhotoUrl : ""} alt={trail ? trail.name : ""} />
       <form id='review-form'>
         <h1>{trail ? trail.name : ""}</h1>
         <textarea placeholder='Write review' value={this.state.body} onChange={this.updateField('body')} />

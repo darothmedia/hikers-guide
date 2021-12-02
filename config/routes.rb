@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :users, except: [:new]
     resource :session, only: [:create, :destroy]
     resources :parks, only: [:show, :index]
+    resources :searches, only: [:index]
     resources :trails, only: [:show, :index] do
       resources :reviews, only: [:create, :index]
     end

@@ -6,30 +6,29 @@ export default class SearchBar extends React.Component {
     super(props)
     this.state = {
       query: "",
-      searching: false,
-      loading: false,
-      message: ""
+      searching: false
     }
     this.handleInput = this.handleInput.bind(this)
     this.handleSearching = this.handleSearching.bind(this)
-    this.handleStopSearch = this.handleStopSearch.bind(this)
+    // this.handleStopSearch = this.handleStopSearch.bind(this)
     this.runSearch = this.runSearch.bind(this)
   }
 
   handleInput() {
-    console.log(this.state)
-    return e => this.setState({ query: e.target.value, loading: true, message: '' })
+    return e => this.setState({ query: e.target.value})
   }
 
   handleSearching(){
     this.setState({searching: true})
-    // console.log(this.state)
   }
 
-  handleStopSearch(){
-    this.setState({searching: false})
-    // console.log(this.state)
+  componentWillUnmount(){
+    this.props.clearResults()
   }
+
+  // handleStopSearch(){
+  //   this.setState({searching: false})
+  // }
 
   runSearch(){
     this.props.searchResults(this.state.query)
@@ -43,7 +42,7 @@ export default class SearchBar extends React.Component {
         <form onSubmit={this.runSearch}>
           <input 
           onFocus={this.handleSearching}
-          onBlur={this.handleStopSearch}
+          // onBlur={this.handleStopSearch}
           type="text" 
           id='search-field' 
           placeholder='Search by city, park, or trail name'
@@ -51,14 +50,12 @@ export default class SearchBar extends React.Component {
           onChange={this.handleInput()}
           />
         </form>
-        <button id="go-button"></button>
-        <img src="https://hikers-guide.s3.us-west-1.amazonaws.com/icons/arrow.png" alt="go arrow" id='arrow-btn' />
+          <button id="go-button" onClick={() => this.runSearch}></button>
+          <img src="https://hikers-guide.s3.us-west-1.amazonaws.com/icons/arrow.png" alt="go arrow" id='arrow-btn' />
       </div>
         {this.state.searching === true ?
           <div id='search-results'>
-            <p>Start typing to populate results</p>
-            {console.log(this.props.results)}
-            {/* <Results results={this.props.results} query={this.state.query} /> */}
+            <Results results={this.props.results} query={this.state.query} searchResults={this.props.searchResults} />
           </div>
           : null}
       </div>

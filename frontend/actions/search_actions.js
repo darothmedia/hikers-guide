@@ -16,7 +16,5 @@ export const clearResults = () => {
   }
 }
 
-export const fetchResults = query => dispatch => {
-  return APIUtil.fetchSearch(query)
+export const fetchResults = query => dispatch => APIUtil.fetchSearch(query)
     .then(results => dispatch(receiveResults(results)));
-}

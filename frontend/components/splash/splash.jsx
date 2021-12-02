@@ -1,5 +1,5 @@
 import React from "react";
-import SearchBar from "./search_bar";
+import SearchBarContainer from "./search_bar_container";
 import TrailLineupContainer from '../trails/trail_lineup_container'
 
 export default class Splash extends React.Component {
@@ -20,7 +20,7 @@ export default class Splash extends React.Component {
           <header>
             <h1>Find your next {this.tagline()}</h1>
           </header>
-          <SearchBar />
+          <SearchBarContainer />
         </section>
         <section id='local-favorites'>
           <div id='fav-header'>

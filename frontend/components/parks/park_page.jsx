@@ -50,7 +50,7 @@ export default class ParkPage extends React.Component {
             <div>United States of America</div><div>•</div><div>{park ? park.state : ""}</div><div>•</div><div>{park ? park.name : ""}</div>
           </div>
           <div id='park-image'>
-            <img src={park ? park.m_photo : ""} alt="" />
+            {/* <img src={park ? park.m_photo : ""} alt="" /> */}
           </div>
           <h1>Best trails in {park ? park.name : ""}</h1>
         </header>

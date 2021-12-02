@@ -51,7 +51,7 @@ export default class EditReviewForm extends React.Component {
   }
 
   render() {
-    const mPhoto = this.props.trail ? this.props.trail.m_photo : ""
+    const mPhoto = this.props.trail ? this.props.trail.mainPhotoUrl : ""
     const name = this.props.trail ? this.props.trail.name : ""
     const body = this.state ? this.state.body : ""
     const rating = this.state ? this.state.rating : ""
