@@ -25,8 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   ttg.addEventListener('click', () => {
     document.body.classList.toggle('galaxy');
-    navbar.classList.toggle('galaxy');
-    splash.classList.toggle('galaxy');
     let theme = 'trail'
     if (document.body.classList.contains('galaxy')) {
       theme = 'galaxy'
