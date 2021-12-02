@@ -7,6 +7,7 @@ export default class Results extends React.Component {
     super(props)
     this.trailLink = this.trailLink.bind(this)
     this.parkLink = this.parkLink.bind(this)
+    this.display = this.display.bind(this)
   }
 
   // componentDidMount() {
@@ -31,17 +32,33 @@ export default class Results extends React.Component {
     )
   }
 
+  display(results, query){
+    let statement = ''
+    if (results.length < 1 && query === '') {
+      statement = 'Start typing and hit return to populate results'
+    } else if (results.length < 1 && query !== '') {
+      statement = 'No results found'
+    } else if (results.length > 1 && query !== '') {
+      statement = ''
+    }
+
+    return statement
+  }
+
   render() {
-      const searchResults = this.props.results.map((result, i) => (
+    const searchResults = this.props.results.map((result, i) => (
       <li id='result-mod' key={i}>
         {result.park_id ? (this.trailLink(result)) : (this.parkLink(result))}
       </li>
     ))
 
+    const query = this.props.query
+
     return (
-      <ul id='results-cntr'>
-        {searchResults.length < 1 ? (<p>Start typing and hit return to populate results</p>) : (searchResults)}
-      </ul>
+      <div id='result-div'>
+        <li id='statement'></li>
+        {searchResults}
+        </div>
     )
     
   }

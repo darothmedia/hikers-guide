@@ -10,8 +10,9 @@ export default class SearchBar extends React.Component {
     }
     this.handleInput = this.handleInput.bind(this)
     this.handleSearching = this.handleSearching.bind(this)
-    // this.handleStopSearch = this.handleStopSearch.bind(this)
+    this.handleStopSearch = this.handleStopSearch.bind(this)
     this.runSearch = this.runSearch.bind(this)
+    this.display = this.display.bind(this)
   }
 
   handleInput() {
@@ -26,12 +27,25 @@ export default class SearchBar extends React.Component {
     this.props.clearResults()
   }
 
-  // handleStopSearch(){
-  //   this.setState({searching: false})
-  // }
+  handleStopSearch(){
+    this.setState({searching: false})
+  }
 
   runSearch(){
     this.props.searchResults(this.state.query)
+  }
+
+  display(results, query) {
+    let statement = ''
+    if (results.length < 1 && query === '') {
+      statement = 'Start typing and hit return to populate results'
+    } else if (results.length < 1 && query !== '') {
+      statement = 'No results found'
+    } else if (results.length > 1 && query !== '') {
+      statement = ''
+    }
+
+    return (<li id='statement' className='text'>{statement}</li>)
   }
 
   render(){
@@ -42,7 +56,7 @@ export default class SearchBar extends React.Component {
         <form onSubmit={this.runSearch}>
           <input 
           onFocus={this.handleSearching}
-          // onBlur={this.handleStopSearch}
+          onBlur={this.handleStopSearch}
           type="text" 
           id='search-field' 
           placeholder='Search by park or trail name'
@@ -50,14 +64,17 @@ export default class SearchBar extends React.Component {
           onChange={this.handleInput()}
           />
         </form>
-          <button id="go-button" onClick={() => this.runSearch}></button>
-          <img src="https://hikers-guide.s3.us-west-1.amazonaws.com/icons/arrow.png" alt="go arrow" id='arrow-btn' />
+          <button id="go-button" onClick={this.runSearch}></button>
+          <img onClick={this.runSearch} src="https://hikers-guide.s3.us-west-1.amazonaws.com/icons/arrow.png" alt="go arrow" id='arrow-btn' />
       </div>
+        <div id='search-results'>
+        <ul id='results-cntr'>
         {this.state.searching === true ?
-          <div id='search-results'>
-            <Results results={this.props.results} query={this.state.query} searchResults={this.props.searchResults} />
-          </div>
+          this.display(this.props.results, this.state.query)
           : null}
+          <Results results={this.props.results} query={this.state.query} searchResults={this.props.searchResults} />
+        </ul>
+        </div>
       </div>
     )
   }
