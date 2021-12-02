@@ -30,7 +30,13 @@ export default class TrailPage extends React.Component {
   }
 
   reviews(){
-    const reviews = this.props.reviews
+    const reviews = Array.from(this.props.reviews)
+    reviews.sort((a, b) => {
+      if (a.actdate > b.actdate) return -1;
+      if (a.actdate < b.actdate) return 1;
+      return 0
+    })
+
     // const reviews = trail ? trail.reviews : []
 
     return(
