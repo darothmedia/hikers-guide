@@ -23,7 +23,12 @@ export default class SearchBar extends React.Component {
     this.setState({searching: true})
   }
 
+  componentDidMount(){
+    // this.ping = setInterval(this.runSearch, 500)
+  }
+
   componentWillUnmount(){
+    // clearInterval(this.ping)
     this.props.clearResults()
   }
 
@@ -40,12 +45,12 @@ export default class SearchBar extends React.Component {
     if (results.length < 1 && query === '') {
       statement = 'Start typing and hit return to populate results'
     } else if (results.length < 1 && query !== '') {
-      statement = 'No results found'
+      statement = '_'
     } else if (results.length > 1 && query !== '') {
       statement = ''
     }
-
-    return (<li id='statement' className='text'>{statement}</li>)
+    if (statement === '_') return (<li id='statement' className='void'>{statement}</li>)
+    if (statement !== '') return (<li id='statement' className='text'>{statement}</li>)
   }
 
   render(){
@@ -71,7 +76,7 @@ export default class SearchBar extends React.Component {
         <ul id='results-cntr'>
         {this.state.searching === true ?
           this.display(this.props.results, this.state.query)
-          : null}
+          : <li></li>}
           <Results results={this.props.results} query={this.state.query} searchResults={this.props.searchResults} />
         </ul>
         </div>

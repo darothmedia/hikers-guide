@@ -21,9 +21,6 @@ const ReviewModule = ({review, currentUser, deleteReview, author}) => {
   
   return (
       <div id={`review-module`}>
-        {console.log(review.actdate)}
-        {console.log(date)}
-        {console.log(fulldate)}
         <section id='review-stats'>
         {(currentUser && currentUser.id === review.author_id) ? <h1>Your review:</h1> : ""}
           <h2>{author ? author.fname : ""} {author ? author.lname : ""}</h2>

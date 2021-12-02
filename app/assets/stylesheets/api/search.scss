@@ -10,7 +10,6 @@
   margin-top: -30px;
   border-radius: 0 0 30px 30px;
   text-align: center;
-  padding-top: 10px;
   position: relative;
   top: 170px;
   z-index: 1;
@@ -23,14 +22,20 @@
   margin-bottom: 10px;
 }
 
-#results-cntr {
-
-  max-height: 200px;
-  overflow: scroll;
+#result-mod:first-child {
+  margin-top: 60px;
 }
 
-#statement {
-  margin-bottom: 20px;
+#results-cntr {
+  max-height: 280px;
+  overflow: scroll;
+  // scrollbar-width: thin;
+  // scrollbar-color: #629730;
+}
+
+.void#statement {
+  margin-top: 60px;
+  color: white;
 }
 
 .text#statement {

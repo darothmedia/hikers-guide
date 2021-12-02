@@ -37,7 +37,7 @@ export default class Results extends React.Component {
     if (results.length < 1 && query === '') {
       statement = 'Start typing and hit return to populate results'
     } else if (results.length < 1 && query !== '') {
-      statement = 'No results found'
+      statement = ''
     } else if (results.length > 1 && query !== '') {
       statement = ''
     }
@@ -56,9 +56,8 @@ export default class Results extends React.Component {
 
     return (
       <div id='result-div'>
-        <li id='statement'></li>
         {searchResults}
-        </div>
+      </div>
     )
     
   }
