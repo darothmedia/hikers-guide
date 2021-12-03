@@ -39,7 +39,7 @@ export default class SearchBar extends React.Component {
   display(results, query) {
     let statement = ''
     if (results.length < 1 && query === '') {
-      statement = 'Start typing and hit return to populate results'
+      statement = 'Start typing to populate results'
     } else if (results.length < 1 && query !== '') {
       statement = 'No results'
     } else if (results.length > 1 && query !== '') {
