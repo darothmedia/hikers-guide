@@ -22,7 +22,7 @@ lists of trails.
 ## Home Page:
 The home page contains a dynamic search bar that populates results as a user types. Users can click through to a given trail or park from the search results.
 
-![Search Bar SG](https://hikers-guide.s3.us-west-1.amazonaws.com/screenshots/Screen+Shot+2021-12-03+at+9.41.30+AM.png, "Search Bar Component")
+![Search Bar SG](https://hikers-guide.s3.us-west-1.amazonaws.com/screenshots/Screen+Shot+2021-12-03+at+9.41.30+AM.png "Search Bar Component")
 
 The search results component receives both trail and park results. It assesses the type of result based on the existance of a "park_id" in the returned JSON, and renders the correct icon and link for a given result.
 
