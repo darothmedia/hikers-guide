@@ -11,7 +11,11 @@ require "open-uri"
 User.destroy_all
 demo = User.create(fname: 'demo', lname: 'user', email: 'demo@user.com', password:'password')
 u1 = User.create(fname: 'Adrian', lname: 'Rothschild', email: 'adrian@hikersguide.com', password:'password')
-u2 = User.create(fname: 'Bono', lname: 'The Great', email: 'bono@u2.com', password: 'password')
+u2 = User.create(fname: 'Arthur', lname: 'Dent', email: 'arthur@hikersguide.com', password: 'password')
+u3 = User.create(fname: 'Zaphod', lname: 'Beeblebrox', email: 'zaphod@hikersguide.com', password: 'password')
+u4 = User.create(fname: 'Paranoid', lname: 'Android', email: 'android@hikersguide.com', password: 'password')
+u5 = User.create(fname: 'Ford', lname: 'Prefect', email: 'ford@hikersguide.com', password: 'password')
+
 
 Park.destroy_all
 p1 = Park.create(
@@ -617,8 +621,7 @@ t1 = Trail.create(
   route_type: "Loop",
   lat: 37.90486,
   lng: -122.24505,
-  park_id: p1.id,
-  m_photo: purl('IMG_8338.jpg')
+  park_id: p1.id
 )
 
 ph1 = URI.open(purl('IMG_8338.jpg'))
@@ -634,8 +637,7 @@ t2 = Trail.create(
   route_type: "Out & Back",
   lat: 37.90486,
   lng: -122.24505,
-  park_id: p1.id,
-  m_photo: purl('DSCN4130.jpg')
+  park_id: p1.id
 )
 
 ph2 = URI.open(purl('DSCN4130.jpg'))
@@ -651,8 +653,7 @@ t3 = Trail.create(
   route_type: "Out & Back",
   lat: 37.72736,
   lng: -119.57502,
-  park_id: p2.id,
-  m_photo: purl('IMG_20210913_125258718.jpg')
+  park_id: p2.id
 )
 
 ph3 = URI.open(purl('IMG_20210913_125258718.jpg'))
@@ -668,8 +669,7 @@ t4 = Trail.create(
   route_type: "Loop",
   lat: 37.92743,
   lng: -122.57986,
-  park_id: p3.id,
-  m_photo: purl('IMG_8823.jpg')
+  park_id: p3.id
 )
 
 ph4 = URI.open(purl('IMG_8823.jpg'))
@@ -685,8 +685,7 @@ t5 = Trail.create(
   route_type: "Loop",
   lat: 37.73279,
   lng: -119.55782,
-  park_id: p2.id,
-  m_photo: purl('IMG_3063.jpg')
+  park_id: p2.id
 )
 
 ph5 = URI.open(purl('IMG_3063.jpg'))
@@ -702,8 +701,7 @@ t6 = Trail.create(
   route_type: "Out & Back",
   lat: 37.6408178,
   lng: -119.9443979,
-  park_id: p2.id,
-  m_photo: purl('IMG_3109.jpg')
+  park_id: p2.id
 )
 
 ph6 = URI.open(purl('IMG_3109.jpg'))
@@ -719,8 +717,7 @@ t7 = Trail.create(
   route_type: "Out & Back",
   lat: 37.7357108,
   lng: -119.5657707,
-  park_id: p2.id,
-  m_photo: purl('IMG_3681.jpg')
+  park_id: p2.id
 )
 
 ph7 = URI.open(purl('IMG_3681.jpg'))
@@ -736,8 +733,7 @@ t8 = Trail.create(
   route_type: "Out & Back",
   lat: 37.82569,
   lng: -119.46999,
-  park_id: p2.id,
-  m_photo: purl('IMG_20210913_100444372.jpg')
+  park_id: p2.id
 )
 
 ph8 = URI.open(purl('IMG_20210913_100444372.jpg'))
@@ -753,8 +749,7 @@ t9 = Trail.create(
   route_type: "Out & Back",
   lat: 37.71243,
   lng: -119.58632,
-  park_id: p2.id,
-  m_photo: purl('IMG_8407.jpg')
+  park_id: p2.id
 )
 
 ph9 = URI.open(purl('IMG_8407.jpg'))
@@ -770,12 +765,192 @@ t10 = Trail.create(
   route_type: "Out & Back",
   lat: 37.73385,
   lng: -119.60187,
-  park_id: p2.id,
-  m_photo: purl('IMG_8373.jpg')
+  park_id: p2.id
 )
 
 ph10 = URI.open(purl('IMG_8373.jpg'))
 t10.main_photo.attach(io: ph10, filename: 'IMG_8373.jpg')
+
+t11 = Trail.create(
+name: "Bristlecone and Alpine Lakes Loop",
+overview: "Bristlecone and Alpine Lakes Loop is a 5.3 mile moderately trafficked loop trail located near Baker, Nevada that features a lake and is rated as moderate. The trail is primarily used for hiking, walking, nature trips, and bird watching and is best used from April until September.",
+lat: 39.01012,
+lng: -114.30705,
+length: 5.3,
+description: "This is a very popular trailhead, so parking may be limited and users suggest arriving early to get a spot. The Wheeler Bristlecone Grove trailhead also offers access to a wheelchair-accessible .4 mile trail https://www.alltrails.com/trail/us/nevada/sky-islands-forest-trail",
+difficulty: "Moderate",
+elevation:1020,
+route_type: "Loop,"
+park_id: p29.id
+)
+
+ph11 = URI.open(purl('IMG_3718.jpg'))
+t11.main_photo.attach(io: ph11, filename: 'IMG_3718.jpg')
+
+
+t12 = Trail.create(
+name: "Capitol Gorge Trail",
+overview: "Capitol Gorge Trail is a 4.5 mile heavily trafficked out and back trail located near Torrey, Utah that offers scenic views and is rated as moderate. The trail offers a number of activity options and is best used from March until November.",
+lat: 38.20955,
+lng: -111.16924,
+length: 4.5,
+description: "This hike follows the gorge for the first mile, varying in width from 50' in places to about 10' at its narrowest. You follow the dry creek bed down the middle of the gorge, and take the trail on the far left side of the gorge. About 1/4 mile into the hike you will see a sign for petroglyphs. After another 1/4 of a mile is the Pioneer Register. This is a series of names and dates from the late 1800's thru the early 1900's. ",
+difficulty: "Moderate",
+elevation:374,
+route_type: "Out & Back,"
+park_id: p13.id
+)
+
+ph12 = URI.open(purl('IMG_3572.jpg'))
+t12.main_photo.attach(io: ph12, filename: 'IMG_3572.jpg')
+
+t13 = Trail.create(
+name: "Goosenecks & Sunset Point",
+overview: "Goosenecks and Sunset Point is a 2.5 mile heavily trafficked out and back trail located near Torrey, Utah that offers scenic views and is good for all skill levels. The trail is primarily used for walking and is best used from March until November.",
+lat: 38.30747,
+lng: -111.2954,
+length: 2.5,
+description: "Arrive in the last two hours before sunset on any evening and you will see photographers setting out their soul-catchers for a popular view in the park.  Like mites or spiders, their tripods dot the landscape.  Just look around them and enjoy the scenery. You've come for one thing:  to watch the sunset.  Though the trails are short, they do present hazards:  a lack of shade during the day time, dangerous dropoffs at the points, and no water at the parking lot.   ",
+difficulty: "Easy",
+elevation:544,
+route_type: "Out & Back,"
+park_id: p13.id
+)
+
+ph13 = URI.open(purl('IMG_3690.jpg'))
+t13.main_photo.attach(io: ph13, filename: 'IMG_3690.jpg')
+
+t14 = Trail.create(
+name: "Hickman Bridge Trail",
+overview: "Hickman Bridge Trail is a 1.7 mile heavily trafficked out and back trail located near Torrey, Utah that features a river and is rated as moderate. The trail is primarily used for hiking, running, and nature trips and is best used from March until November.",
+lat: 38.28871,
+lng: -111.22774,
+length: 1.7,
+description: "The Hickman Natural Bridge trail is a very relaxing and scenic trail in Capitol Reef National Park. A trail brochure - available at the trailhead - points out 17 things to observe along the hike at various interpretive zones. Integral to the cultural and human history of the area, the Fremont People occupied the lands in this area from 300 to 1400 C.E. and the historical artifacts of their past can still be seen today. Some of the culturally significant sites along the trail are Fremont pit houses, an elevated granary (for food storage) tucked into the Kayenta formation, and the greater Fremont River Valley where the Fremont lived prosperously for generations. ",
+difficulty: "Moderate",
+elevation:416,
+route_type: "Out & Back,"
+park_id: p13.id
+)
+
+ph14 = URI.open(purl('IMG_3666.jpg'))
+t14.main_photo.attach(io: ph14, filename: 'IMG_3666.jpg')
+
+t15 = Trail.create(
+name: "Elephant Hill Trail",
+overview: "Elephant Hill Trail is a 6.4 mile moderately trafficked out and back trail located near Monticello, Utah that offers scenic views and is good for all skill levels. The trail offers a number of activity options and is accessible year-round.",
+lat: 38.1417,
+lng: -109.82783,
+length: 6.4,
+description: "Canyonlands National Park charges a fee to enter. You can also purchase a park-specific annual pass. For more information, please see ",
+difficulty: "Easy",
+elevation:728,
+route_type: "Out & Back,"
+park_id: p12.id
+)
+
+ph15 = URI.open(purl('IMG_3556.jpg'))
+t15.main_photo.attach(io: ph15, filename: 'IMG_3556.jpg')
+
+t16 = Trail.create(
+name: "Slickrock Foot Trail",
+overview: "Slickrock Foot Trail is a 2.4 mile heavily trafficked loop trail located near Moab, Utah that features beautiful wild flowers and is rated as moderate. The trail is primarily used for hiking, walking, running, and nature trips and is accessible year-round.",
+lat: 38.177,
+lng: -109.81459,
+length: 2.4,
+description: "Please note that this trail is not well marked. Make sure to look at map/GPS along the way.",
+difficulty: "Moderate",
+elevation:137,
+route_type: "Loop,"
+park_id: p12.id
+)
+
+ph16 = URI.open(purl('IMG_3543.jpg'))
+t16.main_photo.attach(io: ph16, filename: 'IMG_3543.jpg')
+
+t17 = Trail.create(
+name: "Grand View Point Trail",
+overview: "Grand View Point Trail is a 1.8 mile heavily trafficked out and back trail located near Moab, Utah that offers the chance to see wildlife and is good for all skill levels. The trail is primarily used for hiking, walking, and nature trips and is accessible year-round.",
+lat: 38.31075,
+lng: -109.85658,
+length: 1.8,
+description: "Breathtaking sunset hike on the rim of Islands in the Sky. Accessibility: According to the park website, to the first overlook the trail is paved concrete and wheelchair and stroller friendly. It has been marked with a waypoint. Past that, there are stairs and it turns into traversing rocky cliff edges. The width is typically at least four feet wide on the paved section and the estimated grade there is mostly gentle (all 3% or less).",
+difficulty: "Easy",
+elevation:160,
+route_type: "Out & Back,"
+park_id: p12.id
+)
+
+ph17 = URI.open(purl('IMG_3493.jpg'))
+t17.main_photo.attach(io: ph17, filename: 'IMG_3493.jpg')
+
+
+t18 = Trail.create(
+name: "Mesa Arch Trail",
+overview: "Mesa Arch Trail is a 0.7 mile heavily trafficked loop trail located near La Sal, Utah that features beautiful wild flowers and is good for all skill levels. The trail offers a number of activity options and is accessible year-round.",
+lat: 38.38919,
+lng: -109.86812,
+length: 0.7,
+description: "This is an easy walk to an arch perched on a cliff edge. Users especially recommend this as a great sunrise hike in Canyonlands National Park with its amazing morning views. Getting to this day hike early is also a great way to avoid the busy crowds and full parking lot that tend to start in the mid-morning, making this a more nature-like experience. As this climate varies tremendously throughout the year and days, definitely bring layers for the cold mornings and hot days. ",
+difficulty: "Easy",
+elevation:88,
+route_type: "Loop,"
+park_id: p12.id
+)
+
+ph18 = URI.open(purl('IMG_3457.jpg'))
+t18.main_photo.attach(io: ph18, filename: 'IMG_3457.jpg')
+
+
+t19 = Trail.create(
+name: "Devils Garden Trail",
+overview: "Devils Garden is a 7.9 mile heavily trafficked loop trail located near Thompson, Utah that offers the chance to see wildlife and is rated as difficult. The trail is primarily used for hiking.",
+lat: 38.78237,
+lng: -109.59509,
+length: 7.9,
+description: "Devils Garden is a popular, challenging hike at the northern end of the park. The trail offers incredible views of unique arches, including Landscape Arch, which is one of the longest natural spans in the world.",
+difficulty: "Hard",
+elevation:1085,
+route_type: "Loop,"
+park_id: p6.id
+)
+
+ph19 = URI.open(purl('IMG_3430.jpg'))
+t19.main_photo.attach(io: ph19, filename: 'IMG_3430.jpg')
+
+
+t20 = Trail.create(
+name: "Delicate Arch Trail",
+overview: "Delicate Arch Trail is a 3.2 mile heavily trafficked out and back trail located near Moab, Utah that features beautiful wild flowers and is rated as moderate. The trail is primarily used for hiking and is accessible year-round.",
+lat: 38.73566,
+lng: -109.52051,
+length: 3.2,
+description: "Delicate Arch Trail is a short hike in Arches National Park to Utah's most recognizable natural arch, which you will likely recognize from the Utah license plate. The park is home to some of the most unique geologic features in the world. This fantastic hiking trail leads along the red rock slabs to the largest free standing arch in the park. You’ll pass smaller stone arches, piles of balanced rocks, and tall sandstone fins on your way to this incredible rocky feature.",
+difficulty: "Moderate",
+elevation:629,
+route_type: "Out & Back,"
+park_id: p6.id
+)
+
+ph20 = URI.open(purl('IMG_3319.jpg'))
+t20.main_photo.attach(io: ph20, filename: 'IMG_3319.jpg')
+
+t21 = Trail.create(
+name: "Dragon Point Trail",
+overview: "Dragon Point Trail is a 0.4 mile moderately trafficked out and back trail located near Montrose, Colorado that offers the chance to see wildlife and is good for all skill levels. The trail is primarily used for hiking, walking, nature trips, and bird watching and is best used from May until October.",
+lat: 38.57396,
+lng: -107.72309,
+length: 0.4,
+description: "Dragon Point; a widening ravine with overgrown sides, enclosing the greenish-grey waters of the river. The overlook is reached by a wide path across a flat, rocky promontory between the river and a small side canyon to the south. A sign gives the distance as 100 yards, but 300 is more accurate.",
+difficulty: "Easy",
+elevation:59,
+route_type: "Out & Back,"
+park_id: p10.id
+)
+
+ph21 = URI.open(purl('IMG_3109.jpg'))
+t21.main_photo.attach(io: ph21, filename: 'IMG_3109.jpg')
+
 
 Review.destroy_all
 
@@ -799,7 +974,31 @@ r3 = Review.create(
   body: "Decent",
   rating: 2,
   actdate: Date.parse('2021-11-24'),
-  author_id: u2.id,
+  author_id: u5.id,
   trail_id: t2.id
+)
+
+r4 = Review.create(
+  body: "Out of this world. Literally",
+  rating: 5,
+  actdate: Date.parse('2019-09-24'),
+  author_id: u4.id,
+  trail_id: t21.id
+)
+
+r4 = Review.create(
+  body: "The answer to life, the universe, and everything",
+  rating: 4,
+  actdate: Date.parse('2042-04-02'),
+  author_id: u3.id,
+  trail_id: t17.id
+)
+
+r5 = Review.create(
+  body: "I absolutely did not like this. Absolutely.",
+  rating: 1,
+  actdate: Date.parse('2042-04-02'),
+  author_id: u2.id,
+  trail_id: t8.id
 )
 

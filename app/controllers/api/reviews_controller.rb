@@ -34,7 +34,7 @@ class Api::ReviewsController < ApplicationController
   end
 
   def index
-    @reviews = Review.where(trail_id: params[:trail_id]).order(actdate: :desc)
+    @reviews = Review.where(trail_id: params[:trail_id])
     render :index
   end
 
