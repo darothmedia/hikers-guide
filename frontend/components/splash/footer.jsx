@@ -6,13 +6,13 @@ const Footer = () => {
     <footer>
       <div className='footer-container'>
         <div className='favicons'>
-          <SocialIcon url="https://www.linkedin.com/in/adrian-rothschild/" bgColor="#414141" />
+          <SocialIcon url="https://www.linkedin.com/in/adrian-rothschild/" target='_blank' bgColor="#414141" />
         </div>
         <div className='favicons'>
-          <SocialIcon url="https://github.com/darothmedia" bgColor="#414141" />
+          <SocialIcon url="https://github.com/darothmedia" target='_blank' bgColor="#414141" />
         </div>
         <div className='favicons'>
-          <SocialIcon url="https://www.rothmedia.org/" bgColor="#414141" />
+          <SocialIcon url="https://www.rothmedia.org/" target='_blank' bgColor="#414141" />
         </div>
       </div>
     </footer>

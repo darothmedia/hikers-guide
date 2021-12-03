@@ -18,11 +18,8 @@ export default class TrailLineup extends React.Component {
     let date = new Date()
     let minutes = date.getMinutes()
     while (four.length < 4) {
-      let t = (Math.floor(Math.random() * allTrails.length))
-      console.log(minutes % 16)
       four.push(allTrails[minutes % 16])
       minutes += 1
-      // allTrails.splice(t, 1)
     }
     return four
   }
