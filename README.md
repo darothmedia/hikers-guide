@@ -4,27 +4,29 @@
 
 HikersGuide is a clone of AllTrails where users can log in, create/write/update/delete reviews of a trail, and view park / trail detail pages with helpful info. The site draws references from The Hitchhiker's Guide to the Galaxy, and has several easter eggs that fans of the book will appreciate.
 
-### **Tech Stack:**
+## **Tech Stack:**
 
 * **Database:** PostgreSQL
 * **Backend:** Ruby on Rails
 * **Queries:** jQuery AJAX
 * **Frontend:** React-Redux (JavaScript)
 
-## Components:
+### Components:
 * **Image Hosting:** AWS S3 with Rails Active Storage
 * **Mapping:** Mapbox GL JS
 
-### **Features:**
+## **Features:**
 HikersGuide's primary content is trail listings, with secondary park listings that contain
 lists of trails.
 
-## Home Page:
+### Home Page:
 The home page contains a dynamic search bar that populates results as a user types. Users can click through to a given trail or park from the search results.
 
 ![Search Bar SG](https://hikers-guide.s3.us-west-1.amazonaws.com/screenshots/Screen+Shot+2021-12-03+at+9.41.30+AM.png "Search Bar Component")
 
-The search results component receives both trail and park results. It assesses the type of result based on the existance of a "park_id" in the returned JSON, and renders the correct icon and link for a given result.
+The search results component receives both trail and park results. It assesses the type of result based on the existance of a "park_id" foreign key in the returned JSON for a trail, and renders the correct icon and link for a given result.
+
+Here is some sample code from the search component:
 
 ```js
 render() {
@@ -53,10 +55,18 @@ parkLink(result) {
   }
 ```
 
+The site has a "galaxy mode" (dark mode) which persists as a user clicks through the site. All components on all site pages have been given appropriate dark mode styling in the site's CSS.
+
+![Dark Mode SG](https://hikers-guide.s3.us-west-1.amazonaws.com/screenshots/Screen+Shot+2021-12-03+at+9.56.42+AM.png "Dark Mode")
+
 ## Trails:
 Users can interact with trails by leaving reviews. These reviews are shown on a given trail and update the trail's average review, which is featured throughout the site.
 
-All the site's trails have the following details:
+Trails are displayed as modules throughout the site (on the home, explore, and parks pages) and each has its own standalone trail info page.
+
+![Trail Module SG](https://hikers-guide.s3.us-west-1.amazonaws.com/screenshots/Screen+Shot+2021-12-03+at+9.34.08+AM.png "Trail Modules")
+
+The site's trail pages have the following details:
 * Primary Photo
 * Overview
 * Difficulty
@@ -72,9 +82,6 @@ All the site's trails have the following details:
   * Review Body
 
 ## Parks:
-
- 
-
 
 
 [HikersGuide Design Documents](https://github.com/darothmedia/hikers-guide/wiki)
