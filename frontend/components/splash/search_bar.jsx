@@ -15,20 +15,16 @@ export default class SearchBar extends React.Component {
     this.display = this.display.bind(this)
   }
 
-  handleInput() {
-    return e => this.setState({ query: e.target.value})
+  handleInput(e) {
+    this.setState({ query: e.target.value})
+    this.runSearch(this.state.query)
   }
 
   handleSearching(){
     this.setState({searching: true})
   }
 
-  componentDidMount(){
-    // this.ping = setInterval(this.runSearch, 500)
-  }
-
   componentWillUnmount(){
-    // clearInterval(this.ping)
     this.props.clearResults()
   }
 
@@ -45,7 +41,7 @@ export default class SearchBar extends React.Component {
     if (results.length < 1 && query === '') {
       statement = 'Start typing and hit return to populate results'
     } else if (results.length < 1 && query !== '') {
-      statement = '_'
+      statement = 'No results'
     } else if (results.length > 1 && query !== '') {
       statement = ''
     }
@@ -66,7 +62,7 @@ export default class SearchBar extends React.Component {
           id='search-field' 
           placeholder='Search by park or trail name'
           autoComplete='off'
-          onChange={this.handleInput()}
+          onChange={e => this.handleInput(e)}
           />
         </form>
           <button id="go-button" onClick={this.runSearch}></button>

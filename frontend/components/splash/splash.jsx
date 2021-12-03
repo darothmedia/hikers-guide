@@ -13,6 +13,10 @@ export default class Splash extends React.Component {
       return (tags[Math.floor(Math.random() * tags.length)])
   }
 
+  // componentDidMount(){
+  //   this.props.fetchTrails()
+  // }
+
   render(){
     return (
       <div id='bg'>
@@ -24,7 +28,7 @@ export default class Splash extends React.Component {
         </section>
         <section id='local-favorites'>
           <div id='fav-header'>
-            <h2>Local favorites near </h2><p>Earth</p>
+            <h2>Local trails near </h2><p>Earth</p>
           </div>
           <TrailLineupContainer />
         </section>

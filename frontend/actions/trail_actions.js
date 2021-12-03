@@ -18,3 +18,4 @@ export const fetchAllTrails = () => dispatch => APIUtil.fetchTrails()
 
 export const fetchTrail = (trailId) => dispatch => APIUtil.fetchTrail(trailId)
   .then(trail => dispatch(receiveTrail(trail)))
+

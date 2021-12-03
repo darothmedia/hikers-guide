@@ -15,10 +15,14 @@ export default class TrailLineup extends React.Component {
   connectFour() {
     const allTrails = Array.from(this.props.trails)
     let four = []
+    let date = new Date()
+    let minutes = date.getMinutes()
     while (four.length < 4) {
       let t = (Math.floor(Math.random() * allTrails.length))
-      four.push(allTrails[t])
-      allTrails.splice(t, 1)
+      console.log(minutes % 16)
+      four.push(allTrails[minutes % 16])
+      minutes += 1
+      // allTrails.splice(t, 1)
     }
     return four
   }
