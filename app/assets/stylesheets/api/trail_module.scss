@@ -59,6 +59,13 @@
   padding-top: 5px;
 }
 
+#trail-stats>p {
+  width: 240px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 #trail-stats p {
   font-size: 14px;
   color: #767676;

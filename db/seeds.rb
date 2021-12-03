@@ -675,21 +675,21 @@ t4 = Trail.create(
 ph4 = URI.open(purl('IMG_8823.jpg'))
 t4.main_photo.attach(io: ph4, filename: 'IMG_8823.jpg')
 
-t5 = Trail.create(
-  name: "Vernal and Nevada Falls via Mist Trail",
-  overview: "Vernal and Nevada Falls via Mist Trail is a 6 mile heavily trafficked loop trail located near Yosemite Valley, California that features a waterfall and is rated as difficult. The trail is primarily used for hiking and is best used from May until October.",
-  description: "Hike to two breathtaking waterfalls along some of Yosemite Valley's most popular hiking trails. If you only have time for one hike while in Yosemite look no further - the Mist Trail is the hike for you. It is no wonder why this trail is one of the most traveled in Yosemite National Park. You will hike so close to these two massive waterfalls that you may get wet from the trail. The best time to hike this trail is in Spring or early Summer, while the snow runoff is high and the falls are full of water. The Mist Trail starts at Happy Isles Trailhead (YARTS Happy Isles shuttle stop #16, and within walking distance of Curry Village and the parking lot). The park recommends starting early to avoid the larger crowds. After a brief stroll along the river, you climb a pretty steep initial accent over stone steps until you reach the footbridge, which offers the first glimpse of Vernal Falls in the distance. You will also find a water fountain and restrooms. You will then continue up to Vernal Falls, past Emerald Pool, and alongside Nevada Falls until you reach the high-point of this hike. You can choose to take the alternate route down along the John Muir Trail to see great views of Nevada Falls and Liberty Cap in the distance before meeting back up with the Mist Trail near the footbridge. This route back is slightly longer, but offers a change of scenery and is easier on the knees. Before hopping back on the YARTS shuttle, treat yourself to some ice cream or a refreshing drink at the small stand, or head over to Curry Village for a larger variety of choices.",
-  difficulty: "Hard",
-  length: 6.0,
-  elevation: 2162,
-  route_type: "Loop",
-  lat: 37.73279,
-  lng: -119.55782,
-  park_id: p2.id
-)
+# t5 = Trail.create(
+#   name: "Vernal and Nevada Falls via Mist Trail",
+#   overview: "Vernal and Nevada Falls via Mist Trail is a 6 mile heavily trafficked loop trail located near Yosemite Valley, California that features a waterfall and is rated as difficult. The trail is primarily used for hiking and is best used from May until October.",
+#   description: "Hike to two breathtaking waterfalls along some of Yosemite Valley's most popular hiking trails. If you only have time for one hike while in Yosemite look no further - the Mist Trail is the hike for you. It is no wonder why this trail is one of the most traveled in Yosemite National Park. You will hike so close to these two massive waterfalls that you may get wet from the trail. The best time to hike this trail is in Spring or early Summer, while the snow runoff is high and the falls are full of water. The Mist Trail starts at Happy Isles Trailhead (YARTS Happy Isles shuttle stop #16, and within walking distance of Curry Village and the parking lot). The park recommends starting early to avoid the larger crowds. After a brief stroll along the river, you climb a pretty steep initial accent over stone steps until you reach the footbridge, which offers the first glimpse of Vernal Falls in the distance. You will also find a water fountain and restrooms. You will then continue up to Vernal Falls, past Emerald Pool, and alongside Nevada Falls until you reach the high-point of this hike. You can choose to take the alternate route down along the John Muir Trail to see great views of Nevada Falls and Liberty Cap in the distance before meeting back up with the Mist Trail near the footbridge. This route back is slightly longer, but offers a change of scenery and is easier on the knees. Before hopping back on the YARTS shuttle, treat yourself to some ice cream or a refreshing drink at the small stand, or head over to Curry Village for a larger variety of choices.",
+#   difficulty: "Hard",
+#   length: 6.0,
+#   elevation: 2162,
+#   route_type: "Loop",
+#   lat: 37.73279,
+#   lng: -119.55782,
+#   park_id: p2.id
+# )
 
-ph5 = URI.open(purl('IMG_3063.jpg'))
-t5.main_photo.attach(io: ph5, filename: 'IMG_3063.jpg')
+# ph5 = URI.open(purl('IMG_3063.jpg'))
+# t5.main_photo.attach(io: ph5, filename: 'IMG_3063.jpg')
 
 t6 = Trail.create(
   name: "Upper Yosemite Falls Trail",
@@ -704,8 +704,8 @@ t6 = Trail.create(
   park_id: p2.id
 )
 
-ph6 = URI.open(purl('IMG_3109.jpg'))
-t6.main_photo.attach(io: ph6, filename: 'IMG_3109.jpg')
+ph6 = URI.open(purl('IMG_3802.jpg'))
+t6.main_photo.attach(io: ph6, filename: 'IMG_3802.jpg')
 
 t7 = Trail.create(
   name: "Half Dome via the John Muir Trail",
@@ -720,8 +720,8 @@ t7 = Trail.create(
   park_id: p2.id
 )
 
-ph7 = URI.open(purl('IMG_3681.jpg'))
-t7.main_photo.attach(io: ph7, filename: 'IMG_3681.jpg')
+ph7 = URI.open(purl('IMG_8807.jpg'))
+t7.main_photo.attach(io: ph7, filename: 'IMG_8807.jpg')
 
 t8 = Trail.create(
   name: "Clouds Rest Trail",
@@ -772,16 +772,16 @@ ph10 = URI.open(purl('IMG_8373.jpg'))
 t10.main_photo.attach(io: ph10, filename: 'IMG_8373.jpg')
 
 t11 = Trail.create(
-name: "Bristlecone and Alpine Lakes Loop",
-overview: "Bristlecone and Alpine Lakes Loop is a 5.3 mile moderately trafficked loop trail located near Baker, Nevada that features a lake and is rated as moderate. The trail is primarily used for hiking, walking, nature trips, and bird watching and is best used from April until September.",
-lat: 39.01012,
-lng: -114.30705,
-length: 5.3,
-description: "This is a very popular trailhead, so parking may be limited and users suggest arriving early to get a spot. The Wheeler Bristlecone Grove trailhead also offers access to a wheelchair-accessible .4 mile trail https://www.alltrails.com/trail/us/nevada/sky-islands-forest-trail",
-difficulty: "Moderate",
-elevation:1020,
-route_type: "Loop,"
-park_id: p29.id
+  name: "Bristlecone and Alpine Lakes Loop",
+  overview: "Bristlecone and Alpine Lakes Loop is a 5.3 mile moderately trafficked loop trail located near Baker, Nevada that features a lake and is rated as moderate. The trail is primarily used for hiking, walking, nature trips, and bird watching and is best used from April until September.",
+  lat: 39.01012,
+  lng: -114.30705,
+  length: 5.3,
+  description: "This is a very popular trailhead, so parking may be limited and users suggest arriving early to get a spot. The Wheeler Bristlecone Grove trailhead also offers access to a wheelchair-accessible .4 mile trail https://www.alltrails.com/trail/us/nevada/sky-islands-forest-trail",
+  difficulty: "Moderate",
+  elevation:1020,
+  route_type: "Loop",
+  park_id: p29.id
 )
 
 ph11 = URI.open(purl('IMG_3718.jpg'))
@@ -797,7 +797,7 @@ length: 4.5,
 description: "This hike follows the gorge for the first mile, varying in width from 50' in places to about 10' at its narrowest. You follow the dry creek bed down the middle of the gorge, and take the trail on the far left side of the gorge. About 1/4 mile into the hike you will see a sign for petroglyphs. After another 1/4 of a mile is the Pioneer Register. This is a series of names and dates from the late 1800's thru the early 1900's. ",
 difficulty: "Moderate",
 elevation:374,
-route_type: "Out & Back,"
+route_type: "Out & Back",
 park_id: p13.id
 )
 
@@ -813,7 +813,7 @@ length: 2.5,
 description: "Arrive in the last two hours before sunset on any evening and you will see photographers setting out their soul-catchers for a popular view in the park.  Like mites or spiders, their tripods dot the landscape.  Just look around them and enjoy the scenery. You've come for one thing:  to watch the sunset.  Though the trails are short, they do present hazards:  a lack of shade during the day time, dangerous dropoffs at the points, and no water at the parking lot.   ",
 difficulty: "Easy",
 elevation:544,
-route_type: "Out & Back,"
+route_type: "Out & Back",
 park_id: p13.id
 )
 
@@ -829,7 +829,7 @@ length: 1.7,
 description: "The Hickman Natural Bridge trail is a very relaxing and scenic trail in Capitol Reef National Park. A trail brochure - available at the trailhead - points out 17 things to observe along the hike at various interpretive zones. Integral to the cultural and human history of the area, the Fremont People occupied the lands in this area from 300 to 1400 C.E. and the historical artifacts of their past can still be seen today. Some of the culturally significant sites along the trail are Fremont pit houses, an elevated granary (for food storage) tucked into the Kayenta formation, and the greater Fremont River Valley where the Fremont lived prosperously for generations. ",
 difficulty: "Moderate",
 elevation:416,
-route_type: "Out & Back,"
+route_type: "Out & Back",
 park_id: p13.id
 )
 
@@ -845,7 +845,7 @@ length: 6.4,
 description: "Canyonlands National Park charges a fee to enter. You can also purchase a park-specific annual pass. For more information, please see ",
 difficulty: "Easy",
 elevation:728,
-route_type: "Out & Back,"
+route_type: "Out & Back",
 park_id: p12.id
 )
 
@@ -861,7 +861,7 @@ length: 2.4,
 description: "Please note that this trail is not well marked. Make sure to look at map/GPS along the way.",
 difficulty: "Moderate",
 elevation:137,
-route_type: "Loop,"
+route_type: "Loop",
 park_id: p12.id
 )
 
@@ -877,7 +877,7 @@ length: 1.8,
 description: "Breathtaking sunset hike on the rim of Islands in the Sky. Accessibility: According to the park website, to the first overlook the trail is paved concrete and wheelchair and stroller friendly. It has been marked with a waypoint. Past that, there are stairs and it turns into traversing rocky cliff edges. The width is typically at least four feet wide on the paved section and the estimated grade there is mostly gentle (all 3% or less).",
 difficulty: "Easy",
 elevation:160,
-route_type: "Out & Back,"
+route_type: "Out & Back",
 park_id: p12.id
 )
 
@@ -894,7 +894,7 @@ length: 0.7,
 description: "This is an easy walk to an arch perched on a cliff edge. Users especially recommend this as a great sunrise hike in Canyonlands National Park with its amazing morning views. Getting to this day hike early is also a great way to avoid the busy crowds and full parking lot that tend to start in the mid-morning, making this a more nature-like experience. As this climate varies tremendously throughout the year and days, definitely bring layers for the cold mornings and hot days. ",
 difficulty: "Easy",
 elevation:88,
-route_type: "Loop,"
+route_type: "Loop",
 park_id: p12.id
 )
 
@@ -911,7 +911,7 @@ length: 7.9,
 description: "Devils Garden is a popular, challenging hike at the northern end of the park. The trail offers incredible views of unique arches, including Landscape Arch, which is one of the longest natural spans in the world.",
 difficulty: "Hard",
 elevation:1085,
-route_type: "Loop,"
+route_type: "Loop",
 park_id: p6.id
 )
 
@@ -928,7 +928,7 @@ length: 3.2,
 description: "Delicate Arch Trail is a short hike in Arches National Park to Utah's most recognizable natural arch, which you will likely recognize from the Utah license plate. The park is home to some of the most unique geologic features in the world. This fantastic hiking trail leads along the red rock slabs to the largest free standing arch in the park. You’ll pass smaller stone arches, piles of balanced rocks, and tall sandstone fins on your way to this incredible rocky feature.",
 difficulty: "Moderate",
 elevation:629,
-route_type: "Out & Back,"
+route_type: "Out & Back",
 park_id: p6.id
 )
 
@@ -944,7 +944,7 @@ length: 0.4,
 description: "Dragon Point; a widening ravine with overgrown sides, enclosing the greenish-grey waters of the river. The overlook is reached by a wide path across a flat, rocky promontory between the river and a small side canyon to the south. A sign gives the distance as 100 yards, but 300 is more accurate.",
 difficulty: "Easy",
 elevation:59,
-route_type: "Out & Back,"
+route_type: "Out & Back",
 park_id: p10.id
 )
 
