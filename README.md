@@ -20,7 +20,49 @@ HikersGuide's primary content is trail listings, with secondary park listings th
 lists of trails.
 
 ## Home Page:
-The home page contains a dynamic search bar
+The home page contains a dynamic search bar that populates results as a user types. Users can click through to a given trail or park from the search results.
+
+![Search Bar SG](https://hikers-guide.s3.us-west-1.amazonaws.com/screenshots/Screen+Shot+2021-12-03+at+9.41.30+AM.png, "Search Bar Component")
+
+The search results component receives both trail and park results. It assesses the type of result based on the existance of a "park_id" in the returned JSON, and renders the correct icon and link for a given result.
+
+```js
+...
+Render function in results.jsx
+...
+render() {
+    const searchResults = this.props.results.map((result, i) => (
+      <li id='result-mod' key={i}>
+        {result.park_id ? (this.trailLink(result)) : (this.parkLink(result))}
+      </li>
+    ))
+
+...
+
+Trail results
+...
+trailLink(result) {
+    return(
+      <Link to={`/trails/${result.id}`} key={result.id} className={result} id={result.id}>
+        <div id='result-icon'><FaMapMarkerAlt color='#629730' size={30} key={result.id} /> </div>
+        <p id='result-name'>{result.name}</p>
+      </Link>
+    )
+  }
+...
+
+Park results
+...
+parkLink(result) {
+    return (
+      <Link to={`/parks/${result.id}`} key={result.id} className={result} id={result.id}>
+        <div id='result-icon'><FaTree color='#629730' size={30} key={result.id} /> </div>
+        <p id='result-name'>{result.name}</p>
+      </Link>
+    )
+  }
+...
+```
 
 ## Trails:
 Users can interact with trails by leaving reviews. These reviews are shown on a given trail and update the trail's average review, which is featured throughout the site.
