@@ -27,9 +27,6 @@ The home page contains a dynamic search bar that populates results as a user typ
 The search results component receives both trail and park results. It assesses the type of result based on the existance of a "park_id" in the returned JSON, and renders the correct icon and link for a given result.
 
 ```js
-...
-Render function in results.jsx
-...
 render() {
     const searchResults = this.props.results.map((result, i) => (
       <li id='result-mod' key={i}>
@@ -37,10 +34,6 @@ render() {
       </li>
     ))
 
-...
-
-Trail results
-...
 trailLink(result) {
     return(
       <Link to={`/trails/${result.id}`} key={result.id} className={result} id={result.id}>
@@ -49,10 +42,7 @@ trailLink(result) {
       </Link>
     )
   }
-...
 
-Park results
-...
 parkLink(result) {
     return (
       <Link to={`/parks/${result.id}`} key={result.id} className={result} id={result.id}>
@@ -61,7 +51,6 @@ parkLink(result) {
       </Link>
     )
   }
-...
 ```
 
 ## Trails:
