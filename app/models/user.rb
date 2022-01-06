@@ -19,6 +19,7 @@ class User < ApplicationRecord
   validates :email, :fname, :lname, :password_digest, :session_token, presence: true
   validates :email, uniqueness: true
   validates :password, presence: true, length: {minimum: 6}, allow_nil: true
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP } 
 
   has_many :reviews
 
