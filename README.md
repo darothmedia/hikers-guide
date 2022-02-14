@@ -2,7 +2,7 @@
 
 ![HikersGuide Header](https://hikers-guide.s3.us-west-1.amazonaws.com/logo/img/logo/hikersGuideLogo4x.png "HikersGuide Logo")
 
-HikersGuide is a clone of AllTrails where users can log in, create/write/update/delete reviews of a trail, and view park / trail detail pages with helpful info. The site draws references from The Hitchhiker's Guide to the Galaxy, and has several easter eggs that fans of the book will appreciate.
+HikersGuide is a clone of AllTrails where users can log in, create/read/update/delete reviews of a trail, and view park / trail detail pages with helpful info. The site draws references from The Hitchhiker's Guide to the Galaxy, and has several easter eggs that fans of the book will appreciate.
 
 ## **Tech Stack:**
 
